@@ -1,3 +1,5 @@
-# Brand profile — contains sensitive positioning, competitor intel, and strategy.
-# Do not commit. Each user's brand.md is private to their project.
+# Brand profiles — contain sensitive positioning, competitor intel, and strategy.
+# Do not commit. Each user's brand profiles are private to their project.
 .claude/cmo/brand.md
+.claude/cmo/brands/*/brand.md
+.claude/cmo/active-brand

@@ -1,30 +1,36 @@
 # Blair — AI CMO Agent
 
-Blair is an AI Chief Marketing Officer that handles any marketing ask — from go-to-market strategy to campaign architecture to content and copy. Built as a Claude Code agent bundle.
+Blair is an AI Chief Marketing Officer built as a Claude Code agent bundle. It handles any marketing ask — from go-to-market strategy to paid campaigns to individual copy assets.
 
-Tell Blair what you need. Blair routes to the right specialist. You get real, usable marketing output.
+Clone it. Drop it into any project. Run `/blair:start`. Done.
 
 ---
 
 ## What Blair Does
 
-**Strategy**
-Positioning frameworks, ICP definitions, messaging hierarchies, and go-to-market plans.
+**Strategy** — positioning, ICP definition, messaging hierarchy, GTM plans
 
-**Research**
-Competitive intelligence, market analysis, audience behavior, and channel research.
+**Research** — competitive intelligence, market analysis, audience behavior, channel benchmarks
 
-**Campaigns**
-Multi-channel campaign architecture, messaging maps, asset lists, and timelines.
+**Campaigns** — multi-channel architecture, messaging maps, asset lists, timelines
 
-**Content**
-Blog posts, newsletters, LinkedIn posts, X threads, YouTube scripts, and podcast outlines.
+**Content** — blog posts, newsletters, LinkedIn, X threads, YouTube scripts
 
-**Copy**
-Ad copy, email sequences, landing page copy, headlines, and CTAs.
+**Copy** — ad copy, email sequences, landing page copy, headlines, subject lines
 
-**Audits**
-Scored reviews of existing marketing with specific, prioritized fixes.
+**Email programs** — welcome sequences, nurture flows, re-engagement, post-demo sequences
+
+**Paid media** — Google Search, Meta, and LinkedIn campaign structures and creative briefs
+
+**PR and earned media** — press releases, journalist pitches, story angles
+
+**Sales enablement** — battle cards, objection handlers, one-pagers, ROI frameworks
+
+**SEO and AEO** — keyword research, on-page optimization, AI engine visibility
+
+**Analytics** — performance diagnosis, constraint identification, action plans
+
+**Audits** — scored review of existing marketing with specific, prioritized fixes
 
 ---
 
@@ -56,7 +62,7 @@ claude
 /blair:start
 ```
 
-Blair will interview you about your product, audience, positioning, voice, competitors, and goals — one question at a time. When it's done, your brand profile is saved to `.claude/cmo/brand.md` and Blair is ready to work.
+Blair interviews you about your product, audience, positioning, voice, competitors, and goals — one question at a time. When it's done, your brand profile is saved to `.claude/cmo/brand.md` and Blair is ready to work.
 
 ---
 
@@ -65,17 +71,35 @@ Blair will interview you about your product, audience, positioning, voice, compe
 | Command | What it does |
 |---|---|
 | `/blair:start` | Run onboarding — build your brand profile |
-| `/blair:strategy` | Get positioning, ICP, messaging, or GTM strategy |
+| `/blair:update` | Update specific brand profile fields without re-running onboarding |
+| `/blair:strategy` | Positioning, ICP, messaging, GTM strategy |
 | `/blair:research` | Market and competitive intelligence |
 | `/blair:campaign` | Build a complete campaign end-to-end |
-| `/blair:audit` | Audit existing marketing assets |
+| `/blair:audit` | Scored audit of existing marketing |
+| `/blair:calendar` | 30/60/90-day content calendar |
+| `/blair:repurpose` | Repurpose one asset across all channels |
+| `/blair:launch` | Coordinated launch kit — strategy, campaign, copy, and PR in one run |
+| `/blair:competitor` | Deep competitor research + battle card |
+| `/blair:headline` | 10 headline variations for any surface |
+| `/blair:email-sequence` | Full email sequence for any trigger type |
+| `/blair:swot` | Marketing SWOT with strategic synthesis and 90-day priorities |
+| `/blair:review` | Scored copy review with line-by-line diagnosis and rewrites |
+| `/blair:post` | Write a social post for any platform — fast |
 
-Or just tell Blair what you need:
+**Multi-brand (agencies):**
+
+| Command | What it does |
+|---|---|
+| `/blair:brands` | List all brand profiles |
+| `/blair:switch` | Switch the active brand |
+
+Or just tell Blair what you need — no slash command required:
 
 > "Write me a launch email sequence"
 > "Who are my competitors and how do I differentiate?"
-> "Build me a 30-day content calendar"
-> "Audit my homepage copy"
+> "Build me a 30-day content calendar for LinkedIn"
+> "Review this homepage copy"
+> "What's our paid media strategy for Q3?"
 
 ---
 
@@ -89,27 +113,46 @@ Or just tell Blair what you need:
 | `blair-researcher` | Market and competitive intelligence |
 | `blair-campaigns` | Campaign architecture and asset planning |
 | `blair-content` | Long-form and social content |
-| `blair-copy` | Conversion copy: ads, emails, landing pages |
-| `blair-audit` | Marketing audit with scored report |
+| `blair-copy` | Conversion copy: ads, emails, landing pages, headlines |
+| `blair-audit` | Scored marketing audit |
+| `blair-calendar` | Content calendar planning |
+| `blair-repurpose` | Content repurposing across channels |
+| `blair-seo` | Keyword research, on-page SEO, AEO content briefs |
+| `blair-email` | Email program strategy and full sequence writing |
+| `blair-paid` | Google, Meta, and LinkedIn paid campaign structures |
+| `blair-pr` | Press releases, journalist pitches, earned media |
+| `blair-sales-enablement` | Battle cards, objection handlers, ROI frameworks |
+| `blair-analytics` | Performance diagnosis and action planning |
 
 ---
 
 ## How It Works
 
 **First time:**
-`/blair:start` → `blair-brief` interviews you → writes `.claude/cmo/brand.md` → Blair is ready
+`/blair:start` → `blair-brief` interviews you → writes `.claire/cmo/brand.md` → Blair is ready
 
 **Every session after:**
-You make a marketing request → `blair` reads your brand profile → routes to the right specialist(s) → you get usable output
+You make a request → `blair` reads your brand profile → routes to the right specialist(s) → you get usable output
 
 **Multi-step work:**
-For complex requests, Blair chains specialists in the right order. A full campaign brief might run: `blair-researcher` → `blair-strategist` → `blair-campaigns` → `blair-copy` → `blair-content`. Each specialist passes context forward. You get everything at the end.
+For complex requests, Blair chains specialists in the right order and passes context forward. A full campaign might run: `blair-researcher` → `blair-strategist` → `blair-campaigns` → `blair-copy`. You get everything synthesized at the end.
+
+**Diagnostic step:**
+For vague requests, Blair asks one sharp clarifying question before routing. "We need to grow" gets a specific question back — not a generic plan.
 
 ---
 
-## Using Blair in Cadence / Jarvis Projects
+## Multi-Brand (Agencies)
 
-Blair detects `.claude/identity/`, `.claude/voice/`, and `.claude/memory/` files automatically. If they exist, Blair inherits brand context from them and skips questions those files already answer.
+Running Blair for multiple clients? Use the multi-brand setup:
+
+```
+/blair:start [client-name]    # onboard a new brand
+/blair:brands                 # list all brands
+/blair:switch [client-name]   # make a brand active
+```
+
+Each brand gets its own profile at `.claude/cmo/brands/[name]/brand.md` plus its own campaign log and insights history. Blair always works in the context of the active brand.
 
 ---
 
@@ -118,22 +161,50 @@ Blair detects `.claude/identity/`, `.claude/voice/`, and `.claude/memory/` files
 ```
 .claude/
 ├── agents/
-│   ├── blair.md              # orchestrator
-│   ├── blair-brief.md        # onboarding
-│   ├── blair-strategist.md   # strategy
-│   ├── blair-researcher.md   # research
-│   ├── blair-campaigns.md    # campaigns
-│   ├── blair-content.md      # content
-│   ├── blair-copy.md         # copy
-│   └── blair-audit.md        # audit
+│   ├── blair.md                    # orchestrator
+│   ├── blair-brief.md              # onboarding
+│   ├── blair-strategist.md
+│   ├── blair-researcher.md
+│   ├── blair-campaigns.md
+│   ├── blair-content.md
+│   ├── blair-copy.md
+│   ├── blair-audit.md
+│   ├── blair-calendar.md
+│   ├── blair-repurpose.md
+│   ├── blair-seo.md
+│   ├── blair-email.md
+│   ├── blair-paid.md
+│   ├── blair-pr.md
+│   ├── blair-sales-enablement.md
+│   └── blair-analytics.md
 ├── cmo/
-│   └── brand.md              # your brand profile (written by blair-brief)
+│   ├── brand.md                    # your brand profile (gitignored)
+│   ├── brand.md.example            # example of a completed profile
+│   ├── campaigns.md                # campaign log (auto-appended)
+│   ├── insights.md                 # analytics log (auto-appended)
+│   └── brands/                     # multi-brand profiles (agencies)
+│       └── [brand-name]/
+│           ├── brand.md
+│           ├── campaigns.md
+│           └── insights.md
 └── skills/
     ├── blair-start/SKILL.md
-    ├── blair-audit/SKILL.md
-    ├── blair-campaign/SKILL.md
+    ├── blair-update/SKILL.md
     ├── blair-strategy/SKILL.md
-    └── blair-research/SKILL.md
+    ├── blair-research/SKILL.md
+    ├── blair-campaign/SKILL.md
+    ├── blair-audit/SKILL.md
+    ├── blair-calendar/SKILL.md
+    ├── blair-repurpose/SKILL.md
+    ├── blair-launch/SKILL.md
+    ├── blair-competitor/SKILL.md
+    ├── blair-headline/SKILL.md
+    ├── blair-email-sequence/SKILL.md
+    ├── blair-swot/SKILL.md
+    ├── blair-review/SKILL.md
+    ├── blair-post/SKILL.md
+    ├── blair-brands/SKILL.md
+    └── blair-switch/SKILL.md
 ```
 
 ---
@@ -141,7 +212,7 @@ Blair detects `.claude/identity/`, `.claude/voice/`, and `.claude/memory/` files
 ## Requirements
 
 - [Claude Code](https://claude.ai/code) (CLI or desktop app)
-- Claude account (free tier works for basic use)
+- Claude account (free tier works for most tasks; Research agents use web search)
 
 ---
 
