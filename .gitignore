@@ -3,3 +3,5 @@
 .claude/cmo/brand.md
 .claude/cmo/brands/*/brand.md
 .claude/cmo/active-brand
+.claude/cmo/pipeline.md
+.claude/cmo/brands/*/pipeline.md
