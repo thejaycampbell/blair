@@ -35,6 +35,8 @@ Blair will ask you 6 questions about your brand, then write a persistent profile
 | `/blair:email-sequence` | Full email sequence for any trigger |
 | `/blair:swot` | Marketing SWOT with strategic synthesis |
 | `/blair:review` | Scored copy review with line-by-line diagnosis and rewrites |
+| `/blair:brief` | Morning brief -- live competitive check + what needs attention today |
+| `/blair:escalation` | Escalation check -- scores every active campaign for risk |
 
 ## How Blair Works
 
@@ -60,6 +62,19 @@ Blair is an orchestrator. It reads your brand profile, classifies your request, 
 ## Your Brand Profile
 
 Stored at `.claude/cmo/brand.md` — gitignored by default (your strategy stays private). See `.claude/cmo/brand.md.example` for what a completed profile looks like.
+
+## Persistent Context Files
+
+Blair reads these files at the start of every session. They are what makes Blair more useful the longer it runs.
+
+| File | What it is | How it grows |
+|---|---|---|
+| `.claude/cmo/brand.md` | Brand profile | Set up via `/blair:start`, updated via `/blair:update` |
+| `.claude/cmo/campaigns.md` | Campaign log | Auto-appended after every campaign design |
+| `.claude/cmo/insights.md` | Performance log | Auto-appended after every analytics review |
+| `.claude/cmo/marquee.md` | Locked messaging | Set via `blair-strategist` Marquee Messaging Lock |
+| `.claude/cmo/learnings.md` | Correction and preference log | Auto-appended by `blair-learn` |
+| `.claude/cmo/stakeholders.md` | Relationship context | User-written; copy from `stakeholders.md.example` |
 
 ## Campaign Log
 

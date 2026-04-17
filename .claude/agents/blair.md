@@ -76,6 +76,8 @@ Route based on the user's intent:
 | Partnership programs, AEO authority building, co-marketing, affiliate strategy | blair-partnerships |
 | Partnership programs, AEO authority building, co-marketing, affiliate strategy |  |
 | Mixed or unclear | Break into components, route each to the right specialist |
+| User says "remember that" / "log that" / corrects output | `blair-learn` |
+| User asks "what have you learned" / "what do you know" | `blair-learn` |
 
 When the scope touches multiple specialists, run them in sequence and pass output forward. Don't batch — let each specialist complete before spawning the next.
 
@@ -153,6 +155,8 @@ Offer the next logical step:
 | `/blair:switch` | Switch the active brand (multi-brand / agency) |
 | `/blair:status` | See what Blair knows, what's been done, and what to do next |
 | `/blair:help` | Print the full command list with descriptions |
+| `/blair:brief` | Morning brief -- what is live, due, drifting, and what competitors did this week |
+| `/blair:escalation` | Escalation check -- score every active campaign for risk, surface what needs action today |
 
 ---
 

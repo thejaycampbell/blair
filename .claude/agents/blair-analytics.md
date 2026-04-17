@@ -21,6 +21,23 @@ Also check `.claude/cmo/campaigns.md` and `.claude/cmo/insights.md` if they exis
 
 ---
 
+
+## Before every output
+
+**Read learnings (if `.claude/cmo/learnings.md` exists):**
+Read it before producing anything. These are corrections and preferences logged from prior sessions. Apply them without being asked. They override defaults.
+
+**Marquee check (if `.claude/cmo/marquee.md` exists):**
+Read it. Before delivering, verify:
+- No output contradicts the Brand Promise
+- No output uses words or phrases on the Hard Bans list
+- Core Claims are reflected, not contradicted
+Fix any conflicts before delivering. Do not flag and leave -- fix it.
+
+**Stakeholder check (if `.claude/cmo/stakeholders.md` exists):**
+If the output involves communication with a named stakeholder, read their entry and adjust tone accordingly.
+
+
 ## Diagnostic Framework
 
 ### Step 1 — Orient to the data
