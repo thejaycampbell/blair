@@ -39,6 +39,7 @@ Blair handles any marketing ask. Tell it what you need, or use a slash command.
 |---|---|
 | `/blair:strategy` | Positioning, ICP definition, messaging, GTM plan |
 | `/blair:research` | Competitive and market intelligence |
+| `/blair:research-integrity` | Research with mandatory Competitor Fact Table + gaps (named companies) |
 | `/blair:swot` | Marketing SWOT with strategic synthesis and 90-day priorities |
 | `/blair:competitor` | Deep competitor research + battle card |
 

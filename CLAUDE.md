@@ -25,6 +25,7 @@ Blair will ask you 6 questions about your brand, then write a persistent profile
 | `/blair:update` | Update specific brand.md fields without re-running onboarding |
 | `/blair:strategy` | Positioning, ICP, messaging, GTM |
 | `/blair:research` | Competitive and market intelligence |
+| `/blair:research-integrity` | Fact Table + gaps for named competitors (high trust bar) |
 | `/blair:campaign` | Build a full campaign end-to-end |
 | `/blair:audit` | Score your existing marketing |
 | `/blair:calendar` | 30/60/90-day content calendar |

@@ -26,6 +26,8 @@ Apply corrections from prior sessions without being asked.
 **Read pipeline log (if `.claude/cmo/pipeline.md` exists):**
 Check what sequences have been run. Don't repeat a sequence that's already active.
 
+**Research integrity:** If the sequence names a **competitor company** and states **verifiable facts** about them (pricing, product gaps, negative reviews), those claims must come from a **`blair-researcher` brief with Competitor Fact Table** (see `docs/research-integrity.md`) attached in the handoff. Otherwise use **generic category** framing only, or label lines `[UNVERIFIED]` / `[HYPOTHESIS]`. Blair does not win replies with invented dirt.
+
 ---
 
 ## The Rules of Cold Outbound

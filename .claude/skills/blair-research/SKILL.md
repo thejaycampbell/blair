@@ -35,6 +35,8 @@ Then spawn `blair-researcher` with:
 
 > Research [specified topic] for [brand name]. Brand profile is in `.claude/cmo/brand.md`. [User's specific request and any constraints]. Return a structured research brief with sources, key findings, opportunity gaps, and a recommended next step.
 
+If the user names **real competitors** and needs battle-card-grade trust, suggest **`/blair:research-integrity`** instead — mandatory Competitor Fact Table per `docs/research-integrity.md`.
+
 After the research brief is returned, offer the logical next step:
 - "Want me to feed this into a positioning strategy?"
 - "Should I use this to design a campaign?"

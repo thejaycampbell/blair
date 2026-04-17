@@ -1,5 +1,7 @@
 # Integrations playbook
 
+**New here?** Start with the 30-minute [integrations quickstart](integrations-quickstart.md), then return here for templates and depth.
+
 Blair is **messaging, strategy, and copy**. It is **not** a system of record for contacts, email verification, or CRM.
 
 ## One-sentence map

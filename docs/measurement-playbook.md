@@ -2,6 +2,8 @@
 
 Use this to turn Blair outputs into **evidence**, not just artifacts.
 
+**Competitor claims:** Pair marketing experiments with [research-integrity.md](research-integrity.md) so messaging tests do not rely on unverified battle-card facts.
+
 ## Before you change anything
 
 1. **Baseline** the current asset (screenshot, exported HTML, or pasted copy in `insights.md` with a date).

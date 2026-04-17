@@ -20,7 +20,7 @@ v3.0 adds a revenue layer — cold outbound sequences, a **marketing-attribution
 
 ## Results
 
-Documented, anonymized examples with metrics and caveats: [docs/case-studies/README.md](docs/case-studies/README.md). To reproduce the measurement pattern: [docs/measurement-playbook.md](docs/measurement-playbook.md).
+Documented examples with metrics and caveats: [docs/case-studies/README.md](docs/case-studies/README.md) (includes one **named, permissioned** maintainer case study). To reproduce the measurement pattern: [docs/measurement-playbook.md](docs/measurement-playbook.md).
 
 ---
 
@@ -31,6 +31,8 @@ Documented, anonymized examples with metrics and caveats: [docs/case-studies/REA
 | [Security and data](docs/security-and-data.md) | What stays local, what leaves your machine, enterprise limits |
 | [Agency governance](docs/agency-governance.md) | Multi-brand ownership and offboarding |
 | [Integrations playbook](docs/integrations-playbook.md) | How Blair pairs with lists, CRM, calendar |
+| [Integrations quickstart](docs/integrations-quickstart.md) | ~30-minute list → CRM → Blair → send checklist |
+| [Research integrity](docs/research-integrity.md) | Competitor Fact Table, pre-flight gates, trust defaults |
 | [Setup: Gmail / Calendar](docs/setup-gmail-calendar.md) | Optional Google wiring and fallbacks |
 | [Manual testing](docs/testing.md) | Maintainer smoke checklist |
 | [Roadmap](docs/roadmap.md) | Non-binding future directions |
@@ -160,6 +162,7 @@ Blair asks 6 questions, one at a time. Writes your brand profile. Ready.
 |---|---|
 | `/blair:strategy` | Positioning, ICP, messaging, GTM plan |
 | `/blair:research` | Competitive and market intelligence |
+| `/blair:research-integrity` | Research with mandatory Competitor Fact Table + gaps |
 | `/blair:swot` | Marketing SWOT with 90-day priorities |
 | `/blair:competitor` | Deep research + battle card for any competitor |
 
@@ -266,6 +269,7 @@ Blair is a Claude Code agent bundle — no runtime, no server, no API keys beyon
     ├── blair-update/
     ├── blair-strategy/
     ├── blair-research/
+    ├── blair-research-integrity/   # Fact Table + gaps (named competitors)
     ├── blair-campaign/
     ├── blair-audit/
     ├── blair-calendar/
@@ -310,6 +314,8 @@ Want to add a specialist or modify behavior? Edit the relevant `.md` file. Each 
 ---
 
 ## Version history
+
+**v3.0.2** — Research integrity (`docs/research-integrity.md`, `/blair:research-integrity`), integrations quickstart, named maintainer case study.
 
 **v3.0** — Revenue layer: cold outbound (`/blair:cold-outbound`), pipeline tracking (`/blair:pipeline-impact`), weekly CMO brief (`/blair:weekly-brief`), agency briefing (`/blair:brief-agency`), fast-lane onboarding (`/blair:start --fast`), LinkedIn native grammar overhaul.
 

@@ -45,6 +45,29 @@ When users ask to “sync HubSpot” or “pull my pipeline,” route to **`blai
 
 If a request assumes Blair invented competitor facts without sources, escalate: **one clarifying question** or route back to `blair-researcher` with explicit “verify or label as hypothesis.”
 
+### Research integrity (pre-flight gates)
+
+**Spec:** `docs/research-integrity.md` in the Blair repo.
+
+**Default:** Any deliverable that depends on **facts about a named company** must pass research integrity before it ships as “true.”
+
+**Route `blair-researcher` before `blair-sales-enablement` when:**
+- The user wants a **battle card**, trap questions, or “why not them” copy against a **named** competitor, and there is no current Fact Table + brief in the session.
+- The handoff references competitors listed in `brand.md` with **specific claims** (pricing, weaknesses, positioning) that are not already cited in `brand.md` **Research sources**.
+
+**Route `blair-researcher` before `blair-outbound` when:**
+- The sequence asserts **specific facts** about a named vendor (their pricing, reputation, product gaps). If the user only names a **category** or **role** (no competitor facts), research is optional.
+
+**Before final delivery to the user, verify:**
+- Researcher output includes a **Competitor Fact Table** (single competitor) or **per-competitor table rows** (multi), plus **Gaps / not verified**, when named companies are in play.
+- If research was skipped at user request: label output with **`Research integrity: NEEDS_RESEARCH`** and restrict competitor statements to **`[HYPOTHESIS]`** or **`[UNVERIFIED]`** as appropriate.
+
+**User-facing banner when synthesis completes:**
+- Citations present: one line: `Research integrity: PASS (see Fact Table and gaps).`
+- Hypothesis-only: `Research integrity: NEEDS_RESEARCH — competitor facts not verified this session.`
+
+**Slash command:** `/blair:research-integrity` forces the Fact Table + brief path for a named competitor or topic (see skill `blair-research-integrity`).
+
 ---
 
 ## Workflow
@@ -76,6 +99,7 @@ Route based on the user's intent:
 |---|---|
 | Positioning, ICP, messaging, GTM strategy | `blair-strategist` |
 | Market research, competitor analysis, trend research | `blair-researcher` |
+| `/blair:research-integrity` — Fact Table + gaps for a named competitor or research topic | `blair-researcher` (per skill `blair-research-integrity`) |
 | Full campaign (launch, product, growth) | `blair-researcher` → `blair-strategist` → `blair-campaigns` → `blair-copy` |
 | Campaign architecture only | `blair-campaigns` |
 | Blog posts, newsletters, social content, scripts | `blair-content` |
@@ -117,11 +141,12 @@ For strategy, campaign, and positioning requests — ask one sharp diagnostic qu
 - A slash command was used with clear intent (`/blair:headline`, `/blair:audit [URL]`)
 - The user already gave context that answers the diagnostic
 
-**v3.0 commands — route directly without diagnostic question:**
+**v3.0+ commands — route directly without diagnostic question:**
 - `/blair:cold-outbound` → spawn `blair-cold-outbound` skill handler
 - `/blair:pipeline-impact` → spawn `blair-pipeline-impact` skill handler
 - `/blair:weekly-brief` → spawn `blair-weekly-brief` skill handler
 - `/blair:brief-agency` → spawn `blair-brief-agency` skill handler
+- `/blair:research-integrity` → spawn `blair-research-integrity` skill handler
 
 One question. Not a list. Wait for the answer before routing.
 
@@ -184,6 +209,7 @@ Offer the next logical step:
 | `/blair:help` | Print the full command list with descriptions |
 | `/blair:brief` | Morning brief -- what is live, due, drifting, and what competitors did this week |
 | `/blair:escalation` | Escalation check -- score every active campaign for risk, surface what needs action today |
+| `/blair:research-integrity` | Research with mandatory Competitor Fact Table + gaps (named competitor or topic) |
 
 ---
 

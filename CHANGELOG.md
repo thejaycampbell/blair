@@ -4,6 +4,24 @@ All notable changes to the Blair **repository** (agents, skills, docs, installer
 
 ## [Unreleased]
 
+## [3.0.2] — 2026-04-17
+
+### Added
+
+- `docs/research-integrity.md` — Competitor Fact Table schema, orchestrator pre-flight rules, and trust defaults.
+- `/blair:research-integrity` skill — forces Fact Table + gaps before battle cards or competitor-heavy outbound.
+- `docs/integrations-quickstart.md` — ~30-minute list → CRM → Blair → send checklist (links to integrations playbook).
+- `docs/case-studies/case-study-03-jay-campbell-blair-dogfood.md` — named, permissioned maintainer case study using measurement-playbook habits.
+
+### Changed
+
+- `.claude/agents/blair-researcher.md` — Research integrity mode default for named competitors; Fact Table before matrix.
+- `.claude/agents/blair.md` — Pre-flight gates, PASS/NEEDS_RESEARCH banners, slash command table entry.
+- `.claude/agents/blair-sales-enablement.md`, `.claude/agents/blair-outbound.md` — No invented competitor facts without research handoff.
+- `.claude/skills/blair-competitor/SKILL.md`, `.claude/skills/blair-cold-outbound/SKILL.md`, `.claude/skills/blair-help/SKILL.md` — Aligned with integrity flow.
+- `docs/integrations-playbook.md` — Quickstart link at top.
+- `docs/case-studies/README.md` — Third case study row.
+
 ## [3.0.1] — 2026-04-17
 
 ### Added

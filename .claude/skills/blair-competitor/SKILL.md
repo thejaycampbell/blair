@@ -34,6 +34,7 @@ HANDOFF CONTEXT — /blair:competitor
 Brand profile: [paste full brand.md]
 Competitor: [name]
 Task: Deep competitive research on [competitor]. Cover:
+0. **First:** Output the **Competitor Fact Table** (full schema in `docs/research-integrity.md`) for this competitor only — then the rest.
 1. Their positioning and messaging (pull from their website, homepage, pricing page)
 2. Their pricing model and tier structure
 3. Customer complaints — G2 reviews, Reddit, Capterra, Twitter/X
@@ -51,13 +52,14 @@ Include: citation blocks (URL + date accessed), confidence labels, and a **Gaps 
 
 Before building the battle card, confirm the researcher output includes:
 
+- **Competitor Fact Table** (mandatory — see `docs/research-integrity.md`)
 - **Citations** (URL + date accessed) for major factual claims
 - **Confidence** labels where evidence quality varies
 - **Gaps / not verified** for anything that could not be confirmed on the public web
 
 If any of those are missing, send the research back to `blair-researcher` with:
 
-> "Add citation blocks, confidence labels, and a Gaps section. Do not invent weaknesses."
+> "Add the Competitor Fact Table first (schema in docs/research-integrity.md), then citation blocks, confidence labels, and a Gaps section. Do not invent weaknesses."
 
 ---
 

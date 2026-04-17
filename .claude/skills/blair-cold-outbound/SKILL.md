@@ -35,6 +35,10 @@ If not, ask one question:
 
 Wait for the answer.
 
+**Step 3b: Research integrity (competitor facts)**
+
+If the user asks for copy that **asserts specific facts** about a **named competitor** (vendor pricing, weaknesses, market position), run **`/blair:research-integrity`** (or spawn `blair-researcher` with the Fact Table requirement from `docs/research-integrity.md`) **before** `blair-outbound`. If the sequence only targets a role/ICP with no competitor claims, skip this.
+
 **Step 4: Ask channel preference**
 
 > "Which channel — cold email, LinkedIn DMs, phone scripts, or all three?"
