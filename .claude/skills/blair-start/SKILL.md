@@ -15,6 +15,21 @@ Supports two modes:
 
 ## Single-Brand Setup (`/blair:start`)
 
+**Mode selection:**
+
+Check if the user added a mode flag to the command:
+- `/blair:start --fast` → pass `MODE: fast` to blair-brief (2-question fast lane)
+- `/blair:start --deep` → pass `MODE: deep` to blair-brief (20-question deep dive)
+- `/blair:start` (no flag) → standard 6-question mode (default)
+
+If no flag and brand.md doesn't exist, offer the choice before running:
+> "Quick question before we start: do you want the **fast setup** (2 questions, done in 2 minutes) or the **full deep dive** (20 questions, complete brand picture)?
+> - `/blair:start --fast` for fast
+> - `/blair:start --deep` for deep
+> - Or just press enter for the standard 6-question setup."
+
+Wait for their response, then invoke blair-brief with the appropriate MODE.
+
 Check `.claude/cmo/brand.md` before doing anything:
 
 **If `brand.md` does not exist:**
