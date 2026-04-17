@@ -138,7 +138,7 @@ Run when `MODE: deep` is passed in the handoff. Ask one question per message. Sh
 **Pipeline (20):**
 20. Do you have a CRM? What does your current lead-to-close pipeline look like — stages, volume, conversion rates?
 
-After all 20 answers, write the full `brand.md` including the Pipeline section. No `[ASK WHEN NEEDED]` fields — deep dive fills everything.
+After all 20 answers, write the full `brand.md` including the Pipeline section and the **Research sources** section (use answers from competition and proof questions where relevant, or `none`). No `[ASK WHEN NEEDED]` fields — deep dive fills everything.
 
 Deliver:
 > "Deep dive complete. Blair now has your full brand picture — [N] fields filled, nothing left to infer. Ready to build."
