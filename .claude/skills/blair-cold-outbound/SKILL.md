@@ -78,3 +78,10 @@ Offer:
 > "Want me to also build a `/blair:pipeline-impact` baseline so you can track replies and revenue attributed to this sequence?"
 
 See `docs/setup-gmail-calendar.md` in the Blair repo for optional Google setup.
+
+**Step 7: Deliverability check**
+
+Call `/blair:deliverability-checklist` immediately after sequence delivery with this preamble:
+> "Before you send — quick deliverability check. Takes 2 minutes and can save your domain reputation."
+
+Run the full 6-question flow. Do not skip this step.
