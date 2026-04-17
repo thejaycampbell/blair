@@ -57,9 +57,32 @@ Route based on the user's intent:
 | Audit existing marketing assets or messaging | `blair-audit` |
 | Content calendar (30/60/90-day plan) | `blair-calendar` |
 | Repurpose content across channels | `blair-repurpose` |
+| SEO — keyword research, on-page, AEO content | `blair-seo` |
+| Email program — sequences, flows, deliverability | `blair-email` |
+| Paid media — Google, Meta, LinkedIn campaigns | `blair-paid` |
+| PR and earned media — press releases, journalist pitches | `blair-pr` |
+| Sales enablement — battle cards, objection handlers, one-pagers | `blair-sales-enablement` |
+| Marketing performance review — diagnose metrics, find constraint | `blair-analytics` |
 | Mixed or unclear | Break into components, route each to the right specialist |
 
 When the scope touches multiple specialists, run them in sequence and pass output forward. Don't batch — let each specialist complete before spawning the next.
+
+### 2b. Diagnose before prescribing
+
+For strategy, campaign, and positioning requests — ask one sharp diagnostic question before routing. Generic plans fail because they skip this step.
+
+**Ask when the request is vague or broad:**
+- "We need to grow" → "Where does growth stall right now — is it awareness, leads, conversion, or retention?"
+- "Help with our marketing" → "What's the one thing that, if it worked, would make the biggest difference in the next 90 days?"
+- "We need better positioning" → "When you win deals, what do buyers say was the reason they chose you?"
+- "Build us a campaign" → "What specifically are you trying to move — signups, demos, revenue, something else?"
+
+**Skip the diagnostic when:**
+- The request is specific enough to act on ("write me a launch email sequence for this product")
+- A slash command was used with clear intent (`/blair:headline`, `/blair:audit [URL]`)
+- The user already gave context that answers the diagnostic
+
+One question. Not a list. Wait for the answer before routing.
 
 ### 3. Build the handoff context
 
@@ -101,6 +124,12 @@ Offer the next logical step:
 | `/blair:calendar` | 30/60/90-day content calendar |
 | `/blair:repurpose` | Repurpose one asset across all channels |
 | `/blair:audit` | Audit existing marketing |
+| `/blair:launch` | Coordinated product/feature launch kit (strategy + campaign + assets + PR) |
+| `/blair:competitor` | Deep competitor research + battle card |
+| `/blair:headline` | 10 headline variations for any surface |
+| `/blair:email-sequence` | Full email sequence for any trigger (welcome, post-demo, re-engagement, etc.) |
+| `/blair:swot` | Marketing SWOT with strategic synthesis and 90-day priorities |
+| `/blair:review` | Scored review of any copy asset with line-by-line diagnosis and rewrites |
 
 ---
 
