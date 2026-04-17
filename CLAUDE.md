@@ -1,6 +1,6 @@
 # Blair — AI CMO Agent
 
-Blair is a Claude Code agent bundle that handles any marketing ask: strategy, research, campaigns, content, copy, SEO, email, paid media, PR, sales enablement, and performance analytics.
+Blair is a Claude Code agent bundle that handles any marketing ask: strategy, research, campaigns, content, copy, cold outbound, SEO, email, paid media, PR, sales enablement, and performance analytics — with a revenue layer that connects marketing activity to pipeline outcomes.
 
 ## Getting Started
 
@@ -35,6 +35,10 @@ Blair will ask you 6 questions about your brand, then write a persistent profile
 | `/blair:email-sequence` | Full email sequence for any trigger |
 | `/blair:swot` | Marketing SWOT with strategic synthesis |
 | `/blair:review` | Scored copy review with line-by-line diagnosis and rewrites |
+| `/blair:cold-outbound` | 7-touch cold email + 5-touch LinkedIn DM sequence optimized for reply rate |
+| `/blair:pipeline-impact` | Connect marketing outputs to revenue — leads, pipeline, deals, CAC |
+| `/blair:weekly-brief` | Monday CMO standup — what shipped, what's performing, what's next |
+| `/blair:brief-agency` | Complete creative brief for agencies, freelancers, or internal creative teams |
 
 ## How Blair Works
 
@@ -56,6 +60,7 @@ Blair is an orchestrator. It reads your brand profile, classifies your request, 
 - `blair-pr` — press releases, journalist pitches, earned media
 - `blair-sales-enablement` — battle cards, objection handlers, one-pagers
 - `blair-analytics` — performance diagnosis and recommendations
+- `blair-outbound` — cold outbound sequences (email, LinkedIn DMs, phone)
 
 ## Your Brand Profile
 
@@ -68,3 +73,7 @@ Blair appends to `.claude/cmo/campaigns.md` after each campaign design. This pre
 ## Performance Log
 
 `blair-analytics` appends to `.claude/cmo/insights.md` after each performance review — building a running record of what's been tried and what's been learned.
+
+## Pipeline Log
+
+`blair-outbound` and `blair-analytics` append to `.claude/cmo/pipeline.md` (gitignored) — tracking active outbound sequences and point-in-time pipeline snapshots. Use `/blair:pipeline-impact` to review and update.
