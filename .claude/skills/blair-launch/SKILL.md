@@ -17,11 +17,20 @@ If `brand.md` is missing or has `[NEEDS BRIEF]` in critical fields: spawn `blair
 
 ---
 
-## Step 2 — Identify launch type
+## Step 2 -- Diagnose before routing
 
-If the user specified a launch type, use it. If not, ask one question:
+Ask these two questions before identifying launch type:
 
-> "What are we launching — a new product, a feature, a pricing change, a market expansion, or something else?"
+> 1. "Is this a valley month (you need this launch to carry the period) or a peak month (you have organic momentum and this launch adds upside)?"
+
+> 2. "Can your existing best-sellers hit your monthly revenue target without this new product?"
+
+Wait for answers. They determine the campaign structure:
+- Valley month + no baseline coverage = concentrated launch, protect-the-month pre-step required
+- Peak month + strong baseline = launch as upside, lighter campaign structure
+- Mixed = treat as valley month to be safe
+
+Then: "What are we launching -- a new product, a feature, a pricing change, or something else?"
 
 ---
 

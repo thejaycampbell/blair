@@ -62,17 +62,60 @@ Tone: More personal than a blog post. The reader chose to subscribe. Write like 
 
 ### LinkedIn Post
 
-Formats:
-- **Hook + insight:** Strong first line (visible before "see more") → develop the idea → end with takeaway or question
-- **Listicle:** "5 things I learned from [experience]" — only if each item is genuinely specific
-- **Story:** Concrete situation → turning point → lesson. Never abstract from the story before the reader is ready.
-- **Contrarian take:** Challenge a received wisdom in the category. Must be defensible with specifics.
+#### The 2026 Algorithm Reality
+LinkedIn's ranking system is now a language model -- it reads content semantically, not just by engagement signals. Three changes affect everything:
 
-Rules:
-- First line must stop the scroll. It's the only thing that gets seen before the "see more" click.
-- No fake vulnerability ("I used to think X, I was so wrong"). Be honest about hard things without performing humility.
-- No forced ending questions unless the post actually invites response.
-- 150-300 words is the sweet spot. Longer only if the content earns it.
+1. **Topical concentration.** 80% of content should stay within 3 core topics. Content outside those topics gets deprioritized, even if it performs elsewhere. Pick the 3 topics before writing anything.
+
+2. **Hook weight.** The first 1-2 sentences get 3-5x more algorithmic processing than the rest of the post. The hook must be directional -- about the brand's topic area, not a generic statement. "5 things I learned" is not a hook. "Our conversion rate doubled after we stopped A/B testing" is.
+
+3. **Depth over breadth.** Long comments and substantive engagement outperform volume. One genuine comment thread beats 50 one-word replies.
+
+#### Format Priority (by goal)
+| Goal | Best format |
+|---|---|
+| Grow followers | Infographics, carousels -- highest follower conversion rate |
+| Get views | Video -- gets views but lower follow conversion |
+| Build authority | Long-form text posts with a specific argument |
+
+**Note:** If building an audience, pick one format and stick with it. The algorithm rewards consistency over variety.
+
+#### Content Funnel
+Structure the brand's LinkedIn output across three content types:
+- **Awareness content** (top of funnel): Broad, shareable, on the ICP's interests. May not mention the product. Goal: reach.
+- **Education content** (middle of funnel): Branded frameworks, how-to guides, step-by-step processes. Goal: consideration and follows.
+- **Conversion content** (bottom of funnel): Case studies, testimonials, results with specifics. Rarely performs by reach metrics -- but converts warm audiences who already follow.
+
+Ratio: roughly 60% awareness, 30% education, 10% conversion.
+
+#### Education Content Framework (highest follower growth)
+The highest-performing LinkedIn content is education packaged as branded IP. The model: take a real framework or insight, give it a name, make it teachable.
+- James Clear -> Atomic Habits -> 1% improvement concept
+- Simon Sinek -> Start With Why framework
+- The brand should have 3-5 named frameworks that make abstract expertise tangible
+
+For each framework: (1) give it a short, memorable name, (2) make it a step-by-step or structured visual, (3) post variations of it repeatedly -- the algorithm rewards consistency on a topic.
+
+#### Pre-Validation
+Before writing new content, study outliers: posts from accounts with similar follower counts that got 5-10x their normal engagement. The content that outperformed is the pre-validated idea, not the creator's fame.
+- Find: similar-sized accounts in the ICP's category
+- Study: their highest-performing posts (sorted by engagement)
+- Extract: the framework or argument structure that worked
+- Adapt: rename it, reframe it, make it specific to the brand's positioning
+
+#### Lead Magnet for De-Platforming
+LinkedIn audience is rented. Algorithm changes can cut reach overnight. Every brand should have a lead magnet that moves followers to email:
+- One high-value resource (template, checklist, guide, tool)
+- Clear value exchange: what they get, what they give (email)
+- Must feel worth paying for -- if it's not, it won't convert
+
+Include a lead magnet CTA in 1-in-5 posts maximum. Don't over-pitch.
+
+#### Rules (unchanged)
+- First line must stop the scroll -- it's the only line visible before "see more"
+- 150-300 words is the sweet spot; longer only if the content earns it
+- No fake vulnerability or forced ending questions
+- No engagement bait
 
 ### X / Twitter
 

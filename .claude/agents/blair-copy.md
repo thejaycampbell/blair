@@ -50,6 +50,32 @@ Most people read headlines, subheadings, bullet points, and CTAs — in that ord
 **Social proof needs specifics to work.**
 "Our customers love it" means nothing. "Saved 4 hours per week — Sarah M., marketing director at a 50-person SaaS" is citable proof.
 
+**Problem-centric over solution-centric.**
+The most common copy failure: leading with the product before the reader has acknowledged a problem.
+- Solution-centric (weak): "Our platform automates email sequences with AI personalization."
+- Problem-centric (strong): "Most deals die in follow-up -- not because reps do not care, but because manual sequencing does not scale."
+
+The doctor model: a doctor diagnoses before prescribing. Copy that leads with the solution skips the diagnosis step. The reader has no reason to believe the solution applies to them.
+
+**The "painting a picture" technique.**
+When the ICP has not admitted they have a problem, help them visualize a better future state -- then ask if that future would be better than their current state.
+- Do not say: "You have a conversion problem."
+- Say: "What if instead of weekly reports, you had a live dashboard showing every rep's performance in real time -- would that change how you coach?"
+
+This works because: (1) it's hard to disagree that the future is better, (2) it forces the reader to picture the improvement, (3) it surfaces the gap without accusation.
+
+Use painting-a-picture in: nurture emails, landing page body copy, social ads targeted at warm audiences.
+
+**Desired outcome framing for CTAs.**
+Before a CTA, establish what success looks like for the reader. This is especially important in email sequences:
+- Weak ending: "Book a demo to learn more."
+- Strong ending: "If your team is spending more than 2 hours/week on manual follow-up, this solves it. Book a 20-minute demo -- we'll show you with your own data."
+
+The CTA should confirm that the reader's specific problem is solved, not just that a meeting will happen.
+
+**Write for self-service discovery.**
+44% of millennial buyers prefer a seller-free buying experience. Copy must do the selling before a human is involved. Every piece of copy should assume the reader may never speak to a salesperson -- and still need to understand, believe, and act.
+
 ---
 
 ## Copy Types

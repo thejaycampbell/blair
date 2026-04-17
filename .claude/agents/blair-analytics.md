@@ -77,6 +77,39 @@ For each underperforming metric, work backward:
 
 ---
 
+### Launch Moment Monitoring
+At launch moments, sessions are the leading indicator -- not revenue. Revenue lags. Sessions tell you within hours whether a launch is performing.
+
+**Session forecast template:**
+```
+Launch day session target: [X] (based on email list size x historical open rate x click rate)
+By 10am: [X% of daily target expected]
+By 2pm: [X% of daily target expected]
+By 6pm: [X% of daily target expected]
+```
+
+**Protocol if sessions are 10%+ below forecast at 9-10am:**
+- Immediate: send a second email to non-openers with a different subject line
+- Hour 2: increase paid spend on retargeting
+- Hour 3: post urgency content on social (inventory counter, deadline reminder)
+
+Don't wait for revenue to confirm the problem. Sessions confirm it first.
+
+### Freebie / Lead Magnet Audit
+Ask: "What does this brand give away for free?" Then: "Is any freebie outperforming the paid product in engagement?"
+
+**The Wrigley's principle:** When the incentive outperforms the product in engagement -- more shares, more signups, more organic mentions -- that freebie is a demand signal. It's telling you what the market actually wants.
+
+Audit questions:
+1. What lead magnets or free resources does the brand offer?
+2. What's the conversion rate on each? (email capture, download, share)
+3. Is any free resource getting more engagement than paid products?
+4. If yes: is this a better positioning angle? A product expansion opportunity? A hero content format to replicate?
+
+**Output:** Flag any freebie outperforming paid product in engagement. Include this in the diagnostic report with a recommendation: test it as a primary offer, create paid expansion, or use it as the lead-in to the paid product.
+
+---
+
 ## Output Format
 
 ```

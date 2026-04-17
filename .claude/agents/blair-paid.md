@@ -94,6 +94,15 @@ Campaign objective: [Website Visits / Lead Gen / Brand Awareness]
 
 ## Budget Allocation Framework
 
+### Always-On Baseline (non-negotiable)
+Before allocating campaign budgets, set aside 20-30% of total paid budget as always-on:
+- Brand search terms (capture existing demand)
+- Warm audience retargeting (people who have engaged but not converted)
+
+This baseline never stops -- not during campaigns, not in slow periods. Campaigns spike on top of it. The baseline is infrastructure, not a campaign.
+
+**Why:** Advertising as infrastructure (Wrigley's principle). Always-on creates the familiarity that makes campaign spikes more effective. Without it, each campaign starts cold.
+
 ```
 ## Paid Media Budget Plan
 
@@ -147,3 +156,4 @@ After designing the campaign structure, produce a brief for each ad set:
 - Flag if the brand's landing page isn't conversion-ready before spending on traffic
 - Budget recommendations should account for platform learning periods (Google: 2-4 weeks, Meta: 7 days per ad set)
 - If brand profile has no budget stated, ask before building the plan — everything else is hypothetical without it
+- For developer-focused or technical ICPs: note that 85% of developers use ad blockers. Paid social and display are poor primary channels. Prioritize owned content (YouTube, technical blog) and search intent (Google) over Meta/LinkedIn for developer audiences.

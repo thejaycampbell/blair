@@ -68,3 +68,5 @@ Blair appends to `.claude/cmo/campaigns.md` after each campaign design. This pre
 ## Performance Log
 
 `blair-analytics` appends to `.claude/cmo/insights.md` after each performance review — building a running record of what's been tried and what's been learned.
+- blair-partnerships -- AI presence audit, partner recruitment, content briefs, outreach pitches, content scoring
+-  -- AI presence audit, partner recruitment, content briefs, outreach pitches, content scoring

@@ -29,6 +29,59 @@ Treat these as different problems with overlapping solutions. Most content shoul
 
 ---
 
+---
+
+## AEO Maturity Model
+
+Modern AEO has four pillars. For each, assess where the brand currently sits and what the next level requires.
+
+### Pillar 1: Content
+| Level | What it means |
+|---|---|
+| Level 1 | Keyword-targeted content |
+| Level 2 | Question-answering content for specific buyer queries |
+| Level 3 | Comprehensive topic clusters covering full buyer journey |
+| Level 4 | Programmatic, personalized content at scale |
+
+**Key insight:** 95% of ChatGPT citations were updated in the last 10 months. Content with a visible "last updated" date gets 1.8x higher citation rate. Recommend content refresh schedule before new content creation.
+
+**Content that gets cited:** Direct answers to specific questions. Q&A format. Comparison tables. Lists with specific numbers. Named frameworks. Content that reads like a reference, not a pitch.
+
+### Pillar 2: Technical
+| Priority | Action |
+|---|---|
+| Critical | Schema markup -- 73% of Google top 10 results use it; only 12% of all sites have it. Implement for: Product, FAQ, Article, Organization, Event, Person pages. |
+| Critical | Sitemap.xml -- must exist and auto-update. LLMs use it for crawling. |
+| High | Alt text on all images -- LLMs read alt text frequently. Auto-generate if the site has image volume. |
+| High | SEO metadata (title, description) -- 25% of top-linked sites still missing this. |
+| High | Page speed + mobile responsiveness -- slow sites signal low authority. |
+| Emerging | LLMs.txt -- proposed standard, adopt as thought leadership. |
+| Emerging | MCP server -- early signal of LLM usage; Webflow was first CMS to implement. |
+
+### Pillar 3: Authority
+| Level | What it means |
+|---|---|
+| Level 1 | Backlinks (still matter -- do not abandon) |
+| Level 2 | Positive plain-text mentions in digital PR, Reddit, Quora, YouTube |
+| Level 3 | Executive thought leadership that others cite |
+| Level 4 | Find sites cited in LLM answers then build co-marketing relationships with them |
+
+**Key insight:** 68% of Redditors are not on LinkedIn, but LLMs pull heavily from Reddit. Google's E-E-A-T (Experience, Expertise, Authority, Trust) applies to AEO. 85% of cited content is human-created or AI-assisted -- not AI-generated. Quality gates hold.
+
+**Modern authority workflow:** Run the brand's top 5 buyer questions through each LLM. List every site cited. Check if the brand is mentioned on those sites. If not, that's the outreach list. Spawn `blair-partnerships` for this work.
+
+### Pillar 4: Measurement
+| Level | What it means |
+|---|---|
+| Level 1 | Keyword rankings (no longer the north star) |
+| Level 2 | LLM traffic volume + conversion rate |
+| Level 3 | Citation tracking -- was the brand mentioned in answers to target queries? |
+| Level 4 | Share of voice -- how often vs. competitors? |
+| Level 5 | Sentiment -- are mentions positive? (new concept vs. traditional SEO) |
+
+**Why conversion matters:** LLM traffic converts 4x-23x better than traditional organic search (Ahrefs/SEMrush data). Average LLM session is 15-20 minutes vs. quick keyword searches. LLM visitors visit 50% more pages. Even if LLM traffic volume is smaller, it's further down the funnel.
+
+
 ## Deliverable Types
 
 ### Keyword Research
@@ -108,6 +161,9 @@ Content specifically written to be cited by AI engines:
 - Key facts: [3-5 specific, citable data points]
 - FAQ structure: [5 questions with direct, quotable answers]
 - Entity mentions: [related terms that establish topical authority]
+- Freshness requirement: include visible "last updated" date -- 1.8x higher citation rate
+- Q&A sections with direct 1-2 sentence answers -- LLMs extract these verbatim
+- Structured data (tables, numbered lists) that LLMs can extract
 
 ### Writing instructions for blair-content
 - Open with the direct answer (AI extracts first sentences)

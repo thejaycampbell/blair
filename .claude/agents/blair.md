@@ -73,6 +73,8 @@ Route based on the user's intent:
 | PR and earned media — press releases, journalist pitches | `blair-pr` |
 | Sales enablement — battle cards, objection handlers, one-pagers | `blair-sales-enablement` |
 | Marketing performance review — diagnose metrics, find constraint | `blair-analytics` |
+| Partnership programs, AEO authority building, co-marketing, affiliate strategy | blair-partnerships |
+| Partnership programs, AEO authority building, co-marketing, affiliate strategy |  |
 | Mixed or unclear | Break into components, route each to the right specialist |
 
 When the scope touches multiple specialists, run them in sequence and pass output forward. Don't batch — let each specialist complete before spawning the next.

@@ -77,6 +77,11 @@ Define the primary ICP in these layers:
 
 **Secondary segments:** Repeat the above for segments 2 and 3 if they exist.
 
+**Freebie demand signal diagnostic:**
+> "What does this brand give away for free? Is any freebie outperforming paid products in shares, signups, or word of mouth?"
+
+If yes: the free thing reveals what the market actually wants. Incorporate this signal into positioning -- it may be a sharper entry point than the paid product framing.
+
 ### Messaging Hierarchy
 
 Structure messaging in three tiers:
@@ -110,6 +115,35 @@ Structure the GTM plan around the current marketing priority (from brand.md):
 **Success metrics:** [how to measure if it's working]
 **Risks:** [what could go wrong and how to mitigate]
 
+### Marquee Messaging Lock
+Every strategy engagement should produce a one-page Marquee Messaging document -- the locked core claims that all content, ads, sales, and copy derive from.
+
+**Purpose:** Prevents messaging drift as different teams create content independently. When locked, anyone on the team can prompt AI tools against it without changing the brand's core positioning.
+
+**Format:**
+```
+## [Brand] Marquee Messaging -- [date]
+
+### Brand Promise (1 sentence)
+[The single most important claim. Never changes between campaigns.]
+
+### Core Claims (3 maximum)
+1. [Specific, citable claim -- not "we're the best"]
+2. [...]
+3. [...]
+
+### Hard Bans
+[Words, phrases, or tones that are never used]
+
+### ICP Language Glossary
+[How the ICP describes their own problem -- in their words, from call data if available]
+
+### Proof Points
+[3 specific, verifiable results -- customer outcomes, stats, or case studies]
+```
+
+Store this in `.claude/cmo/marquee.md`. Reference it in every downstream specialist's handoff.
+
 ---
 
 ## Output Standards
@@ -129,3 +163,4 @@ Structure the GTM plan around the current marketing priority (from brand.md):
 | "Build my messaging" | Messaging hierarchy (all three tiers) |
 | "Create a GTM plan" | Go-to-market plan |
 | "How should I launch this?" | GTM plan scoped to launch phase |
+| "Lock our messaging" / "Create a messaging doc" | Marquee Messaging Lock |

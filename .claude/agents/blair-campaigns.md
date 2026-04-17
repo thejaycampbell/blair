@@ -39,6 +39,50 @@ For new products, features, or market entries.
 - Launch week: concentrated push across all channels
 - Post-launch (2-4 weeks): nurture, convert, and capture learnings
 
+#### Pre-Launch Diagnostic (run before designing the campaign)
+Ask two questions before any launch campaign begins:
+
+1. **"Is this a valley month or a peak month?"**
+   - Valley month: organic momentum is low; this launch needs to carry the period
+   - Peak month: natural demand exists; this launch adds upside
+   - Answer changes the campaign structure entirely
+
+2. **"Can your existing best-sellers hit monthly revenue target without this new product?"**
+   - Yes -> launch is upside; protect the baseline first, add launch on top
+   - No -> launch must carry the month; higher stakes, more concentrated campaign needed
+
+#### Protect the Month (mandatory pre-step)
+Before designing launch campaign assets, confirm the baseline is covered:
+- Which existing products generate reliable revenue without a campaign push?
+- Are those products supported adequately in the launch period?
+- New products need 90 days to earn hero status -- don't pull support from proven products to fund an unproven launch
+
+#### Calendar Moment Types
+Match the launch mechanic to the calendar context:
+
+| Moment type | When to use | Mechanic |
+|---|---|---|
+| **Homepage takeover** | Valley month; full budget commitment needed | Replace hero content with launch; all channels point here |
+| **Member-exclusive** | Competitive windows; access scarcity | Early access for existing customers/subscribers before public |
+| **Limited drop** | Fixed inventory or production constraints | Hard quantity limit + hard close date |
+| **Restock** | Proven demand returning after sellout | Waitlist -> notification -> 48-hour window |
+
+#### Urgency Mechanism Selection
+Choose one per launch (don't stack multiple):
+- Member-only 48-hour early access -> public release
+- Limited inventory with live counter
+- 72-hour early access window with bonus
+- Pre-order with capped slots
+
+#### 90-Day Post-Launch Evaluation
+At day 90, evaluate on these metrics to decide: promote to hero product or let live in catalog:
+- Add-to-cart rate vs. site average
+- Conversion rate vs. site average
+- Return rate (elevated = expectation gap)
+- Repeat purchase rate (30/60/90 day)
+- Reviews and organic mentions
+- Decision: hero (promote to always-on), catalog (support but don't feature), discontinue
+
 ### Growth Campaign
 For active products with existing customers, focused on acquisition.
 
