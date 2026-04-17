@@ -12,6 +12,12 @@ All notable changes to the Blair **repository** (agents, skills, docs, installer
 - `CHANGELOG.md`, `CONTRIBUTING.md`, GitHub issue template for bad outputs.
 - Orchestrator scope boundaries; researcher citation/confidence/gaps standards; pipeline-impact honesty block; competitor verification step; email/outbound graceful degradation; optional `Research sources` in brand profile and `/blair:update sources`.
 
+### Changed
+
+- `docs/integrations-playbook.md`: copy-paste export block templates for CRM notes and pipeline snapshots.
+- `docs/case-studies/case-study-01-b2b-saas.md`: redacted ASCII wireframe artifact (plan acceptance).
+- `docs/security-and-data.md`: explicit **Enterprise (future)** non-shipped bullet.
+
 ## [3.0.0] — 2025 (tagged)
 
 - Revenue layer: cold outbound, pipeline-impact, weekly brief, agency brief, fast onboarding, LinkedIn grammar updates.

@@ -28,6 +28,32 @@ After Blair produces a sequence or campaign:
 - Create **tasks** or **notes** in CRM with the asset link or pasted summary.
 - Use a single owner field so follow-up is clear.
 
+### Export block templates (copy into CRM notes or `pipeline.md`)
+
+Use these as-is so you do not improvise structure.
+
+**CRM note (sequence shipped):**
+
+```markdown
+## Blair asset — [date]
+- **Command:** /blair:cold-outbound or /blair:email-sequence
+- **ICP:** [one line from brand.md]
+- **Owner:** [name]
+- **Paste or link:** [GDoc URL or “see thread 2026-04-17”]
+- **Send channel:** [Outreach / HubSpot sequences / manual]
+```
+
+**Pipeline snapshot (paste into `/blair:pipeline-impact` or append `pipeline.md`):**
+
+```markdown
+## Pipeline snapshot — [period]
+- Leads in: [N]
+- Opportunities: [N]
+- Closed-won: [N] ($[amount] optional)
+- Top source (best guess): [channel/campaign]
+- Confidence: [high / medium / rough estimate]
+```
+
 ### Calendar
 
 If Google Calendar integration is not available, use the **ICS-style instructions** or copy-paste blocks Blair provides (see [setup-gmail-calendar.md](setup-gmail-calendar.md)).

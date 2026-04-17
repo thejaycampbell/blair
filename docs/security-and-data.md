@@ -26,6 +26,8 @@ Blair today is aimed at **individuals and small teams** comfortable with markdow
 - SSO, org-wide RBAC, or audit logs beyond your git history
 - HIPAA/SOC2 certification of Blair itself (your org’s compliance still applies to how you use AI)
 
+**Enterprise (future — not shipped):** A different product line might add SSO, centralized policy, hosted deployment, or integration marketplaces. This open-source bundle does **not** imply that roadmap or timeline.
+
 A realistic **future** enterprise story might include hosted policies, admin controls, or export-only integrations. That is **not** what this repo ships today.
 
 ## Practical rules

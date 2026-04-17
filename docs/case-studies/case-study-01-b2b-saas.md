@@ -26,7 +26,23 @@ Hero spoke in **feature language** (“AI-powered workflow engine”) with no cl
 > **Before (conceptual):** “The AI workflow engine your team deserves.”  
 > **After:** “Stop spreadsheet handoffs between Sales and CS — one workspace for handoffs under 50 employees.”
 
-Full screenshots are withheld for client privacy.
+**Redacted wireframe (structure only — not a real screenshot):**
+
+```
+┌─────────────────────────────────────────────────────────┐
+│  [Logo]                              [Login] [Book demo] │
+├─────────────────────────────────────────────────────────┤
+│  BEFORE: Headline: "AI-powered workflow engine"          │
+│          Sub: (generic product description)             │
+│          CTA: [ Book demo ]                             │
+├─────────────────────────────────────────────────────────┤
+│  AFTER:  Headline: "Stop spreadsheet handoffs — ..."     │
+│          Sub: (ICP-specific, proof hint)                  │
+│          CTA: [ Book demo ]   ← same placement, new copy │
+└─────────────────────────────────────────────────────────┘
+```
+
+Full pixel screenshots are withheld for client privacy.
 
 ## Caveats
 
