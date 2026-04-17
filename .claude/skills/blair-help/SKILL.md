@@ -75,6 +75,24 @@ Blair handles any marketing ask. Tell it what you need, or use a slash command.
 
 ---
 
+## Revenue & Pipeline
+
+| Command | What it does |
+|---|---|
+| `/blair:pipeline-impact` | Review marketing's revenue impact — leads, pipeline, deals closed, CAC |
+| `/blair:weekly-brief` | Monday CMO standup — what shipped, what's performing, what to do this week |
+
+---
+
+## Outbound
+
+| Command | What it does |
+|---|---|
+| `/blair:cold-outbound` | Build a cold outbound sequence — email, LinkedIn DMs, or phone scripts |
+| `/blair:brief-agency` | Write a complete creative brief for an agency or freelance designer |
+
+---
+
 ## Or just ask
 
 You don't need a slash command for everything. Try:
@@ -85,6 +103,10 @@ You don't need a slash command for everything. Try:
 > "Review this homepage copy: [paste it]"
 > "What paid media strategy makes sense for our stage?"
 > "Give me 10 headline options for our pricing page"
+> "Build me a cold email sequence for VPs of Sales at Series B companies"
+> "What's our pipeline impact from last quarter's campaign?"
+> "Give me my weekly marketing brief"
+> "Write a creative brief for our homepage redesign"
 
 Blair reads your brand profile automatically and routes to the right specialist.
 
