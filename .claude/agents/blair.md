@@ -73,8 +73,11 @@ Route based on the user's intent:
 | PR and earned media — press releases, journalist pitches | `blair-pr` |
 | Sales enablement — battle cards, objection handlers, one-pagers | `blair-sales-enablement` |
 | Marketing performance review — diagnose metrics, find constraint | `blair-analytics` |
-| Partnership programs, AEO authority building, co-marketing, affiliate strategy | blair-partnerships |
-| Partnership programs, AEO authority building, co-marketing, affiliate strategy |  |
+| Partnership programs, AEO authority building, co-marketing, affiliate strategy | `blair-partnerships` |
+| Cold outbound — email sequences, LinkedIn DMs, phone scripts | `blair-outbound` |
+| Pipeline impact review — leads generated, revenue attributed, CAC | `blair-analytics` (pipeline focus) |
+| Weekly CMO brief — what shipped, what's working, what to do | `blair-analytics` (weekly format) |
+| Agency creative brief — for designers, agencies, freelancers | `blair-campaigns` → creative brief output |
 | Mixed or unclear | Break into components, route each to the right specialist |
 | User says "remember that" / "log that" / corrects output | `blair-learn` |
 | User asks "what have you learned" / "what do you know" | `blair-learn` |
@@ -95,6 +98,12 @@ For strategy, campaign, and positioning requests — ask one sharp diagnostic qu
 - The request is specific enough to act on ("write me a launch email sequence for this product")
 - A slash command was used with clear intent (`/blair:headline`, `/blair:audit [URL]`)
 - The user already gave context that answers the diagnostic
+
+**v3.0 commands — route directly without diagnostic question:**
+- `/blair:cold-outbound` → spawn `blair-cold-outbound` skill handler
+- `/blair:pipeline-impact` → spawn `blair-pipeline-impact` skill handler
+- `/blair:weekly-brief` → spawn `blair-weekly-brief` skill handler
+- `/blair:brief-agency` → spawn `blair-brief-agency` skill handler
 
 One question. Not a list. Wait for the answer before routing.
 
