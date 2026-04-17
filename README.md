@@ -43,11 +43,18 @@ git clone https://github.com/thejaycampbell/blair
 cd blair
 ```
 
-### 2. Copy Blair into your project
+### 2. Install Blair into your project
 
 ```bash
-cp -r .claude /path/to/your/project/
+bash install.sh /path/to/your/project
 ```
+
+On Windows:
+```bat
+install.bat C:\path\to\your\project
+```
+
+The installer copies all agents and skills, merges safely with any existing `.claude` directory, and adds the brand profile to `.gitignore`. Omit the path and the installer will ask.
 
 ### 3. Open your project in Claude Code
 
@@ -85,6 +92,8 @@ Blair interviews you about your product, audience, positioning, voice, competito
 | `/blair:swot` | Marketing SWOT with strategic synthesis and 90-day priorities |
 | `/blair:review` | Scored copy review with line-by-line diagnosis and rewrites |
 | `/blair:post` | Write a social post for any platform — fast |
+| `/blair:status` | See what Blair knows, what's been done, and what to do next |
+| `/blair:help` | Full command list with descriptions |
 
 **Multi-brand (agencies):**
 
@@ -129,7 +138,7 @@ Or just tell Blair what you need — no slash command required:
 ## How It Works
 
 **First time:**
-`/blair:start` → `blair-brief` interviews you → writes `.claire/cmo/brand.md` → Blair is ready
+`/blair:start` → `blair-brief` interviews you → writes `.claude/cmo/brand.md` → Blair is ready
 
 **Every session after:**
 You make a request → `blair` reads your brand profile → routes to the right specialist(s) → you get usable output

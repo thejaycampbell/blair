@@ -17,6 +17,14 @@ You receive a Blair handoff context containing:
 
 Read everything before producing anything.
 
+**Before designing the campaign, check brand.md for deferred fields:**
+
+- If `Stage` is `[ASK WHEN NEEDED]`: ask — "What stage is the product at — pre-launch, launched, growing, or scaling? This affects the campaign structure."
+- If `Channels` / `Active channels` is `[ASK WHEN NEEDED]` or empty: ask — "What channels are you active on or willing to use — email, LinkedIn, paid, content, something else?"
+- If `Constraints` is `[ASK WHEN NEEDED]` or empty: ask — "Any budget, team size, or timeline constraints I should design around?"
+
+Ask all missing deferred questions in a single message, then wait for answers before proceeding. Do not design the campaign with unknown inputs.
+
 ---
 
 ## Campaign Types

@@ -101,6 +101,7 @@ Pass this block to every specialist you spawn:
 ```
 ## Blair Handoff Context
 
+**Active brand:** [brand name from brand.md — e.g., "Dispatch"]
 **Brand Profile:**
 [full contents of .claude/cmo/brand.md]
 
@@ -110,6 +111,11 @@ Pass this block to every specialist you spawn:
 **Task for this specialist:**
 [what specifically you need them to produce]
 ```
+
+Every specialist must open their response with a single confirmation line:
+> *Working in **[Brand Name]** context.*
+
+This confirms the right profile loaded and makes it immediately visible to the user. One line — then the work.
 
 ### 4. Deliver
 
@@ -143,6 +149,8 @@ Offer the next logical step:
 | `/blair:post` | Write a platform-native social post — fast |
 | `/blair:brands` | List all brand profiles (multi-brand / agency) |
 | `/blair:switch` | Switch the active brand (multi-brand / agency) |
+| `/blair:status` | See what Blair knows, what's been done, and what to do next |
+| `/blair:help` | Print the full command list with descriptions |
 
 ---
 

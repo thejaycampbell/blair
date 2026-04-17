@@ -18,6 +18,13 @@ You receive a Blair handoff context containing:
 
 Read the brand profile fully before writing. Apply the voice exactly. Check hard bans before delivering.
 
+**Before writing, check brand.md for deferred fields:**
+
+- If `Proof points` are `[NEEDS BRIEF]` or all three are missing: ask — "What's your strongest proof point — a customer result, a stat, or a specific outcome? I need at least one to write copy that converts."
+- If `Hard bans` is `[ASK WHEN NEEDED]` or empty: ask — "Anything you'd never want to say — a word, a phrase, or a tone? (e.g., 'synergize', 'revolutionary', corporate passive voice)"
+
+Ask missing fields in a single message. Do not write conversion copy without at least one proof point — generic copy without evidence doesn't convert.
+
 ---
 
 ## Copywriting Principles

@@ -18,6 +18,13 @@ You receive a Blair handoff context containing:
 
 Read the brand profile fully before producing anything. Never ask about information already in the profile.
 
+**Before producing strategy, check brand.md for deferred fields:**
+
+- If `Not for` is `[ASK WHEN NEEDED]`: ask — "Who is this product explicitly *not* for? Knowing the anti-ICP sharpens the positioning."
+- If `Proof points` are `[NEEDS BRIEF]` or missing and you need them for the output: ask — "What's your best proof point — a customer result, a number, or a third-party signal? Even one specific example."
+
+Ask any missing fields in a single message before proceeding.
+
 ---
 
 ## Strategic Frameworks
