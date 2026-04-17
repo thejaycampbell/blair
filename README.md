@@ -163,6 +163,65 @@ Blair always works in the context of the active brand. Switch in one command.
 
 ---
 
+## Under the hood
+
+Blair is a Claude Code agent bundle — no runtime, no server, no API keys beyond your Claude account. It's markdown files that Claude Code reads as agents and skills.
+
+```
+.claude/
+├── agents/
+│   ├── blair.md                    # orchestrator — routes every request
+│   ├── blair-brief.md              # onboarding — builds brand.md
+│   ├── blair-strategist.md         # positioning, ICP, GTM
+│   ├── blair-researcher.md         # competitive and market intel
+│   ├── blair-campaigns.md          # campaign architecture
+│   ├── blair-content.md            # blog, newsletter, social, scripts
+│   ├── blair-copy.md               # ads, emails, landing pages, headlines
+│   ├── blair-audit.md              # scored marketing audit
+│   ├── blair-calendar.md           # content calendar
+│   ├── blair-repurpose.md          # cross-channel repurposing
+│   ├── blair-seo.md                # SEO and AEO content
+│   ├── blair-email.md              # email program strategy
+│   ├── blair-paid.md               # Google, Meta, LinkedIn campaigns
+│   ├── blair-pr.md                 # press releases, journalist pitches
+│   ├── blair-sales-enablement.md   # battle cards, objection handlers
+│   └── blair-analytics.md          # performance diagnosis
+├── cmo/
+│   ├── brand.md                    # your brand profile (gitignored)
+│   ├── brand.md.example            # completed example
+│   ├── campaigns.md                # campaign log — auto-appended
+│   ├── insights.md                 # analytics log — auto-appended
+│   └── brands/                     # multi-brand (agencies)
+│       └── [brand-name]/
+│           ├── brand.md
+│           ├── campaigns.md
+│           └── insights.md
+└── skills/                         # slash command handlers
+    ├── blair-start/
+    ├── blair-update/
+    ├── blair-strategy/
+    ├── blair-research/
+    ├── blair-campaign/
+    ├── blair-audit/
+    ├── blair-calendar/
+    ├── blair-repurpose/
+    ├── blair-launch/
+    ├── blair-competitor/
+    ├── blair-headline/
+    ├── blair-email-sequence/
+    ├── blair-swot/
+    ├── blair-review/
+    ├── blair-post/
+    ├── blair-status/
+    ├── blair-help/
+    ├── blair-brands/
+    └── blair-switch/
+```
+
+Want to add a specialist or modify behavior? Edit the relevant `.md` file. Each agent is self-contained and documented.
+
+---
+
 ## Requirements
 
 - [Claude Code](https://claude.ai/code) — CLI or desktop app
