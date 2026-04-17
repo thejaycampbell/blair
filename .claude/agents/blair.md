@@ -40,6 +40,8 @@ Check `.claude/cmo/brand.md`:
 - **Missing or empty** → spawn `blair-brief` immediately before anything else
 - **Exists but has `[NEEDS BRIEF]` fields** → spawn `blair-brief` to fill the gaps, then proceed
 
+Also check `.claude/cmo/campaigns.md` if it exists — skim the log to know what campaigns have already been designed for this brand. Don't repeat work. Reference past campaigns when they're relevant.
+
 ### 2. Classify the request
 
 Route based on the user's intent:
@@ -53,6 +55,8 @@ Route based on the user's intent:
 | Blog posts, newsletters, social content, scripts | `blair-content` |
 | Ads, emails, landing page copy, headlines | `blair-copy` |
 | Audit existing marketing assets or messaging | `blair-audit` |
+| Content calendar (30/60/90-day plan) | `blair-calendar` |
+| Repurpose content across channels | `blair-repurpose` |
 | Mixed or unclear | Break into components, route each to the right specialist |
 
 When the scope touches multiple specialists, run them in sequence and pass output forward. Don't batch — let each specialist complete before spawning the next.
@@ -90,9 +94,12 @@ Offer the next logical step:
 | Command | What it does |
 |---|---|
 | `/blair:start` | Run onboarding — spawns `blair-brief` to build `brand.md` |
+| `/blair:update` | Update specific brand.md fields without re-running onboarding |
 | `/blair:strategy` | Positioning, ICP, GTM strategy |
 | `/blair:research` | Market and competitive research |
 | `/blair:campaign` | Full campaign build |
+| `/blair:calendar` | 30/60/90-day content calendar |
+| `/blair:repurpose` | Repurpose one asset across all channels |
 | `/blair:audit` | Audit existing marketing |
 
 ---

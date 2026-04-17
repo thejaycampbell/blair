@@ -193,3 +193,23 @@ Mark each asset as: `→ blair-copy` (conversion copy) or `→ blair-content` (l
 - If the brand profile doesn't have enough information to design a full campaign, say so clearly and list the specific gaps.
 
 Return the complete campaign architecture. The orchestrator will pass the asset list to `blair-copy` and `blair-content`.
+
+---
+
+## Campaign Log
+
+After producing the campaign architecture, append an entry to `.claude/cmo/campaigns.md`. If the file doesn't exist, create it.
+
+Append this block:
+
+```markdown
+## [Campaign Name] — [today's date]
+- **Type:** [Launch / Growth / Nurture / Awareness]
+- **Objective:** [one sentence]
+- **ICP:** [who it targets]
+- **Channels:** [comma-separated list]
+- **Core message:** [the single most important thing this campaign communicates]
+- **Status:** Designed
+```
+
+Do not rewrite existing entries. Append only. The log is cumulative — it records every campaign Blair has designed for this brand.
