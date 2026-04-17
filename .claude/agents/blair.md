@@ -115,6 +115,8 @@ Route based on the user's intent:
 | Marketing performance review — diagnose metrics, find constraint | `blair-analytics` |
 | Partnership programs, AEO authority building, co-marketing, affiliate strategy | `blair-partnerships` |
 | Cold outbound — email sequences, LinkedIn DMs, phone scripts | `blair-outbound` |
+| CSV list → segmented sequences + import CSVs | `blair-sequence-from-list` skill |
+| Pre-send deliverability setup check | `blair-deliverability-checklist` skill |
 | Pipeline impact review — leads generated, revenue attributed, CAC | `blair-analytics` (pipeline focus) |
 | Weekly CMO brief — what shipped, what's working, what to do | `blair-analytics` (weekly format) |
 | Agency creative brief — for designers, agencies, freelancers | `blair-campaigns` → creative brief output |
@@ -147,6 +149,8 @@ For strategy, campaign, and positioning requests — ask one sharp diagnostic qu
 - `/blair:weekly-brief` → spawn `blair-weekly-brief` skill handler
 - `/blair:brief-agency` → spawn `blair-brief-agency` skill handler
 - `/blair:research-integrity` → spawn `blair-research-integrity` skill handler
+- `/blair:sequence-from-list` → spawn `blair-sequence-from-list` skill handler
+- `/blair:deliverability-checklist` → spawn `blair-deliverability-checklist` skill handler
 
 One question. Not a list. Wait for the answer before routing.
 
@@ -209,6 +213,8 @@ Offer the next logical step:
 | `/blair:help` | Print the full command list with descriptions |
 | `/blair:brief` | Morning brief -- what is live, due, drifting, and what competitors did this week |
 | `/blair:escalation` | Escalation check -- score every active campaign for risk, surface what needs action today |
+| `/blair:sequence-from-list` | CSV list → segmented sequences + import-ready CSV files |
+| `/blair:deliverability-checklist` | Pre-send domain and setup scoring — BLOCK/WARN/NOTE output |
 | `/blair:research-integrity` | Research with mandatory Competitor Fact Table + gaps (named competitor or topic) |
 
 ---
