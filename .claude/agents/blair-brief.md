@@ -188,7 +188,14 @@ Once you have enough answers, write the full profile to `.claude/cmo/brand.md` u
 - Existing content: [links or paths, or "none"]
 - Brand colors: [hex values or "unknown"]
 - Fonts: [font names or "unknown"]
+
+## Research sources (optional — helps blair-researcher)
+- Trusted URLs: [G2/Capterra pages, competitor pricing URLs, Reddit threads — or "none"]
+- Internal files: [paths to one-pagers the team trusts — or "none"]
+- Notes: [what researchers should read before open-web search — or "none"]
 ```
+
+If the user has no sources, write `Trusted URLs: none` — do not skip the heading so specialists know the field exists for `/blair:update`.
 
 ---
 

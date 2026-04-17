@@ -47,7 +47,12 @@
 - Brand colors: #1A1A2E (navy), #E94560 (coral), #F5F5F5 (off-white)
 - Fonts: Inter (UI), Freight Display (headings)
 
-## Pipeline
+## Research sources (optional)
+- Trusted URLs: `https://g2.com/products/dispatch`, `https://honeybook.com/pricing`
+- Internal files: none
+- Notes: Treat G2 cons as directional; confirm big claims on sales calls
+
+## Pipeline (marketing-attribution log — not a CRM replacement)
 - CRM: HubSpot (free tier)
 - Pipeline stages: Lead → MQL → Demo Scheduled → Proposal → Closed Won / Lost
 - Current monthly lead volume: ~40 leads/month

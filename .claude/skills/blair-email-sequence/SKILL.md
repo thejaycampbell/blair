@@ -92,6 +92,18 @@ After the sequence is written, add a send schedule table:
 
 ---
 
+## Graceful degradation (Gmail / automation)
+
+If the user has **no** Gmail draft integration or MCP mail tool:
+
+1. Deliver the **full sequence in chat** with clear labels: **Subject:**, **Body:**, **CTA link:** for each email.
+2. Say explicitly: *"Copy into your ESP or Gmail. Blair did not send mail."*
+3. Do not imply drafts were created in Google unless a tool confirmed success.
+
+See `docs/setup-gmail-calendar.md` in the Blair repo for optional Google setup.
+
+---
+
 ## Standards
 
 - One idea per email. One CTA per email. No stacking.

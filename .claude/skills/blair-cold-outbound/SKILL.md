@@ -68,5 +68,9 @@ Build a cold outbound sequence.
 
 Confirm the sequence was logged to `.claude/cmo/pipeline.md`.
 
+If **no** mail-sending or draft tool ran successfully, ensure the user still has **copy-paste-ready** full text for every email and LinkedIn message. Say: *"Paste into your sequencer or inbox. Blair did not send on your behalf."*
+
 Offer:
 > "Want me to also build a `/blair:pipeline-impact` baseline so you can track replies and revenue attributed to this sequence?"
+
+See `docs/setup-gmail-calendar.md` in the Blair repo for optional Google setup.

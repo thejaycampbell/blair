@@ -26,7 +26,7 @@ Blair handles any marketing ask. Tell it what you need, or use a slash command.
 | Command | What it does |
 |---|---|
 | `/blair:start` | Set up your brand profile (run once — or once per brand) |
-| `/blair:update` | Update specific brand profile fields |
+| `/blair:update` | Update specific brand profile fields (`icp`, `competitors`, `goals`, `voice`, `positioning`, `sources`, …) |
 | `/blair:status` | See what Blair knows and what's been done |
 | `/blair:brands` | List all brand profiles (agencies) |
 | `/blair:switch` | Switch the active brand (agencies) |

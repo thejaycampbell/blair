@@ -4,7 +4,38 @@ Most founders are better at building than marketing. Blair bridges the gap.
 
 Blair is an open-source CMO agent for [Claude Code](https://claude.ai/code). Answer 6 questions once. Blair learns your brand — your ICP, your voice, your competitors, your positioning. Every marketing ask after that gets a real, brand-specific answer. Not a generic one.
 
-v3.0 adds a revenue layer — cold outbound sequences, pipeline tracking, weekly briefs, and agency-ready creative briefs — so Blair connects marketing activity to business outcomes, not just output.
+v3.0 adds a revenue layer — cold outbound sequences, a **marketing-attribution log** (see `.claude/cmo/pipeline.md`), weekly briefs, and agency-ready creative briefs — so Blair connects marketing activity to business outcomes, not just output.
+
+---
+
+## What Blair is / isn’t
+
+**Blair is for:** positioning and messaging, campaign and content plans, copy and sequences, competitive research and battle cards, audits, calendars, creative briefs, and **structured logs** you use to interpret performance.
+
+**Blair is not:** a CRM system of record, a lead database, email verification, dialers, or legal/compliance automation for outbound. Use your existing sales and data stack for those jobs. See [docs/integrations-playbook.md](docs/integrations-playbook.md).
+
+**One sentence:** Blair helps you **say the right things** to the market and keep memory in one place; it does not replace **finding prospects** or **storing opportunities**.
+
+---
+
+## Results
+
+Documented, anonymized examples with metrics and caveats: [docs/case-studies/README.md](docs/case-studies/README.md). To reproduce the measurement pattern: [docs/measurement-playbook.md](docs/measurement-playbook.md).
+
+---
+
+## Documentation
+
+| Doc | Purpose |
+|-----|---------|
+| [Security and data](docs/security-and-data.md) | What stays local, what leaves your machine, enterprise limits |
+| [Agency governance](docs/agency-governance.md) | Multi-brand ownership and offboarding |
+| [Integrations playbook](docs/integrations-playbook.md) | How Blair pairs with lists, CRM, calendar |
+| [Setup: Gmail / Calendar](docs/setup-gmail-calendar.md) | Optional Google wiring and fallbacks |
+| [Manual testing](docs/testing.md) | Maintainer smoke checklist |
+| [Roadmap](docs/roadmap.md) | Non-binding future directions |
+| [Partner one-pager](docs/partner-one-pager.md) | Short external summary |
+| [Contributing](CONTRIBUTING.md) | How to contribute and triage |
 
 ---
 
@@ -71,7 +102,7 @@ Ask Blair for objection handlers and it produces exact scripts: what to say, wha
 `/blair:cold-outbound VP of Sales at Series B SaaS` writes a full 7-touch cold email sequence and a 5-touch LinkedIn DM sequence — personalized to that ICP, optimized for reply rate. Logs to your pipeline tracker automatically.
 
 **Want to know if your marketing is actually driving revenue**
-`/blair:pipeline-impact` connects the dots between campaigns you've run and pipeline generated. Leads in, opportunities created, revenue attributed. Works with whatever CRM data you can share — even rough numbers.
+`/blair:pipeline-impact` connects **your** campaign log and **numbers you provide** (CRM export, spreadsheet, or rough estimates) into a structured review. It does **not** auto-sync your CRM. Attribution stays honest: see the skill and [docs/measurement-playbook.md](docs/measurement-playbook.md).
 
 **Starting your week**
 `/blair:weekly-brief` reads everything Blair knows — active campaigns, outbound sequences, last performance review — and tells you the three things to do this week. Proactive, not reactive.
@@ -155,7 +186,7 @@ Blair asks 6 questions, one at a time. Writes your brand profile. Ready.
 
 | Command | What it does |
 |---|---|
-| `/blair:pipeline-impact` | Connect marketing outputs to revenue — leads, pipeline, deals, CAC |
+| `/blair:pipeline-impact` | Marketing-attribution review — connects your logs + numbers you share to revenue story (not CRM sync) |
 | `/blair:weekly-brief` | Monday CMO standup — what shipped, what's performing, what's next |
 
 **Outbound**
@@ -258,12 +289,23 @@ Blair is a Claude Code agent bundle — no runtime, no server, no API keys beyon
 
 Want to add a specialist or modify behavior? Edit the relevant `.md` file. Each agent is self-contained and documented.
 
+**Repository docs** (case studies, security, measurement): see the `docs/` folder in this repo.
+
 ---
 
 ## Requirements
 
 - [Claude Code](https://claude.ai/code) — CLI or desktop app
 - Claude account — free tier covers most tasks
+
+---
+
+## Portability and lock-in
+
+- **Your brand profile and logs are plain markdown** under `.claude/cmo/`. You can copy them into another project or paste relevant sections into any chat UI.
+- **Blair’s logic is files in this repo** (`agents/`, `skills/`). There is no separate Blair runtime.
+- **Anthropic / Claude Code** is the execution environment today. See [docs/roadmap.md](docs/roadmap.md) for non-binding future ideas.
+- **Versioned changes:** [CHANGELOG.md](CHANGELOG.md).
 
 ---
 

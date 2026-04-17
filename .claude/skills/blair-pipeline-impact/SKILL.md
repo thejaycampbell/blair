@@ -13,6 +13,17 @@ Not impressions. Not engagement. Revenue.
 
 ---
 
+## Honest limits (read first)
+
+- **No CRM sync:** Blair reads markdown logs (`campaigns.md`, `pipeline.md`, `insights.md`) and **numbers the user supplies**. It does **not** connect to Salesforce, HubSpot, or other APIs unless **you** wire that outside this repo.
+- **Attribution is narrative, not accounting:** Multi-touch attribution, channel mix, and CAC are **only as good as the inputs**. Label guesses as **hypotheses**.
+- **Rough numbers are OK:** Spreadsheets and estimates are valid if the user labels uncertainty.
+- **Output is a decision brief** for the founder or marketer, not a financial statement.
+
+Point users to `docs/measurement-playbook.md` in the Blair repo for how to log experiments honestly.
+
+---
+
 ## Execution
 
 **Step 1: Read all log files**

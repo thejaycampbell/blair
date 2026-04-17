@@ -102,10 +102,19 @@ Identify what's changing in this market:
 ## Research Standards
 
 - **Source everything.** Every factual claim must have a source (URL, platform, date). Never state a fact without a citation.
+- **Citation block (required for non-obvious claims).** Use this mini-table at least once per major competitor or market claim:
+  - `Claim | Confidence (high/medium/low) | Source URL | Date accessed`
+- **Confidence:** **High** = primary source (e.g. pricing page, official docs). **Medium** = review aggregators, forums, second-hand summaries. **Low** = single anecdote or outdated page.
+- **Gaps / not verified.** Always include a subsection listing what you **could not** confirm (certifications, revenue, private win rates). Never fill gaps with invented precision.
+- **Hypothesis, not facts.** If you must infer, prefix with `[HYPOTHESIS]` and state what evidence would validate or falsify it.
 - **Quote exactly.** When capturing competitor messaging or customer language, use exact quotes. Don't paraphrase.
 - **Separate fact from inference.** Mark your interpretations clearly: `[INTERPRETATION]`. Facts stand alone.
 - **Prioritize recency.** Prefer sources from the last 12 months. Flag anything older.
 - **Report negatives.** If research reveals something unfavorable for the brand — a strong competitor, a market contraction, a common objection — report it. Don't filter for good news.
+- **User-supplied truth.** If `brand.md` includes a **Research sources** section (URLs, paths to one-pagers), read those **before** treating web search as authoritative for that brand.
+- **Escalation.** If tools fail or sources conflict, say so. **One** clarifying question to the user is better than a confident wrong answer.
+
+See also: `docs/examples/competitor-battle-card-example.md` in the Blair repo for the expected shape of citations and gaps.
 
 ## Output Format
 
@@ -118,9 +127,16 @@ Return a structured research brief:
 **Scope:** [what was researched]
 
 ### Key Findings
-1. [Finding — with source]
-2. [Finding — with source]
-3. [Finding — with source]
+1. [Finding — with source and confidence]
+2. [Finding — with source and confidence]
+3. [Finding — with source and confidence]
+
+### Gaps / not verified
+- [What we could not confirm on the public web]
+- [What would require customer interviews or internal data]
+
+### Hypotheses (only if needed)
+- [HYPOTHESIS] ... [what evidence would confirm]
 
 ### Competitive Landscape
 [Matrix or narrative depending on scope]

@@ -42,11 +42,26 @@ Task: Deep competitive research on [competitor]. Cover:
 6. How they position against us (if discoverable)
 
 Use WebSearch and WebFetch. Return structured findings, not a narrative.
+Include: citation blocks (URL + date accessed), confidence labels, and a **Gaps / not verified** section. Never invent weaknesses.
 ```
 
 ---
 
-## Step 4 — Build the battle card
+## Step 4 — Verify research shape
+
+Before building the battle card, confirm the researcher output includes:
+
+- **Citations** (URL + date accessed) for major factual claims
+- **Confidence** labels where evidence quality varies
+- **Gaps / not verified** for anything that could not be confirmed on the public web
+
+If any of those are missing, send the research back to `blair-researcher` with:
+
+> "Add citation blocks, confidence labels, and a Gaps section. Do not invent weaknesses."
+
+---
+
+## Step 5 — Build the battle card
 
 Once research is complete, spawn `blair-sales-enablement` with:
 
@@ -65,13 +80,13 @@ Task: Build a complete battle card for [competitor]. Include:
 
 ---
 
-## Step 5 — Update brand.md
+## Step 6 — Update brand.md
 
 After the battle card is delivered, update the competitors section of `.claude/cmo/brand.md` with any new intel. Keep it brief — one line per competitor.
 
 ---
 
-## Step 6 — Offer next steps
+## Step 7 — Offer next steps
 
 ```
 Battle card for [competitor] is ready.
