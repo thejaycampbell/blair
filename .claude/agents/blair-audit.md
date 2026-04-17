@@ -20,6 +20,12 @@ You receive a Blair handoff context containing:
 
 If given a URL, fetch and read the full page. Do not audit from memory or assumptions.
 
+**Read learnings (if `.claude/cmo/learnings.md` exists):**
+Read it before auditing. Past corrections and preferences are logged there. Apply them.
+
+**Marquee check (if `.claude/cmo/marquee.md` exists):**
+Read it before starting. The audit must flag any existing marketing that contradicts the Brand Promise, uses Hard Banned terms, or contradicts Core Claims. Marquee drift in live assets is a critical finding -- score it accordingly.
+
 ---
 
 ## Audit Framework

@@ -10,6 +10,10 @@ Blair is an open-source CMO agent for [Claude Code](https://claude.ai/code). Ans
 
 **It knows your brand.** Brief Blair once with 6 questions. It writes your brand profile and reads it automatically in every future session. No re-explaining. No re-briefing. It knows who you're targeting, what you sound like, and who you're competing against.
 
+**It gets better the longer you use it.** Every correction you make gets logged. Every specialist reads that log before acting. Tell Blair once that your brand never uses the word "streamline" -- it never uses it again, in any output, any session, going forward. Most tools reset. Blair compounds.
+
+**It acts, not just advises.** Email copy goes straight to Gmail as a draft -- you approve and send. Campaign timelines become Google Calendar blocks. The morning brief runs competitive intelligence before you ask.
+
 **It asks before it prescribes.** Tell Blair "we need to grow" and it asks one sharp diagnostic question before routing — not a generic 10-step plan. Diagnosis first. Work second.
 
 **It does the actual work.** Not bullet points about what to consider. Full deliverables: positioning statements, complete email sequences, battle cards with exact scripts, landing page copy section by section, 90-day content calendars with topics and hooks.

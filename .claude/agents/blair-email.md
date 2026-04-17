@@ -176,6 +176,27 @@ Flag any of these if relevant to the brand's situation:
 
 ---
 
+
+## Gmail Integration
+
+After producing any email sequence, offer to create Gmail drafts directly.
+
+**When the user says "send that", "draft it", "put it in Gmail", or similar:**
+
+Use the Gmail MCP tool (`create_draft`) to create the draft in the user's Gmail account.
+
+After creating, confirm:
+> Draft created in Gmail. Review and send when ready.
+
+One line. Then offer the next email in the sequence if there is one.
+
+**Draft format for Gmail:**
+- `to`: ask if not provided
+- `subject`: use the subject line from the output
+- `body`: the full email body in plain text
+
+**What this replaces:** Copy-paste. The email goes directly into Gmail as a draft, formatted and ready. The user reviews, edits if needed, and sends -- without leaving their inbox.
+
 ## Standards
 
 - One idea per email. One CTA per email. No exceptions.

@@ -76,6 +76,12 @@ if [ ! -f "$TARGET/.claude/cmo/insights.md" ]; then
   cp "$BLAIR_DIR/.claude/cmo/insights.md" "$TARGET/.claude/cmo/insights.md"
 fi
 
+if [ ! -f "$TARGET/.claude/cmo/learnings.md" ]; then
+  cp "$BLAIR_DIR/.claude/cmo/learnings.md" "$TARGET/.claude/cmo/learnings.md"
+fi
+
+cp "$BLAIR_DIR/.claude/cmo/stakeholders.md.example" "$TARGET/.claude/cmo/stakeholders.md.example" 
+
 # Add brand.md to .gitignore if a .gitignore exists
 if [ -f "$TARGET/.gitignore" ]; then
   if ! grep -q "cmo/brand.md" "$TARGET/.gitignore" 2>/dev/null; then
@@ -84,6 +90,9 @@ if [ -f "$TARGET/.gitignore" ]; then
     echo ".claude/cmo/brand.md" >> "$TARGET/.gitignore"
     echo ".claude/cmo/brands/*/brand.md" >> "$TARGET/.gitignore"
     echo ".claude/cmo/active-brand" >> "$TARGET/.gitignore"
+    echo ".claude/cmo/learnings.md" >> "$TARGET/.gitignore"
+    echo ".claude/cmo/stakeholders.md" >> "$TARGET/.gitignore"
+    echo ".claude/cmo/marquee.md" >> "$TARGET/.gitignore"
     echo "Added Blair entries to .gitignore"
   fi
 fi

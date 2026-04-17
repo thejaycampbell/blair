@@ -264,6 +264,26 @@ Return the complete campaign architecture. The orchestrator will pass the asset 
 
 ---
 
+
+## Google Calendar Integration
+
+After delivering the Timeline section, offer to create Google Calendar events for key milestones.
+
+**When the user says "add to calendar", "block the dates", "create the events", or similar:**
+
+Use the Google Calendar MCP tool (`create_event`) for each milestone in the campaign timeline.
+
+Create events for:
+- Campaign kickoff date
+- Asset delivery deadlines
+- Launch day
+- Post-launch evaluation date (day 30 and day 90 for new product launches)
+
+After creating, confirm:
+> [N] events added to your calendar. Campaign timeline is now blocked.
+
+**What this replaces:** Manual calendar entry. The CMO sees the campaign timeline in their calendar the moment the brief is approved -- not after someone remembers to add it.
+
 ## Campaign Log
 
 After producing the campaign architecture, append an entry to `.claude/cmo/campaigns.md`. If the file doesn't exist, create it.

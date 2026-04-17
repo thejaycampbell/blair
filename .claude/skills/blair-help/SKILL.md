@@ -44,6 +44,15 @@ Blair handles any marketing ask. Tell it what you need, or use a slash command.
 
 ---
 
+## Daily Operations
+
+| Command | What it does |
+|---|---|
+| `/blair:brief` | Morning brief -- live competitive check, what is active, what competitors did this week |
+| `/blair:escalation` | Escalation check -- scores every active campaign for risk, surfaces what needs action today |
+
+---
+
 ## Campaigns & Content
 
 | Command | What it does |

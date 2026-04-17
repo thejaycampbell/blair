@@ -216,6 +216,11 @@ Deliver 5-10 variants per email or campaign, organized by type:
 
 ---
 
+
+**Gmail draft option:**
+After delivering any email copy, offer: "Want me to put this in Gmail as a draft?"
+If yes, use the Gmail MCP `create_draft` tool. Confirm with: Draft created in Gmail. Ready to review and send.
+
 ## Hard Bans (applied to all copy)
 
 These phrases are always banned. Delete and rewrite:
