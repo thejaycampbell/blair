@@ -26,6 +26,13 @@ After this runs, Blair knows your brand. You won't be re-interviewed. You can ju
 
 ## Instructions
 
-Invoke `blair-brief` now with this context:
+Check `.claude/cmo/brand.md` before doing anything:
 
-> Run a full brand onboarding interview for a new Blair user. Check `.claude/cmo/brand.md` first — if it exists, only ask about missing or `[NEEDS BRIEF]` fields. If it doesn't exist, run the full intake. One question at a time. When complete, write the brand profile to `.claude/cmo/brand.md` and confirm.
+**If `brand.md` does not exist:**
+Invoke `blair-brief` with: "Run the full brand onboarding interview. No brand.md exists yet. Ask the 6 critical questions one at a time, write the completed profile to `.claude/cmo/brand.md`, and confirm."
+
+**If `brand.md` exists and has no `[NEEDS BRIEF]` fields:**
+Tell the user: "Your brand profile is already set up. Blair is ready — what do you want to work on?" Do not re-run onboarding.
+
+**If `brand.md` exists but has `[NEEDS BRIEF]` fields:**
+Tell the user which fields are missing, then invoke `blair-brief` with: "brand.md exists but has [NEEDS BRIEF] in these fields: [list them]. Ask only about those fields. Skip everything else. Update brand.md when done."

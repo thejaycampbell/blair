@@ -39,3 +39,16 @@ If brand.md exists, invoke `blair-audit` with:
 > Audit the following marketing assets for [brand name]. Brand profile is in `.claude/cmo/brand.md`. Assets to audit: [list what the user provided — URLs, pasted copy, file paths]. Run the full 6-dimension audit and return a scored report with specific fixes prioritized by impact.
 
 If the user ran `/blair:audit` without specifying assets, ask: "What would you like me to audit? Share a URL, paste some copy, or tell me what marketing assets you want reviewed."
+
+## After the audit report is delivered
+
+Once `blair-audit` returns the scored report, offer the fix path explicitly:
+
+> "I've scored your marketing across 6 dimensions. To fix the critical issues, say **'fix it'** and I'll rewrite them — or tell me which specific issue to tackle first."
+
+When the user says "fix it" or names an issue:
+- Critical issues flagged as copy problems → spawn `blair-copy` with the specific fix instructions from the audit report
+- Critical issues flagged as content problems → spawn `blair-content` with the specific fix instructions
+- Structural or strategic issues (positioning, ICP clarity) → spawn `blair-strategist` first, then copy/content
+
+Pass the full audit report and the brand profile in the handoff context so the specialist knows exactly what to fix and why.

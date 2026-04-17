@@ -19,32 +19,43 @@ Check `.claude/cmo/brand.md`:
 
 Ask one question per message. Wait for the answer before asking the next. Keep questions conversational — you are a CMO learning about a brand, not filling out a form.
 
+### Critical questions (always ask these 6 first)
+
 Ask in this order, adapting based on answers you've already received:
 
 1. **Product** — "What does [product/brand name] do, and who is it for?"
-2. **Stage** — "Where are you right now — pre-launch, just launched, or actively growing?"
-3. **ICP** — "Who is your ideal customer? Get as specific as you can — role, company size, what problem they're dealing with."
-4. **Not for** — "Who is this NOT for? What would make someone a bad fit?"
-5. **Differentiation** — "How are you different from what your ICP is using today? What's the one thing you lead with?"
-6. **Proof** — "What's the strongest proof point you have right now — a stat, a customer result, a case study?"
-7. **Voice** — "Describe your brand voice in 3 words. Then tell me one brand whose communication style you admire."
-8. **Hard bans** — "Are there words, phrases, or tones you never want to see in your marketing?"
-9. **Competitors** — "Who are your top 2-3 competitors? And what's your honest take on how you differ from each?"
-10. **Goal** — "What's your #1 marketing priority right now — awareness, acquisition, retention, or revenue?"
-11. **Channels** — "Which channels are you active on or planning to use?"
-12. **Constraints** — "Any hard constraints I should know about — budget, team size, timeline, things you've already tried that didn't work?"
+2. **ICP** — "Who is your ideal customer? Be specific — role, company size, what problem they're dealing with right now."
+3. **Differentiation** — "How are you different from what your ICP is using today? What's the one thing you lead with?"
+4. **Goal** — "What's your #1 marketing priority right now — awareness, acquisition, retention, or revenue?"
+5. **Competitors** — "Who are your top 2-3 competitors?"
+6. **Voice** — "Describe your brand voice in 3 words."
+
+After these 6, write the brand profile with what you have. Mark deferred fields as `[ASK WHEN NEEDED]` — not `[NEEDS BRIEF]`.
+
+### Deferred questions (ask only when the relevant specialist needs them)
+
+These are collected on-demand, not upfront:
+
+- **Stage** — ask before `blair-campaigns` if campaign type depends on it
+- **Not for** — ask before `blair-strategist` if ICP definition needs sharpening
+- **Proof** — ask before `blair-copy` if no proof points are available
+- **Hard bans** — ask before `blair-copy` or `blair-content` first run
+- **Channels** — ask before `blair-campaigns` if not obvious from context
+- **Constraints** — ask before `blair-campaigns` if budget/timeline affects channel choices
 
 ### Skipping and Inferring
 
-If the user's earlier answers already cover a question, skip it. For example:
-- If they named competitors in question 1, skip question 9.
-- If they described their ICP in detail in question 1, skip question 3 or just confirm.
+If the user's earlier answers already cover a question, skip it:
+- Named competitors in question 1? Skip question 5.
+- Described ICP in detail in question 1? Skip question 2 or confirm briefly.
 
 Don't ask for information you can already infer. Trust what you've learned.
 
 ### If a user skips or says "I don't know"
 
-Write `[NEEDS BRIEF]` for that field. Do not invent an answer. Blair will surface `[NEEDS BRIEF]` fields before running any specialist that depends on them.
+For critical fields: write `[NEEDS BRIEF]` — Blair will ask before running any specialist that depends on it.
+For deferred fields: write `[ASK WHEN NEEDED]` — Blair will collect it just-in-time.
+Never invent an answer.
 
 ---
 
