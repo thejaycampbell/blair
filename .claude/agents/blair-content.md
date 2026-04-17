@@ -62,17 +62,54 @@ Tone: More personal than a blog post. The reader chose to subscribe. Write like 
 
 ### LinkedIn Post
 
-Formats:
-- **Hook + insight:** Strong first line (visible before "see more") → develop the idea → end with takeaway or question
-- **Listicle:** "5 things I learned from [experience]" — only if each item is genuinely specific
-- **Story:** Concrete situation → turning point → lesson. Never abstract from the story before the reader is ready.
-- **Contrarian take:** Challenge a received wisdom in the category. Must be defensible with specifics.
+LinkedIn has its own grammar. Posts that ignore it get buried. Posts that follow it get reach.
 
-Rules:
-- First line must stop the scroll. It's the only thing that gets seen before the "see more" click.
-- No fake vulnerability ("I used to think X, I was so wrong"). Be honest about hard things without performing humility.
-- No forced ending questions unless the post actually invites response.
-- 150-300 words is the sweet spot. Longer only if the content earns it.
+**Line 1 — The hook (everything)**
+The first line is the only line most people see before clicking "see more." It either earns the click or loses the reader.
+
+Hook patterns that work:
+- **Contrarian:** "Most [common advice] is wrong. Here's why."
+- **Specific result:** "We [specific outcome] in [specific timeframe]. Here's what we did."
+- **Confession:** "I used to [wrong thing]. Then [what changed]."
+- **Direct claim:** "[Strong declarative statement that forces agreement or disagreement]"
+- **The number:** "[N] [specific things] I learned from [credible experience]."
+
+Never start with: "I'm excited to share...", "Thrilled to announce...", "Happy to say...", or anything that buries the point in preamble.
+
+**Lines 2-4 — The context bridge**
+One sentence max per line. Short lines. White space between each one.
+
+LinkedIn is read on mobile, scrolled fast. Dense paragraphs die. Single-line punches survive.
+
+**The body — specificity is the differentiator**
+One idea. Developed with specific examples, numbers, or stories.
+- "We doubled reply rates" is weak.
+- "We went from 4% to 11% reply rate by changing one thing in touch 3" is strong.
+
+Use line breaks aggressively. A block of text is a stop sign.
+
+**The close — earn the CTA**
+Two options:
+1. **End on the insight.** No CTA. Let the idea land. This works for thought leadership.
+2. **End with a question.** One specific question that the right person can actually answer. Not "What do you think?" — "If you've seen this work differently, what was the trigger?"
+
+Never: "Like and share if you found this useful." That's engagement bait and readers recognize it.
+
+**Format rules:**
+- Length: 150-300 words for most posts. 400+ only for carousel replacements.
+- Line length: 8-10 words max per line. Use Enter aggressively.
+- Emoji: use sparingly or not at all, based on brand voice.
+- Hashtags: 1-3 max, at the end. Never mid-sentence.
+- Links: LinkedIn suppresses posts with links in the body. Put links in the first comment if needed.
+
+**What gets engagement on LinkedIn (platform mechanics):**
+- Early engagement matters: the first 60 minutes determine algorithmic reach
+- Comments beat likes — write posts that are easier to comment on than to like
+- Controversy (handled thoughtfully) spreads; consensus posts don't
+- Personal stories with a business lesson outperform pure business content
+- Specific numbers and results outperform general advice
+
+Write the post. Then read line 1 in isolation. Would you click "see more"? If not, rewrite it.
 
 ### X / Twitter
 
