@@ -197,6 +197,8 @@ Blair asks 6 questions, one at a time. Writes your brand profile. Ready.
 | Command | What it does |
 |---|---|
 | `/blair:cold-outbound` | 7-touch cold email + 5-touch LinkedIn DM sequence optimized for reply rate |
+| `/blair:sequence-from-list` | CSV from Seamless, Apollo, or LinkedIn → segmented sequences + import-ready CSV files |
+| `/blair:deliverability-checklist` | Pre-send domain check — 6 questions, BLOCK/WARN/NOTE scored output |
 | `/blair:brief-agency` | Complete creative brief for agencies, freelancers, or internal creative teams |
 
 **Agencies**
@@ -252,7 +254,8 @@ Blair is a Claude Code agent bundle — no runtime, no server, no API keys beyon
 │   ├── blair-pr.md                 # press releases, journalist pitches
 │   ├── blair-sales-enablement.md   # battle cards, objection handlers
 │   ├── blair-analytics.md          # performance diagnosis
-│   └── blair-outbound.md           # cold outbound sequences (v3.0)
+│   ├── blair-outbound.md           # cold outbound sequences (v3.0)
+│   └── blair-list-processor.md     # CSV column mapping and segmentation (v3.1)
 ├── cmo/
 │   ├── brand.md                    # your brand profile (gitignored)
 │   ├── brand.md.example            # completed example
@@ -286,6 +289,8 @@ Blair is a Claude Code agent bundle — no runtime, no server, no API keys beyon
     ├── blair-brands/
     ├── blair-switch/
     ├── blair-cold-outbound/        # (v3.0)
+    ├── blair-sequence-from-list/   # (v3.1)
+    ├── blair-deliverability-checklist/ # (v3.1)
     ├── blair-pipeline-impact/      # (v3.0)
     ├── blair-weekly-brief/         # (v3.0)
     └── blair-brief-agency/         # (v3.0)

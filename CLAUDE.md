@@ -39,6 +39,8 @@ Blair will ask you 6 questions about your brand, then write a persistent profile
 | `/blair:brief` | Morning brief -- live competitive check + what needs attention today |
 | `/blair:escalation` | Escalation check -- scores every active campaign for risk |
 | `/blair:cold-outbound` | 7-touch cold email + 5-touch LinkedIn DM sequence optimized for reply rate |
+| `/blair:sequence-from-list` | CSV list → segmented sequences + import-ready CSV files |
+| `/blair:deliverability-checklist` | Pre-send domain check — BLOCK/WARN/NOTE scored output |
 | `/blair:pipeline-impact` | Connect marketing outputs to revenue — leads, pipeline, deals, CAC |
 | `/blair:weekly-brief` | Monday CMO standup — what shipped, what's performing, what's next |
 | `/blair:brief-agency` | Complete creative brief for agencies, freelancers, or internal creative teams |
