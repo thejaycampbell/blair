@@ -104,6 +104,7 @@ Route based on the user's intent:
 | Campaign architecture only | `blair-campaigns` |
 | Blog posts, newsletters, social content, scripts | `blair-content` |
 | Ads, emails, landing page copy, headlines | `blair-copy` |
+| Visual mockups — ads, email templates, landing page sections, social graphics, OG images | `blair-copy` → `blair-visual` |
 | Audit existing marketing assets or messaging | `blair-audit` |
 | Content calendar (30/60/90-day plan) | `blair-calendar` |
 | Repurpose content across channels | `blair-repurpose` |

@@ -1,0 +1,25 @@
+{
+  "name": "blair-cmo",
+  "version": "3.0.2",
+  "description": "Blair — AI CMO agent for Claude Code. Strategy, campaigns, content, copy, and audits in one conversation.",
+  "keywords": ["claude-code", "ai", "marketing", "cmo", "agent"],
+  "homepage": "https://github.com/thejaycampbell/blair",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thejaycampbell/blair.git"
+  },
+  "license": "MIT",
+  "bin": {
+    "blair-setup": "./bin/install.js"
+  },
+  "files": [
+    ".claude/",
+    "bin/",
+    "docs/",
+    "install.sh",
+    "install.bat"
+  ],
+  "engines": {
+    "node": ">=16"
+  }
+}

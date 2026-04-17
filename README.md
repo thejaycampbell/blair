@@ -4,7 +4,7 @@ Most founders are better at building than marketing. Blair bridges the gap.
 
 Blair is an open-source CMO agent for [Claude Code](https://claude.ai/code). Answer 6 questions once. Blair learns your brand — your ICP, your voice, your competitors, your positioning. Every marketing ask after that gets a real, brand-specific answer. Not a generic one.
 
-v3.0 adds a revenue layer — cold outbound sequences, a **marketing-attribution log** (see `.claude/cmo/pipeline.md`), weekly briefs, and agency-ready creative briefs — so Blair connects marketing activity to business outcomes, not just output.
+v3.1 adds: one-command install (no git required), real pipeline attribution from CRM exports, HTML visual mockups for ads and email, and audit fixes applied directly to project files — no copy-paste loop.
 
 ---
 
@@ -116,27 +116,30 @@ Ask Blair for objection handlers and it produces exact scripts: what to say, wha
 
 ## Quick Start
 
-**1. Clone**
+**Mac / Linux — one command, no git required:**
+```bash
+curl -fsSL https://raw.githubusercontent.com/thejaycampbell/blair/main/install.sh | bash
+```
+
+**Windows — one command in PowerShell:**
+```powershell
+irm https://raw.githubusercontent.com/thejaycampbell/blair/main/install.ps1 | iex
+```
+
+**npm / npx (all platforms):**
+```bash
+npx blair-cmo
+```
+
+Each installer asks where your project lives, merges safely with any existing `.claude` directory, and adds the brand profile to `.gitignore`.
+
+**Prefer git?**
 ```bash
 git clone https://github.com/thejaycampbell/blair
-cd blair
+bash blair/install.sh /path/to/your/project
 ```
 
-**2. Install into your project**
-```bash
-bash install.sh /path/to/your/project
-```
-Windows: `install.bat C:\path\to\your\project`
-
-The installer merges safely with any existing `.claude` directory and adds the brand profile to `.gitignore`.
-
-**3. Open in Claude Code**
-```bash
-cd /path/to/your/project
-claude
-```
-
-**4. Run onboarding**
+**Then open your project in Claude Code and run onboarding:**
 ```
 /blair:start
 ```
@@ -183,13 +186,14 @@ Blair asks 6 questions, one at a time. Writes your brand profile. Ready.
 | `/blair:headline` | 10 headline variations for any surface |
 | `/blair:email-sequence` | Full email sequence for any trigger |
 | `/blair:review` | Scored copy review with rewrites |
-| `/blair:audit` | Full marketing audit with scored report |
+| `/blair:audit` | Full marketing audit — scored report + applies fixes directly to project files |
+| `/blair:mockup` | HTML visual mockup — ads, email templates, landing page sections, social graphics |
 
 **Revenue & Pipeline**
 
 | Command | What it does |
 |---|---|
-| `/blair:pipeline-impact` | Marketing-attribution review — connects your logs + numbers you share to revenue story (not CRM sync) |
+| `/blair:pipeline-impact` | Real attribution from CRM CSV export (HubSpot, Salesforce, Pipedrive, or manual) |
 | `/blair:weekly-brief` | Monday CMO standup — what shipped, what's performing, what's next |
 
 **Outbound**

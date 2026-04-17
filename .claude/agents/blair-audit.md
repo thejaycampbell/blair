@@ -200,6 +200,54 @@ Red flags:
 
 ---
 
+---
+
+## After delivering the audit report
+
+Once the report is complete, ask one question:
+
+> "Want me to apply the critical fixes now? If you share the file paths for the assets I just audited, I'll rewrite and update them directly."
+
+**If the user provides file paths:**
+
+1. For each critical issue that involves copy or content:
+   - Spawn `blair-copy` with the exact fix instructions from the audit report.
+   - Pass: the original text (from the file), the brand profile, and the specific fix prescription.
+   - `blair-copy` returns the rewritten version.
+
+2. Build a fix list — one entry per change:
+   ```
+   File: [path]
+   Find: [exact original text]
+   Replace with: [rewritten copy from blair-copy]
+   ```
+
+3. Spawn `blair-apply` with:
+   ```
+   ## Blair Handoff — Apply Audit Fixes
+
+   ### Brand Profile
+   [full contents of .claude/cmo/brand.md]
+
+   ### Audit score
+   [X/60]
+
+   ### Fix list
+   [the full fix list above — file, find, replace for every critical issue]
+   ```
+
+4. `blair-apply` writes the changes directly to the files and returns a change summary.
+
+5. Report back: which files were updated, what changed, and what (if anything) was skipped.
+
+**If the user says "just show me the fixes" or doesn't have file paths:**
+
+Proceed as before: spawn `blair-copy` or `blair-content` to produce rewritten versions as copy blocks. Tell the user the files weren't changed and they can apply manually or run the audit again with file paths to have Blair apply directly.
+
+**Structural or strategic fixes** (positioning gaps, ICP mismatch, wrong category framing) — these cannot be copy-replaced. Route to `blair-strategist` to work the strategic layer first, then re-audit.
+
+---
+
 ## Audit Standards
 
 - Every finding needs a specific example from the actual asset. No abstract feedback.
@@ -208,4 +256,4 @@ Red flags:
 - If an asset is genuinely good, say so. Don't manufacture problems.
 - If you can't access a URL, say so clearly and ask for the content to be pasted.
 
-Return only the audit report. No preamble.
+Return the audit report first. Then ask for file paths to apply fixes.

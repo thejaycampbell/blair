@@ -66,6 +66,7 @@ done
 
 # CMO directory (brand profile template only — never overwrite an existing brand.md)
 mkdir -p "$TARGET/.claude/cmo"
+mkdir -p "$TARGET/.claude/cmo/data"
 cp "$BLAIR_DIR/.claude/cmo/brand.md.example" "$TARGET/.claude/cmo/brand.md.example"
 
 if [ ! -f "$TARGET/.claude/cmo/campaigns.md" ]; then
@@ -93,6 +94,7 @@ if [ -f "$TARGET/.gitignore" ]; then
     echo ".claude/cmo/learnings.md" >> "$TARGET/.gitignore"
     echo ".claude/cmo/stakeholders.md" >> "$TARGET/.gitignore"
     echo ".claude/cmo/marquee.md" >> "$TARGET/.gitignore"
+    echo ".claude/cmo/pipeline.md" >> "$TARGET/.gitignore"
     echo "Added Blair entries to .gitignore"
   fi
 fi
