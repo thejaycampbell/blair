@@ -4,6 +4,8 @@ Most founders are better at building than marketing. Blair bridges the gap.
 
 Blair is an open-source CMO agent for [Claude Code](https://claude.ai/code). Answer 6 questions once. Blair learns your brand — your ICP, your voice, your competitors, your positioning. Every marketing ask after that gets a real, brand-specific answer. Not a generic one.
 
+v3.0 adds a revenue layer — cold outbound sequences, pipeline tracking, weekly briefs, and agency-ready creative briefs — so Blair connects marketing activity to business outcomes, not just output.
+
 ---
 
 ## What makes it different
@@ -64,6 +66,18 @@ Three minutes. Two messages. Something you'd actually use.
 
 **Deals stalling on objections**
 Ask Blair for objection handlers and it produces exact scripts: what to say, what not to say, the follow-up question that keeps the conversation open.
+
+**Need to fill your pipeline with outbound**
+`/blair:cold-outbound VP of Sales at Series B SaaS` writes a full 7-touch cold email sequence and a 5-touch LinkedIn DM sequence — personalized to that ICP, optimized for reply rate. Logs to your pipeline tracker automatically.
+
+**Want to know if your marketing is actually driving revenue**
+`/blair:pipeline-impact` connects the dots between campaigns you've run and pipeline generated. Leads in, opportunities created, revenue attributed. Works with whatever CRM data you can share — even rough numbers.
+
+**Starting your week**
+`/blair:weekly-brief` reads everything Blair knows — active campaigns, outbound sequences, last performance review — and tells you the three things to do this week. Proactive, not reactive.
+
+**Handing off to an agency or designer**
+`/blair:brief-agency homepage redesign` produces a complete, structured creative brief — audience, message, deliverables, brand specs, timeline — ready to email. No reformatting needed.
 
 ---
 
@@ -137,6 +151,20 @@ Blair asks 6 questions, one at a time. Writes your brand profile. Ready.
 | `/blair:review` | Scored copy review with rewrites |
 | `/blair:audit` | Full marketing audit with scored report |
 
+**Revenue & Pipeline**
+
+| Command | What it does |
+|---|---|
+| `/blair:pipeline-impact` | Connect marketing outputs to revenue — leads, pipeline, deals, CAC |
+| `/blair:weekly-brief` | Monday CMO standup — what shipped, what's performing, what's next |
+
+**Outbound**
+
+| Command | What it does |
+|---|---|
+| `/blair:cold-outbound` | 7-touch cold email + 5-touch LinkedIn DM sequence optimized for reply rate |
+| `/blair:brief-agency` | Complete creative brief for agencies, freelancers, or internal creative teams |
+
 **Agencies**
 
 | Command | What it does |
@@ -189,12 +217,14 @@ Blair is a Claude Code agent bundle — no runtime, no server, no API keys beyon
 │   ├── blair-paid.md               # Google, Meta, LinkedIn campaigns
 │   ├── blair-pr.md                 # press releases, journalist pitches
 │   ├── blair-sales-enablement.md   # battle cards, objection handlers
-│   └── blair-analytics.md          # performance diagnosis
+│   ├── blair-analytics.md          # performance diagnosis
+│   └── blair-outbound.md           # cold outbound sequences (v3.0)
 ├── cmo/
 │   ├── brand.md                    # your brand profile (gitignored)
 │   ├── brand.md.example            # completed example
 │   ├── campaigns.md                # campaign log — auto-appended
 │   ├── insights.md                 # analytics log — auto-appended
+│   ├── pipeline.md                 # pipeline tracker — auto-appended (gitignored, v3.0)
 │   └── brands/                     # multi-brand (agencies)
 │       └── [brand-name]/
 │           ├── brand.md
@@ -219,7 +249,11 @@ Blair is a Claude Code agent bundle — no runtime, no server, no API keys beyon
     ├── blair-status/
     ├── blair-help/
     ├── blair-brands/
-    └── blair-switch/
+    ├── blair-switch/
+    ├── blair-cold-outbound/        # (v3.0)
+    ├── blair-pipeline-impact/      # (v3.0)
+    ├── blair-weekly-brief/         # (v3.0)
+    └── blair-brief-agency/         # (v3.0)
 ```
 
 Want to add a specialist or modify behavior? Edit the relevant `.md` file. Each agent is self-contained and documented.
@@ -230,6 +264,16 @@ Want to add a specialist or modify behavior? Edit the relevant `.md` file. Each 
 
 - [Claude Code](https://claude.ai/code) — CLI or desktop app
 - Claude account — free tier covers most tasks
+
+---
+
+## Version history
+
+**v3.0** — Revenue layer: cold outbound (`/blair:cold-outbound`), pipeline tracking (`/blair:pipeline-impact`), weekly CMO brief (`/blair:weekly-brief`), agency briefing (`/blair:brief-agency`), fast-lane onboarding (`/blair:start --fast`), LinkedIn native grammar overhaul.
+
+**v2.x** — Multi-brand support, slash commands, morning brief, escalation check, partnerships agent.
+
+**v1.0** — Core agents: strategy, research, campaigns, copy, content, email, audit, calendar, repurpose, PR, sales enablement, analytics, paid, SEO.
 
 ---
 
