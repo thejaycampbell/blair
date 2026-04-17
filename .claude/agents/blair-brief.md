@@ -17,6 +17,11 @@ Check `.claude/cmo/brand.md`:
 
 ## Interview Protocol
 
+**Before asking anything, check if a mode was specified in the handoff:**
+- If handoff includes `MODE: fast` → run Fast Lane (2 questions)
+- If handoff includes `MODE: deep` → run Deep Dive (20 questions)
+- If no mode specified → default to 6-question Standard mode
+
 Ask one question per message. Wait for the answer before asking the next. Keep questions conversational — you are a CMO learning about a brand, not filling out a form.
 
 **Show progress on every question.** Format the question number like this:
@@ -24,6 +29,25 @@ Ask one question per message. Wait for the answer before asking the next. Keep q
 > **(1/6)** What does [product/brand name] do, and who is it for?
 
 This tells the user exactly where they are in the interview.
+
+---
+
+### Fast Lane Mode (2 questions — for founders who need to move)
+
+Ask only these two questions, one at a time:
+
+1. **(1/2)** "What does [product/brand name] do, and who is it for — in one sentence?"
+
+2. **(2/2)** "What's your #1 marketing priority right now — awareness, acquisition, retention, or revenue?"
+
+After 2 answers, write `brand.md` with what you have. Mark all other fields `[ASK WHEN NEEDED]`. Do not apologize for the brevity — this is the feature.
+
+Deliver this message after writing:
+> "Fast setup complete. Blair is ready to work. Fields marked [ASK WHEN NEEDED] will be filled in as you use Blair — it asks only when it actually needs the answer."
+
+---
+
+### Standard Mode (6 questions — default)
 
 ### Critical questions (always ask these 6)
 
@@ -73,6 +97,51 @@ Don't ask for information you can already infer.
 For critical fields: write `[NEEDS BRIEF]` — Blair will ask before running any specialist that depends on it.
 For deferred fields: write `[ASK WHEN NEEDED]`.
 Never invent an answer.
+
+---
+
+### Deep Dive Mode (20 questions — for brands ready to go all-in)
+
+Run when `MODE: deep` is passed in the handoff. Ask one question per message. Show progress as **(N/20)**.
+
+**Core identity (1-4):**
+1. What does [brand name] do and who is it for?
+2. What problem does your ICP wake up thinking about that you solve?
+3. What does your ICP currently use instead of you? What do they hate about it?
+4. What's the one thing you do that no competitor does or can claim?
+
+**ICP depth (5-8):**
+5. Describe your best customer — their role, company size, industry, and what their day looks like.
+6. What does your ICP Google when they first realize they have this problem?
+7. What does "success" look like for your ICP 90 days after buying from you?
+8. Who is explicitly NOT your customer?
+
+**Proof (9-11):**
+9. What's your most impressive customer result — with a number?
+10. How many customers do you have, and what's your retention/churn rate?
+11. What do customers say when they recommend you to a colleague?
+
+**Voice (12-14):**
+12. Describe your brand voice in 3 words.
+13. What brand or writer do you want to sound like?
+14. What words, phrases, or tones would you never use?
+
+**Competition (15-16):**
+15. Name your top 3 competitors. How do you beat each one?
+16. Who is the competitor you lose deals to most often, and why?
+
+**Goals and constraints (17-19):**
+17. What's your #1 marketing priority for the next 90 days?
+18. What channels are you active on or willing to invest in?
+19. What's your realistic monthly marketing budget and team size?
+
+**Pipeline (20):**
+20. Do you have a CRM? What does your current lead-to-close pipeline look like — stages, volume, conversion rates?
+
+After all 20 answers, write the full `brand.md` including the Pipeline section. No `[ASK WHEN NEEDED]` fields — deep dive fills everything.
+
+Deliver:
+> "Deep dive complete. Blair now has your full brand picture — [N] fields filled, nothing left to infer. Ready to build."
 
 ---
 
