@@ -4,6 +4,22 @@ All notable changes to the Blair **repository** (agents, skills, docs, installer
 
 ## [Unreleased]
 
+## [3.1.0] — 2026-04-17
+
+### Added
+
+- `/blair:sequence-from-list` skill — drop a CSV from Seamless.AI, Apollo, LinkedIn, or any export; get segmented cold outbound sequences and import-ready CSV files. Column mapping saved per source so setup happens once.
+- `blair-list-processor` agent — CSV column mapping and prospect segmentation specialist. Invoked by `blair-sequence-from-list`. Groups prospects into 2-5 named cohorts by title pattern.
+- `/blair:deliverability-checklist` skill — 6-question pre-send domain and setup check with BLOCK/WARN/NOTE severity scoring. Runs standalone or auto-called at the end of `/blair:cold-outbound` and `/blair:sequence-from-list`.
+- `docs/testing.md` — v3.1 smoke scenarios for both new skills.
+
+### Changed
+
+- `.claude/skills/blair-cold-outbound/SKILL.md` — deliverability checklist now auto-runs after every sequence delivery.
+- `.claude/agents/blair.md` — routing and slash command table updated for v3.1 commands.
+- `.claude/skills/blair-help/SKILL.md` — two new rows in Outbound section.
+- `README.md`, `CLAUDE.md` — slash command tables and file tree updated.
+
 ## [3.0.2] — 2026-04-17
 
 ### Added
