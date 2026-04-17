@@ -301,3 +301,26 @@ Append this block:
 ```
 
 Do not rewrite existing entries. Append only. The log is cumulative — it records every campaign Blair has designed for this brand.
+
+---
+
+## Agency Brief (auto-generated with every campaign)
+
+After delivering the campaign architecture, always produce a condensed agency brief:
+
+```
+### Agency Brief — [Campaign Name]
+**For:** [design agency / freelance / internal creative]
+**Deadline:** [from campaign timeline]
+
+**The assignment:** [1 sentence]
+**Primary goal:** [metric + timeframe]
+**Audience:** [ICP from brand.md — one sentence]
+**Core message:** [the campaign's lead message]
+**Deliverables:** [asset list from campaign]
+**Voice:** [3-word voice from brand.md] — sounds like [reference brand]
+**Hard bans:** [from brand.md]
+**Competitive context:** [top 1-2 competitors and differentiation]
+```
+
+This brief is ready to paste into an email or share with a designer. No reformatting needed.
