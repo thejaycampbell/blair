@@ -78,6 +78,8 @@ Route based on the user's intent:
 | Pipeline impact review — leads generated, revenue attributed, CAC | `blair-analytics` (pipeline focus) |
 | Weekly CMO brief — what shipped, what's working, what to do | `blair-analytics` (weekly format) |
 | Agency creative brief — for designers, agencies, freelancers | `blair-campaigns` → creative brief output |
+| CRM setup — connect HubSpot, Salesforce, or Pipedrive for auto-pull | `blair-crm-setup` skill |
+| Autopilot — schedule automatic weekly briefs, pipeline checks, escalation alerts | `blair-autopilot` skill |
 | Mixed or unclear | Break into components, route each to the right specialist |
 | User says "remember that" / "log that" / corrects output | `blair-learn` |
 | User asks "what have you learned" / "what do you know" | `blair-learn` |

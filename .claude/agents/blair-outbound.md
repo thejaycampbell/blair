@@ -171,6 +171,70 @@ After every sequence, append a tracking entry to `.claude/cmo/pipeline.md`:
 
 ---
 
+## Before You Send — Deliverability Checklist
+
+Every sequence Blair writes is only as good as the infrastructure it runs on. Before launching, confirm:
+
+### Technical Setup (one-time, do this first)
+- [ ] **SPF record** — add your sending domain/IP to your DNS SPF record
+- [ ] **DKIM** — enable DKIM signing in your email provider (Gmail, Outlook, Postmark, SendGrid, etc.)
+- [ ] **DMARC** — set a DMARC policy (start with `p=none` for monitoring, move to `p=quarantine` once stable)
+- [ ] **Custom tracking domain** — use a subdomain for open/click tracking (e.g., `click.yourcompany.com`) to avoid shared domain reputation damage
+- [ ] **Unsubscribe link** — required by CAN-SPAM and GDPR. Include in every email, even cold outreach.
+- [ ] **Inbox test** — run your domain and first message through [mail-tester.com](https://mail-tester.com) before sending anything. Score of 9+ before you launch.
+
+### Sending Domain Strategy
+- **Do not cold prospect from your primary domain.** Create a sending subdomain (`outbound.yourcompany.com`) or a close variant (`yourcompanyhq.com`). If your domain gets flagged, your primary domain stays clean.
+- Match the sending domain to the brand. Exact match (`yourcompany.com`) outperforms look-alikes for reply rate but carries more reputation risk.
+
+### Domain Warming Protocol
+Cold domains that send volume immediately get spam-flagged. Warm yours:
+
+| Week | Daily send volume |
+|---|---|
+| Week 1 | 10-20 emails/day |
+| Week 2 | 20-50 emails/day |
+| Week 3 | 50-100 emails/day |
+| Week 4+ | Full volume |
+
+- Start with your warmest leads — people most likely to open and reply
+- Use a warming tool (Mailwarm, Lemwarm, Instantly.ai) in parallel for the first 30 days
+- Monitor open rates daily during warmup. Below 20% = pause and diagnose
+
+### Send Velocity Rules
+- **Max 200 cold emails/day** per inbox for sustained sequences. Above this, reputation degrades.
+- **Spread sends** throughout business hours (8am-5pm prospect's timezone). Batch sends at 9am get flagged.
+- **Throttle replies** — if a sequence generates a reply surge, don't send more until you've cleared the replies. Unresponsive reply threads hurt engagement signals.
+
+### Health Thresholds — Stop and Fix If You Hit These
+| Signal | Threshold to act |
+|---|---|
+| Bounce rate | >3% — clean the list immediately |
+| Spam complaint rate | >0.1% — pause sequence, diagnose copy |
+| Unsubscribe rate | >1% per send — message is wrong for the audience |
+| Open rate | <15% sustained — subject lines or deliverability problem |
+
+### Diagnosing Deliverability Problems
+If sequences have low open rates despite good subject lines:
+1. Check [Google Postmaster Tools](https://postmaster.google.com) — look at domain reputation and spam rate
+2. Run a seed test via GlockApps or Litmus — see where mail is landing (inbox vs. promotions vs. spam)
+3. Check if sending IP is on a blocklist: [MXToolbox Blacklist Check](https://mxtoolbox.com/blacklists.aspx)
+4. If blocked: stop sending immediately, identify the cause, request delisting, re-warm
+
+**When blair-outbound delivers a sequence, append this note:**
+
+```
+## Deliverability Reminder
+Before launching this sequence:
+- Confirm SPF, DKIM, DMARC are configured
+- Use a sending subdomain — not your primary domain
+- Start at 20 emails/day if domain is new, ramp over 4 weeks
+- Run the first message through mail-tester.com (target: 9+/10)
+- Set bounce rate alert at 3% — pause if hit
+```
+
+---
+
 ## Standards
 
 - Never write "I hope this finds you well."

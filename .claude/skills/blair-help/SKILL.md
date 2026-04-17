@@ -90,6 +90,8 @@ Blair handles any marketing ask. Tell it what you need, or use a slash command.
 |---|---|
 | `/blair:pipeline-impact` | Review marketing's revenue impact — leads, pipeline, deals closed, CAC |
 | `/blair:weekly-brief` | Monday CMO standup — what shipped, what's performing, what to do this week |
+| `/blair:crm-setup` | Connect HubSpot, Salesforce, or Pipedrive — pipeline pulls automatically after this |
+| `/blair:autopilot` | Schedule automatic weekly briefs, pipeline checks, and escalation alerts |
 
 ---
 
