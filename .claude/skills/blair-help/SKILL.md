@@ -101,6 +101,8 @@ Blair handles any marketing ask. Tell it what you need, or use a slash command.
 | Command | What it does |
 |---|---|
 | `/blair:cold-outbound` | Build a cold outbound sequence — email, LinkedIn DMs, or phone scripts |
+| `/blair:sequence-from-list` | Drop a CSV from Seamless, Apollo, or LinkedIn — get segmented sequences + import-ready CSV files |
+| `/blair:deliverability-checklist` | Pre-send domain and setup check — 6 questions, scored BLOCK/WARN/NOTE output |
 | `/blair:brief-agency` | Write a complete creative brief for an agency or freelance designer |
 
 ---
