@@ -181,7 +181,7 @@ Blair asks 6 questions. Writes your brand profile. Ready.
 /blair:brands              # see all clients
 ```
 
-Blair Pro for agencies -- [join the waitlist](TALLY_URL_PLACEHOLDER).
+Blair Pro for agencies -- [join the waitlist](https://tally.so/r/KYByQX).
 
 ---
 
