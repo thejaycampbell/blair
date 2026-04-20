@@ -220,4 +220,18 @@ Your brand profile and logs are plain markdown under `.claude/cmo/` or `.cursor/
 
 ---
 
+## Version history
+
+**v4.0** — Multi-IDE: Cursor support, `npx blair-cmo --ide cursor`, one-command Cursor installers. Compound engine: 12-week Blair-on-Blair publishing schedule, founder outreach playbook, Blair Pro agency waitlist. README rewritten pain-first.
+
+**v3.1** — One-command install (`npx blair-cmo`), CSV list-to-sequence, deliverability checklist, HTML visual mockups, CRM pipeline attribution, audit fixes applied directly to files.
+
+**v3.0** — Revenue layer: cold outbound, pipeline tracking, weekly CMO brief, agency briefing, fast onboarding.
+
+**v2.x** — Multi-brand support, slash commands, morning brief, escalation check.
+
+**v1.0** — Core agents: strategy, research, campaigns, copy, content, email, audit, calendar, repurpose, PR, sales enablement, analytics, paid, SEO.
+
+---
+
 Built by [Jay Campbell](https://thejaycampbell.com). In the spirit of [Mason](https://github.com/thejaycampbell/mason).

@@ -4,6 +4,24 @@ All notable changes to the Blair **repository** (agents, skills, docs, installer
 
 ## [Unreleased]
 
+## [4.0.0] — 2026-04-20
+
+### Added
+
+- **Cursor IDE support** — Blair now installs into Cursor via `npx blair-cmo --ide cursor`. All 23 agents are translated to `.cursor/rules/*.mdc` format at install time. Main `blair.mdc` orchestrator gets `alwaysApply: true`; 22 specialists get `alwaysApply: false`.
+- `bin/cursor-adapter.js` — Node.js translation layer. Reads `.claude/agents/blair*.md`, wraps each in Cursor `.mdc` frontmatter, writes to `.cursor/rules/`. Copies CMO context directory to `.cursor/cmo/`. Updates `.gitignore` with Cursor-specific paths.
+- `install-cursor.sh` — one-command Cursor installer for Mac/Linux (`curl | bash`).
+- `install-cursor.ps1` — one-command Cursor installer for Windows PowerShell (`irm | iex`).
+- `--ide` flag on `npx blair-cmo` — `npx blair-cmo --ide cursor` routes to the Cursor adapter. Unknown IDE values exit with a clear error. Existing Claude Code install flow unchanged when flag is omitted.
+- `docs/compound-engine/week-schedule.md` — 12-week Blair-on-Blair publishing schedule. One Blair command per week run against Blair itself, output shipped as public content. Weekly checklist included.
+- `docs/compound-engine/outreach-dm.md` — 15-founder outreach template and tracker. DM model based on the Apple CMO pitch pattern.
+- `docs/compound-engine/blair-pro-waitlist.md` — Blair Pro agency waitlist setup guide with Tally form instructions and signup tracker.
+
+### Changed
+
+- `README.md` — full rewrite. Leads with the pain (re-briefing every session), moves to proof (real positioning statement output), then three compounding properties, social proof placeholder, multi-IDE quick start matrix, use cases, full command reference. Features wall removed from hero.
+- `package.json` — description updated to "any AI IDE." `install-cursor.sh` and `install-cursor.ps1` added to `files` array.
+
 ## [3.1.1] — 2026-04-17
 
 ### Added
