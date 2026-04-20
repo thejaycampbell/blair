@@ -6,7 +6,39 @@ Brief Blair once. It writes your brand profile and reads it automatically in eve
 
 ---
 
-## See it in action
+## Blair ran on Blair
+
+Blair's own positioning statement -- produced by running `/blair:strategy` on itself. One run. No editing.
+
+```
+Positioning statement:
+For solo founders and 1-3 person teams who build with Claude Code or Cursor,
+Blair is the AI CMO that replaces the copy-paste brand context problem -- so
+every marketing task starts from the same brief, not from scratch.
+
+Unlike ChatGPT or Claude (which reset every session), Blair writes your brand
+profile once and reads it automatically in every future session, in every
+specialist, going forward.
+
+Tier 1 message: "You explained your ICP 47 times last year. Blair remembers it
+after one."
+```
+
+This is what "brief once, use forever" looks like in practice. [More outputs in GitHub Discussions.](https://github.com/thejaycampbell/blair/discussions)
+
+---
+
+## Three things that make it different
+
+**It knows your brand.** Brief Blair once with 6 questions. Every future session reads that profile automatically -- strategy, copy, campaigns, outbound, all of it.
+
+**It gets better over time.** Every correction you make is logged. Every specialist reads that log before acting. Tell Blair your brand never uses the word "streamline" -- it never uses it again, in any output, any session, going forward.
+
+**It works in your IDE.** Claude Code, Cursor, and more. One command to install.
+
+---
+
+## What it looks like for a client brand
 
 *Founder:* `"Define our positioning."`
 
@@ -28,22 +60,6 @@ Tier 1 message: "Your clients won't remember sending that. You will."
 ```
 
 Three minutes. Two messages. Something you'd actually use.
-
----
-
-## Three things that make it different
-
-**It knows your brand.** Brief Blair once with 6 questions. Every future session reads that profile automatically -- strategy, copy, campaigns, outbound, all of it.
-
-**It gets better over time.** Every correction you make is logged. Every specialist reads that log before acting. Tell Blair your brand never uses the word "streamline" -- it never uses it again, in any output, any session, going forward.
-
-**It works in your IDE.** Claude Code, Cursor, and more. One command to install.
-
----
-
-## What founders are saying
-
-*This section updates as real outputs ship. [See live examples in GitHub Discussions.](https://github.com/thejaycampbell/blair/discussions)*
 
 ---
 
@@ -86,13 +102,16 @@ Blair asks 6 questions. Writes your brand profile. Ready.
 
 ## What Blair is / isn't
 
-**Blair is for:** positioning, messaging, campaigns, copy, content calendars, competitive research, battle cards, cold outbound sequences, and performance attribution.
+**Blair is for:** founders doing their own marketing. If you're writing copy, building campaigns, and researching competitors yourself -- without a CMO or agency -- Blair gives you a senior marketer's output without the headcount. It covers positioning, messaging, campaigns, copy, content calendars, competitive research, battle cards, cold outbound sequences, and performance attribution.
 
 **Blair is not:** a CRM, a lead database, email verification, or a dialer. It helps you say the right things -- your existing stack handles finding the people.
 
 ---
 
 ## What you can do with it
+
+**Starting from scratch / new project**
+`/blair:start` -- answer 6 questions once. Blair writes your brand profile and reads it automatically in every future session. No re-explaining your ICP to every tool, every time.
 
 **Launching something**
 `/blair:launch` -- positioning angle, campaign architecture, launch-day copy, press release, journalist pitches. All in one run.
@@ -187,7 +206,7 @@ Blair Pro for agencies -- [join the waitlist](https://tally.so/r/KYByQX).
 
 ## Under the hood
 
-Blair is an agent bundle -- no runtime, no server, no API keys beyond your IDE account. It's markdown files your IDE reads as agents and rules.
+Blair is an agent bundle. No runtime, no server, no separate API keys -- it runs inside your IDE using the account you already have. Each specialist is a self-contained agent file. The whole thing is yours: readable, editable, portable.
 
 ```
 Claude Code:              Cursor:
