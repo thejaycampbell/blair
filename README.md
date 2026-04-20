@@ -1,4 +1,4 @@
-# Blair — AI CMO Agent
+# Blair: your AI CMO Agent
 
 Most founders are better at building than marketing. Blair bridges the gap.
 
