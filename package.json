@@ -1,7 +1,7 @@
 {
   "name": "blair-cmo",
   "version": "3.0.2",
-  "description": "Blair — AI CMO agent for Claude Code. Strategy, campaigns, content, copy, and audits in one conversation.",
+  "description": "Blair — AI CMO agent for any AI IDE. Works with Claude Code, Cursor, and more. Strategy, campaigns, content, copy, and audits — grounded in a persistent brand profile.",
   "keywords": ["claude-code", "ai", "marketing", "cmo", "agent"],
   "homepage": "https://github.com/thejaycampbell/blair",
   "repository": {
@@ -17,7 +17,9 @@
     "bin/",
     "docs/",
     "install.sh",
-    "install.bat"
+    "install.bat",
+    "install-cursor.sh",
+    "install-cursor.ps1"
   ],
   "engines": {
     "node": ">=16"
