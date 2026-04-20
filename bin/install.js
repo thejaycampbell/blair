@@ -12,7 +12,9 @@ const BLAIR_DIR = path.resolve(__dirname, '..');
 
 const _args = process.argv.slice(2);
 const _ideFlagIndex = _args.findIndex(a => a === '--ide');
-const IDE_TARGET = _ideFlagIndex !== -1 ? _args[_ideFlagIndex + 1] : null;
+const IDE_TARGET = (_ideFlagIndex !== -1 && _ideFlagIndex + 1 < _args.length)
+  ? _args[_ideFlagIndex + 1]
+  : null;
 if (_ideFlagIndex !== -1) _args.splice(_ideFlagIndex, 2);
 process.argv = [...process.argv.slice(0, 2), ..._args];
 
@@ -90,6 +92,9 @@ async function main() {
     const cursorAdapter = require('./cursor-adapter');
     await cursorAdapter.install(BLAIR_DIR, target);
     return;
+  } else if (IDE_TARGET !== null) {
+    console.error(`Unknown IDE: "${IDE_TARGET}". Supported: cursor`);
+    process.exit(1);
   }
 
   console.log('\nCopying Blair agents and skills...');
