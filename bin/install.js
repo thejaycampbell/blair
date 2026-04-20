@@ -10,6 +10,12 @@ const readline = require('readline');
 
 const BLAIR_DIR = path.resolve(__dirname, '..');
 
+const _args = process.argv.slice(2);
+const _ideFlagIndex = _args.findIndex(a => a === '--ide');
+const IDE_TARGET = _ideFlagIndex !== -1 ? _args[_ideFlagIndex + 1] : null;
+if (_ideFlagIndex !== -1) _args.splice(_ideFlagIndex, 2);
+process.argv = [...process.argv.slice(0, 2), ..._args];
+
 function ask(question) {
   const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
   return new Promise(resolve => rl.question(question, answer => { rl.close(); resolve(answer.trim()); }));
@@ -78,6 +84,12 @@ async function main() {
   } else {
     const confirm = await ask(`Install Blair into ${target}? (y/N): `);
     if (!confirm.toLowerCase().startsWith('y')) { console.log('Cancelled.'); process.exit(0); }
+  }
+
+  if (IDE_TARGET === 'cursor') {
+    const cursorAdapter = require('./cursor-adapter');
+    await cursorAdapter.install(BLAIR_DIR, target);
+    return;
   }
 
   console.log('\nCopying Blair agents and skills...');
