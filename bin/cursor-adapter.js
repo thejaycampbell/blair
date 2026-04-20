@@ -29,6 +29,7 @@ ${content}`;
 }
 
 function copyFile(src, dest, overwrite = true) {
+  if (!fs.existsSync(src)) return;
   if (!overwrite && fs.existsSync(dest)) return;
   fs.mkdirSync(path.dirname(dest), { recursive: true });
   fs.copyFileSync(src, dest);
@@ -36,7 +37,7 @@ function copyFile(src, dest, overwrite = true) {
 
 async function install(blairDir, target) {
   console.log('\nBlair — AI CMO Agent (Cursor)');
-  console.log('─────────────────────────────\n');
+  console.log('-----------------------------\n');
 
   if (!fs.existsSync(target)) {
     console.error(`Error: directory not found: ${target}`);
@@ -63,6 +64,11 @@ async function install(blairDir, target) {
 
   const agentsSrc = path.join(blairDir, '.claude', 'agents');
   const agentFiles = fs.readdirSync(agentsSrc).filter(n => n.startsWith('blair') && n.endsWith('.md'));
+
+  if (agentFiles.length === 0) {
+    console.error('Error: No Blair agent files found in .claude/agents/');
+    process.exit(1);
+  }
 
   for (const agentFile of agentFiles) {
     const agentName = agentFile.replace('.md', '');
@@ -105,8 +111,8 @@ async function install(blairDir, target) {
   console.log('Next steps:');
   console.log(`  1. Open ${target} in Cursor`);
   console.log('  2. Ask: "Set up my Blair brand profile"');
-  console.log('  3. Start any marketing task — Blair handles the rest\n');
-  console.log('Tip: rules live in .cursor/rules/blair*.mdc — edit to customize.\n');
+  console.log('  3. Start any marketing task - Blair handles the rest\n');
+  console.log('Tip: rules live in .cursor/rules/blair*.mdc - edit to customize.\n');
 }
 
 module.exports = { install };
