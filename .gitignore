@@ -17,3 +17,6 @@ web/.next/
 web/node_modules/
 web/.env.local
 web/drizzle/
+
+# Claude Code worktree artifacts — created by git worktree, not part of the project
+.claude/worktrees/

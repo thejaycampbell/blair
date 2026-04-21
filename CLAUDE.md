@@ -8,7 +8,12 @@ Blair is a Claude Code agent bundle that handles any marketing ask: strategy, re
 ```
 /blair:start
 ```
-Blair will ask you 6 questions about your brand, then write a persistent profile to `.claude/cmo/brand.md`. Every future session uses that profile automatically.
+Blair will set up your brand profile and write it to `.claude/cmo/brand.md`. Three modes:
+- `/blair:start --fast` — 2 questions, done in 2 minutes
+- `/blair:start` — standard 6-question setup (default)
+- `/blair:start --deep` — full 20-question deep dive
+
+Every future session uses that profile automatically.
 
 **After setup — just ask:**
 > "Write me a launch email sequence"
