@@ -91,6 +91,9 @@ ${brandContext}`;
     model: getModel(),
     system: systemPrompt,
     messages: chatMessages,
+    onError: ({ error }) => {
+      console.error('[Blair] streamText error:', error);
+    },
     onFinish: async ({ text }) => {
       if (!conversationId) return;
 
@@ -136,5 +139,10 @@ ${brandContext}`;
 
   return result.toDataStreamResponse({
     headers: { 'X-Blair-Specialist': specialist },
+    getErrorMessage: (error) => {
+      const msg = error instanceof Error ? error.message : String(error);
+      console.error('[Blair] toDataStreamResponse error:', msg);
+      return msg;
+    },
   });
 }
