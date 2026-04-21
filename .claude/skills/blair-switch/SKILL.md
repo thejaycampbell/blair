@@ -1,3 +1,8 @@
+---
+name: blair:switch
+description: Switches the active brand context so all subsequent Blair sessions use the selected brand profile.
+---
+
 # /blair:switch
 
 Triggered when the user runs `/blair:switch` — with a brand slug or name.

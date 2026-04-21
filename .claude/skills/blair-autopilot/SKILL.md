@@ -103,4 +103,4 @@ Cancel a single schedule. Use `CronList` to find the matching task by descriptio
 
 Autopilot schedules commands to run — it does not monitor your accounts in real time. It is not a live alert system. Think of it as a recurring calendar reminder that executes the Blair command automatically instead of just pinging you.
 
-For real-time signal monitoring (competitor mentions, review spikes, news triggers), use `/blair:monitor` when available.
+Real-time signal monitoring (competitor mentions, review spikes, news triggers) is not yet available.

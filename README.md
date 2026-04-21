@@ -224,6 +224,41 @@ Want to add a specialist or modify behavior? Edit the relevant file. Each agent 
 
 ---
 
+## Web App (Optional)
+
+A local Next.js web UI is available in `web/`. It provides a chat interface backed by the same Blair agents.
+
+**Setup:**
+```bash
+cd web
+npm install
+cp .env.local.example .env.local   # fill in your keys
+npm run dev
+```
+
+**Environment variables (`web/.env.local`):**
+
+| Variable | Required | Description |
+|---|---|---|
+| `DATABASE_URL` | Yes | Neon PostgreSQL connection string |
+| `OPENAI_API_KEY` | If using OpenAI | Your OpenAI API key |
+| `AI_PROVIDER` | No | `openai` (default) or `anthropic` |
+| `AI_MODEL` | No | Model name for the selected provider |
+| `AUTH_SECRET` | For public deploy | Generate: `openssl rand -base64 32` |
+| `GOOGLE_CLIENT_ID` | For public deploy | Google OAuth client ID |
+| `GOOGLE_CLIENT_SECRET` | For public deploy | Google OAuth client secret |
+
+**Supported AI providers:**
+
+| Provider | `AI_PROVIDER` | Example `AI_MODEL` |
+|---|---|---|
+| OpenAI (default) | `openai` | `gpt-4o`, `gpt-4o-mini` |
+| Anthropic | `anthropic` | `claude-sonnet-4-6`, `claude-haiku-4-5-20251001` |
+
+**Note:** The web app requires authentication (via Google OAuth) before it can be deployed publicly. Without configuring `AUTH_SECRET`, `GOOGLE_CLIENT_ID`, and `GOOGLE_CLIENT_SECRET`, the app is suitable for local use only.
+
+---
+
 ## Requirements
 
 - An AI IDE: [Claude Code](https://claude.ai/code) or [Cursor](https://cursor.sh)

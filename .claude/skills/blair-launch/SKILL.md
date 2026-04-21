@@ -1,3 +1,8 @@
+---
+name: blair:launch
+description: Coordinated launch kit — strategy, campaign assets, and PR for product or feature launches.
+---
+
 # /blair:launch
 
 Triggered when the user runs `/blair:launch` — optionally with a launch type or product name.

@@ -1,3 +1,8 @@
+---
+name: blair:brands
+description: Lists all brand profiles and the currently active one. Manages multi-brand setup in Blair.
+---
+
 # /blair:brands
 
 Triggered when the user runs `/blair:brands` — lists all brand profiles and the currently active one.

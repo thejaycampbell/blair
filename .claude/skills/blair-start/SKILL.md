@@ -18,8 +18,8 @@ Supports two modes:
 **Mode selection:**
 
 Check if the user added a mode flag to the command:
-- `/blair:start --fast` → pass `MODE: fast` to blair-brief (2-question fast lane)
-- `/blair:start --deep` → pass `MODE: deep` to blair-brief (20-question deep dive)
+- `/blair:start --fast` → pass `MODE: fast` to blair-onboarding (2-question fast lane)
+- `/blair:start --deep` → pass `MODE: deep` to blair-onboarding (20-question deep dive)
 - `/blair:start` (no flag) → standard 6-question mode (default)
 
 If no flag and brand.md doesn't exist, offer the choice before running:
@@ -28,18 +28,18 @@ If no flag and brand.md doesn't exist, offer the choice before running:
 > - `/blair:start --deep` for deep
 > - Or just press enter for the standard 6-question setup."
 
-Wait for their response, then invoke blair-brief with the appropriate MODE.
+Wait for their response, then invoke blair-onboarding with the appropriate MODE.
 
 Check `.claude/cmo/brand.md` before doing anything:
 
 **If `brand.md` does not exist:**
-Invoke `blair-brief` with: "Run the full brand onboarding interview. No brand.md exists yet. Ask the 6 critical questions one at a time, write the completed profile to `.claude/cmo/brand.md`, and confirm."
+Invoke `blair-onboarding` with: "Run the full brand onboarding interview. No brand.md exists yet. Ask the 6 critical questions one at a time, write the completed profile to `.claude/cmo/brand.md`, and confirm."
 
 **If `brand.md` exists and has no `[NEEDS BRIEF]` fields:**
 Tell the user: "Your brand profile is already set up. Blair is ready — what do you want to work on?" Do not re-run onboarding.
 
 **If `brand.md` exists but has `[NEEDS BRIEF]` fields:**
-Tell the user which fields are missing, then invoke `blair-brief` with: "brand.md exists but has [NEEDS BRIEF] in these fields: [list them]. Ask only about those fields. Skip everything else. Update brand.md when done."
+Tell the user which fields are missing, then invoke `blair-onboarding` with: "brand.md exists but has [NEEDS BRIEF] in these fields: [list them]. Ask only about those fields. Skip everything else. Update brand.md when done."
 
 ---
 
@@ -51,9 +51,9 @@ When the user provides a brand name (e.g., `/blair:start acme-corp`):
 2. Check `.claude/cmo/brands/[slug]/brand.md`:
 
 **If the profile doesn't exist:**
-Invoke `blair-brief` with: "Run the full brand onboarding interview for a new brand called '[brand-name]'. Ask the 6 critical questions one at a time, write the completed profile to `.claude/cmo/brands/[slug]/brand.md` (create the directory if needed), and confirm when done."
+Invoke `blair-onboarding` with: "Run the full brand onboarding interview for a new brand called '[brand-name]'. Ask the 6 critical questions one at a time, write the completed profile to `.claude/cmo/brands/[slug]/brand.md` (create the directory if needed), and confirm when done."
 
-After `blair-brief` completes, write the slug to `.claude/cmo/active-brand` to make this brand active.
+After `blair-onboarding` completes, write the slug to `.claude/cmo/active-brand` to make this brand active.
 
 Confirm: "Brand profile for **[brand-name]** is ready. Blair is now working in [brand-name] context. Use `/blair:switch [slug]` to change brands, or `/blair:brands` to see all profiles."
 
@@ -61,7 +61,7 @@ Confirm: "Brand profile for **[brand-name]** is ready. Blair is now working in [
 Tell the user: "Brand profile for **[brand-name]** already exists. Switching to it now." Then write the slug to `.claude/cmo/active-brand`.
 
 **If the profile exists but has `[NEEDS BRIEF]` fields:**
-Tell the user which fields are missing, run targeted gap-fill via `blair-brief`, then switch to that brand.
+Tell the user which fields are missing, run targeted gap-fill via `blair-onboarding`, then switch to that brand.
 
 ---
 

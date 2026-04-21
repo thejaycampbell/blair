@@ -1,3 +1,8 @@
+---
+name: blair:headline
+description: 10 headline variations for any surface — homepage, pricing page, ads, or cold email subject lines.
+---
+
 # /blair:headline
 
 Triggered when the user runs `/blair:headline` — optionally with a specific surface or context.

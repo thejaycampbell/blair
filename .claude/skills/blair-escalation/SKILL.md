@@ -1,3 +1,8 @@
+---
+name: blair:escalation
+description: Scores every active campaign for risk and surfaces what needs attention before it becomes a crisis.
+---
+
 # /blair:escalation
 
 Triggered when the user runs /blair:escalation.

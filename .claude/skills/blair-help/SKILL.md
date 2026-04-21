@@ -1,3 +1,8 @@
+---
+name: blair:help
+description: Help and documentation for all Blair commands, organized by topic or area of focus.
+---
+
 # /blair:help
 
 Triggered when the user runs `/blair:help` — with an optional topic.

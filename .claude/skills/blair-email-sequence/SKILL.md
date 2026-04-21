@@ -1,3 +1,8 @@
+---
+name: blair:email-sequence
+description: Full email sequence for any trigger — welcome, post-demo, re-engagement, or custom flow.
+---
+
 # /blair:email-sequence
 
 Triggered when the user runs `/blair:email-sequence` — optionally with a sequence type or trigger.

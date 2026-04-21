@@ -1,3 +1,8 @@
+---
+name: blair:review
+description: Scored copy review with line-by-line diagnosis and brand-accurate rewrites for any marketing asset.
+---
+
 # /blair:review
 
 Triggered when the user runs `/blair:review` — optionally with a specific asset or URL.

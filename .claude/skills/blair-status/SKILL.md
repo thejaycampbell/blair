@@ -1,3 +1,8 @@
+---
+name: blair:status
+description: Current state-of-play for the active brand — what Blair knows, what has been done, and what is next.
+---
+
 # /blair:status
 
 Triggered when the user runs `/blair:status`.

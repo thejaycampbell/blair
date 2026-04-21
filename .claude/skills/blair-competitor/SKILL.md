@@ -1,3 +1,8 @@
+---
+name: blair:competitor
+description: Deep competitor research and battle card. Optionally targets a specific competitor by name.
+---
+
 # /blair:competitor
 
 Triggered when the user runs `/blair:competitor` — optionally with a competitor name.

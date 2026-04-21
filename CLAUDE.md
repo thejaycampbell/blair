@@ -50,7 +50,7 @@ Blair will ask you 6 questions about your brand, then write a persistent profile
 Blair is an orchestrator. It reads your brand profile, classifies your request, and routes to the right specialist agent. You get synthesized output — not raw agent dumps.
 
 **Specialist agents:**
-- `blair-brief` — brand onboarding
+- `blair-onboarding` — brand onboarding (intake interview, writes brand.md)
 - `blair-strategist` — positioning, ICP, GTM
 - `blair-researcher` — competitive and market intel
 - `blair-campaigns` — campaign architecture
@@ -63,6 +63,7 @@ Blair is an orchestrator. It reads your brand profile, classifies your request, 
 - `blair-email` — email program strategy and sequences
 - `blair-paid` — Google, Meta, LinkedIn paid campaigns
 - `blair-pr` — press releases, journalist pitches, earned media
+- `blair-partnerships` — AI presence audit, partner recruitment, content briefs, outreach pitches, content scoring
 - `blair-sales-enablement` — battle cards, objection handlers, one-pagers
 - `blair-analytics` — performance diagnosis and recommendations
 - `blair-outbound` — cold outbound sequences (email, LinkedIn DMs, phone)
@@ -91,7 +92,6 @@ Blair appends to `.claude/cmo/campaigns.md` after each campaign design. This pre
 ## Performance Log
 
 `blair-analytics` appends to `.claude/cmo/insights.md` after each performance review — building a running record of what's been tried and what's been learned.
-- blair-partnerships -- AI presence audit, partner recruitment, content briefs, outreach pitches, content scoring
 
 ## Pipeline Log
 

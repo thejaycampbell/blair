@@ -1,3 +1,8 @@
+---
+name: blair:swot
+description: Marketing SWOT analysis with strategic synthesis, optionally focused on a competitor or planning cycle.
+---
+
 # /blair:swot
 
 Triggered when the user runs `/blair:swot` — optionally with a focus area or competitor.

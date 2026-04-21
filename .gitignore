@@ -5,3 +5,15 @@
 .claude/cmo/active-brand
 .claude/cmo/pipeline.md
 .claude/cmo/brands/*/pipeline.md
+.claude/cmo/campaigns.md
+.claude/cmo/brands/*/campaigns.md
+.claude/cmo/insights.md
+.claude/cmo/brands/*/insights.md
+.claude/cmo/learnings.md
+.claude/cmo/brands/*/learnings.md
+
+# Web app — generated files and secrets
+web/.next/
+web/node_modules/
+web/.env.local
+web/drizzle/

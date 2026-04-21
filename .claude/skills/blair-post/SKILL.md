@@ -1,3 +1,8 @@
+---
+name: blair:post
+description: Writes platform-native social posts for LinkedIn, X, or Instagram from a topic or milestone.
+---
+
 # /blair:post
 
 Triggered when the user runs `/blair:post` — with a platform and/or topic.
