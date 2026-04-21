@@ -4,6 +4,24 @@ All notable changes to the Blair **repository** (agents, skills, docs, installer
 
 ## [Unreleased]
 
+## [5.0.0] — 2026-04-21
+
+### Added
+
+- **Web app** — Blair now runs in the browser at [blair-steel.vercel.app](https://blair-steel.vercel.app). No IDE, no install, no terminal required. Built with Next.js 15, Neon Postgres, Drizzle ORM, and Vercel AI SDK.
+- `/web` directory — full Next.js source. Self-hostable. Environment variables documented in `web/.env.example`.
+- Onboarding wizard — 6-question brand setup flow in the browser. Writes brand profile to Neon DB.
+- Persistent chat interface — conversation history per brand, auto-titled, specialist-tagged.
+- Brand profile editor — edit any brand field post-onboarding without re-running the full wizard.
+- Cookie-only mode — app runs without Google OAuth. Optional Google sign-in enables multi-device brand ownership.
+- `web/.env.example` — committed env var template documenting all required and optional variables.
+- `web/middleware.ts` — Next.js edge middleware with optional auth guard. Auth enforcement skipped gracefully when OAuth is not configured.
+
+### Changed
+
+- `README.md` — web app promoted to primary access path. "Try Blair now" banner added above the fold. Pricing section added. IDE install demoted to power-user section. GitHub Discussions link made prominent.
+- Requirements section updated — web app requires only a browser. IDE install listed separately.
+
 ## [4.0.0] — 2026-04-20
 
 ### Added
