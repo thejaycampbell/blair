@@ -19,7 +19,7 @@ export function ChatInterface({ conversationId }: ChatInterfaceProps) {
   const [specialist, setSpecialist] = useState<string>('orchestrator');
   const [historyLoaded, setHistoryLoaded] = useState(false);
 
-  const { messages, input, handleInputChange, handleSubmit, isLoading, setInput, setMessages } =
+  const { messages, input, handleInputChange, handleSubmit, isLoading, setInput, setMessages, error } =
     useChat({
       api: '/api/chat',
       body: { conversationId },
@@ -89,6 +89,11 @@ export function ChatInterface({ conversationId }: ChatInterfaceProps) {
             ))}
             {isLoading && <TypingIndicator />}
           </>
+        )}
+        {error && (
+          <div className="px-6 py-3 bg-red-950 border border-red-800 rounded-lg mx-6 mb-4 text-red-300 text-sm">
+            <span className="font-medium">Error:</span> {error.message}
+          </div>
         )}
         <div ref={bottomRef} />
       </div>

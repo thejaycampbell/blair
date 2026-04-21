@@ -39,17 +39,60 @@ After the report: Blair asks if you want the fixes applied directly to your file
 
 Read `.claude/cmo/brand.md` first. If it doesn't exist, tell the user to run `/blair:start` before auditing.
 
+### Step 1 — Fetch all assets before doing anything else
+
+**This step is mandatory. Do not skip it.**
+
+For every URL provided: use `WebFetch` to retrieve the full page content. Extract all visible copy — headlines, subheads, body text, CTAs, testimonials, nav labels. Paste the extracted copy verbatim into the agent handoff. Do not summarize it. Do not paraphrase it. The raw copy must be present.
+
+For file paths: read the file directly. Include the full content.
+
+For pasted copy: use as-is.
+
+**If you cannot fetch a URL, say so and ask the user to paste the copy manually. Do not proceed with the audit using only the URL string.**
+
+### Step 2 — Invoke the audit agent
+
 If brand.md exists, invoke `blair-audit` with:
 
 ```
 Audit the following marketing assets for [brand name].
 Brand profile: .claude/cmo/brand.md
 Assets to audit: [list — URLs, pasted copy, file paths]
+
+Fetched copy from each asset is included below. Base ALL findings on this copy only.
+
+[PASTE FULL FETCHED COPY HERE — one block per asset, labeled by source]
+
 Run the full 6-dimension audit and return a scored report with specific fixes prioritized by impact.
 File paths provided (for apply): [list any .html, .jsx, .tsx, .md files the user gave]
 ```
 
+### Evidence rules — enforce these without exception
+
+**Every finding must cite a specific quote from the fetched copy.** Format: `> "[exact quote]"` followed by your diagnosis. If you cannot point to a specific line, the finding does not get included.
+
+**Only score dimensions you actually reviewed.** If only one asset was provided:
+- `Messaging consistency` → mark as `Not reviewed — only one asset provided`
+- `Channel fit` → mark as `Not reviewed — only one asset provided`
+
+Do not fabricate scores for dimensions you have no evidence for. A score of "assumed" or "likely" is not a score — it is noise.
+
+**Separate what you observed from what you inferred.** Observations come from the fetched copy. Inferences are speculations. Label them differently or drop the inferences entirely.
+
 If the user ran `/blair:audit` without specifying assets, ask: "What would you like me to audit? Share a URL, paste some copy, or give me file paths from your project."
+
+### Step 3 — Self-verification pass before delivering
+
+**Before showing the report to the user, run this check on every finding:**
+
+For each finding in Critical Issues, High Priority, and Lower Priority:
+1. Is there a quoted line from the fetched copy? If not → remove the finding.
+2. Does that quoted line actually appear in the fetched copy? If not → remove the finding.
+3. Does the finding use the words "assumed," "likely," "may," "probably," or "across channels" (when only one asset was reviewed)? If yes → remove the finding.
+4. Is the score for `Messaging consistency` or `Channel fit` based on more than one asset? If not → replace the score with `Not reviewed`.
+
+Remove any finding that fails these checks. A shorter, accurate report is better than a longer, fabricated one. Do not tell the user you removed findings — just deliver the clean report.
 
 ## After the audit report is delivered
 
