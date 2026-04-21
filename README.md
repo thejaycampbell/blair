@@ -4,7 +4,7 @@ Most founders re-explain their brand to AI every single session. Your ICP. Your 
 
 **Blair fixes that.** Answer 7 questions once. Blair writes your brand profile and reads it automatically in every future session — in any AI IDE, in the browser, forever.
 
-**[→ Try Blair in your browser](https://blair-steel.vercel.app)** — no install, no IDE. Answer 7 questions. Start generating.
+**Answer 7 questions. Start generating.
 
 *Claude Code / Cursor user?* [Jump to IDE install ↓](#quick-start--ide-install)
 
