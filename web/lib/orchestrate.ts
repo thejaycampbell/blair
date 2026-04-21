@@ -25,43 +25,44 @@ type RoutingRule = { patterns: (string | RegExp)[]; specialist: Specialist };
 // E.g. 'cold email' must appear before 'email sequence' to avoid misrouting outbound requests.
 const ROUTING_RULES: RoutingRule[] = [
   {
-    patterns: ['/blair:strategy', 'positioning', 'icp', 'ideal customer', 'gtm', 'go-to-market', 'messaging', 'differentiat'],
+    // short-form: /strategy, /swot — and blair: variants
+    patterns: ['/blair:strategy', '/strategy ', '/strategy\n', '/swot', 'positioning', 'icp', 'ideal customer', 'gtm', 'go-to-market', 'messaging', 'differentiat'],
     specialist: 'strategist',
   },
   {
-    patterns: ['/blair:competitor', '/blair:research', 'competitor', 'vs ', ' vs.', 'battle card', 'market research', 'competitive'],
+    patterns: ['/blair:competitor', '/blair:research', '/competitor ', '/competitor\n', '/research ', '/research\n', 'competitor', 'vs ', ' vs.', 'battle card', 'market research', 'competitive'],
     specialist: 'researcher',
   },
   {
-    patterns: ['/blair:campaign', '/blair:launch', 'campaign', 'launch plan', 'launch kit'],
+    patterns: ['/blair:campaign', '/blair:launch', '/campaign ', '/campaign\n', '/launch ', '/launch\n', 'campaign', 'launch plan', 'launch kit'],
     specialist: 'campaigns',
   },
   {
-    patterns: ['/blair:calendar', 'content calendar', 'content plan', '30 day', '60 day', '90 day', 'publishing schedule'],
+    patterns: ['/blair:calendar', '/calendar ', '/calendar\n', 'content calendar', 'content plan', '30 day', '60 day', '90 day', 'publishing schedule'],
     specialist: 'calendar',
   },
   {
-    patterns: ['/blair:cold-outbound', '/blair:outbound', 'cold email', 'cold outbound', 'outbound sequence', 'linkedin dm', 'prospecting'],
+    patterns: ['/blair:cold-outbound', '/blair:outbound', '/cold-outbound ', '/cold-outbound\n', 'cold email', 'cold outbound', 'outbound sequence', 'linkedin dm', 'prospecting'],
     specialist: 'outbound',
   },
   {
-    patterns: ['/blair:audit', 'audit my', 'audit the', 'review my', 'score my', 'review the homepage', 'review my homepage'],
+    patterns: ['/blair:audit', '/audit ', '/audit\n', 'audit my', 'audit the', 'review my', 'score my', 'review the homepage', 'review my homepage'],
     specialist: 'audit',
   },
   {
-    patterns: ['/blair:email-sequence', 'email sequence', 'email flow', 'welcome email', 'drip', 'nurture sequence'],
+    patterns: ['/blair:email-sequence', '/email-sequence ', '/email-sequence\n', 'email sequence', 'email flow', 'welcome email', 'drip', 'nurture sequence'],
     specialist: 'email',
   },
   {
-    patterns: ['/blair:headline', 'headline', 'tagline', 'hero copy', 'subject line'],
+    patterns: ['/blair:headline', '/headline ', '/headline\n', '/review ', '/review\n', 'headline', 'tagline', 'hero copy', 'subject line'],
     specialist: 'copy',
   },
   {
-    patterns: ['/blair:post', '/blair:repurpose', 'linkedin post', 'twitter', 'social post', 'repurpose', 'tweet'],
+    patterns: ['/blair:post', '/blair:repurpose', '/repurpose ', '/repurpose\n', 'linkedin post', 'twitter', 'social post', 'repurpose', 'tweet'],
     specialist: 'content',
   },
   {
-    patterns: ['/blair:seo', 'seo', 'keyword', 'search ranking', 'organic', 'aeo'],
+    patterns: ['/blair:seo', '/seo ', '/seo\n', 'seo', 'keyword', 'search ranking', 'organic', 'aeo'],
     specialist: 'seo',
   },
   {
@@ -77,7 +78,7 @@ const ROUTING_RULES: RoutingRule[] = [
     specialist: 'sales-enablement',
   },
   {
-    patterns: ['/blair:pipeline-impact', '/blair:weekly-brief', 'pipeline', 'revenue', 'cac', 'attribution', 'what shipped', 'weekly brief'],
+    patterns: ['/blair:pipeline-impact', '/blair:weekly-brief', '/weekly-brief', '/brief ', '/brief\n', 'pipeline', 'revenue', 'cac', 'attribution', 'what shipped', 'weekly brief'],
     specialist: 'analytics',
   },
   {
@@ -91,10 +92,11 @@ const ROUTING_RULES: RoutingRule[] = [
 ];
 
 export function detectSpecialist(message: string): Specialist {
-  const lower = message.toLowerCase();
+  // Normalise: trim, then add a trailing space so "/strategy" matches "/strategy "
+  const normalised = message.trim().toLowerCase() + ' ';
   for (const rule of ROUTING_RULES) {
     for (const pattern of rule.patterns) {
-      if (typeof pattern === 'string' ? lower.includes(pattern) : pattern.test(lower)) {
+      if (typeof pattern === 'string' ? normalised.includes(pattern) : pattern.test(normalised)) {
         return rule.specialist;
       }
     }
