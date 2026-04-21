@@ -228,13 +228,11 @@ Your brand profile and logs are plain markdown under `.claude/cmo/`. Copy them t
 
 ## Web App
 
-Blair runs in your browser at **[blair-steel.vercel.app](https://blair-steel.vercel.app)** — no IDE, no install, no terminal. Source is in `web/`. Self-hosting docs and required env vars: [`web/.env.example`](web/.env.example).
+Blair runs in your browser at **localhost)** — no IDE, no install, no terminal. Source is in `web/`. Self-hosting docs and required env vars: [`web/.env.example`](web/.env.example).
 
 ---
 
 ## Requirements
-
-**Browser:** [blair-steel.vercel.app](https://blair-steel.vercel.app) — nothing to install.
 
 **IDE:** [Claude Code](https://claude.ai/code) or [Cursor](https://cursor.sh) — free tier covers most tasks.
 
