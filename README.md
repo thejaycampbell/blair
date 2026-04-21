@@ -4,6 +4,12 @@ Most founders re-explain their brand to AI every session. Your ICP. Your voice. 
 
 Brief Blair once. It writes your brand profile and reads it automatically in every future session -- in any AI IDE. No re-briefing. No re-explaining. It knows who you're targeting, what you sound like, and who you're competing against.
 
+## Try Blair now
+
+**[→ Open Blair in your browser](https://blair-steel.vercel.app)** — no install, no IDE, no setup. Answer 6 questions. Start asking.
+
+*Claude Code / Cursor user? [Jump to IDE install ↓](#quick-start--ide-install)*
+
 ---
 
 ## Blair ran on Blair
@@ -24,7 +30,9 @@ Tier 1 message: "You explained your ICP 47 times last year. Blair remembers it
 after one."
 ```
 
-This is what "brief once, use forever" looks like in practice. [More outputs in GitHub Discussions.](https://github.com/thejaycampbell/blair/discussions)
+This is what "brief once, use forever" looks like in practice.
+
+**[→ See more real outputs in GitHub Discussions](https://github.com/thejaycampbell/blair/discussions)** — positioning statements, campaign outputs, cold outbound sequences, competitor battle cards.
 
 ---
 
@@ -63,7 +71,25 @@ Three minutes. Two messages. Something you'd actually use.
 
 ---
 
-## Quick Start
+## Pricing
+
+**Blair (this repo) is free and open source.** The web app at [blair-steel.vercel.app](https://blair-steel.vercel.app) is free to use — you bring your own AI API key (added in onboarding).
+
+Typical cost for a solo founder running 10–20 marketing tasks/week:
+
+| Usage | Estimated cost |
+|---|---|
+| Light (strategy + copy, ~10 tasks/week) | ~$3–8/mo |
+| Active (campaigns + outbound + calendar) | ~$10–20/mo |
+| Heavy (daily use, agency volume) | ~$25–50/mo |
+
+Costs go to Anthropic or OpenAI directly — not to Blair.
+
+**Blair Pro** (multi-brand agency workspace, SSO, team roles) — [join the waitlist](https://tally.so/r/KYByQX).
+
+---
+
+## Quick Start — IDE Install
 
 **Claude Code -- Mac/Linux:**
 ```bash
