@@ -5,6 +5,75 @@ import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 
+const PREVIEW_EXAMPLES = [
+  {
+    cmd: '/blair:cold-outbound VP of Sales',
+    label: 'Cold email',
+    preview: '"Hey [First] — most VPs I talk to are still having reps Google ChatGPT prompts. We built a structured system for exactly that. Worth 15 min?"',
+  },
+  {
+    cmd: '/blair:campaigns Q3 acquisition',
+    label: 'Campaign brief',
+    preview: '"Q3 Acquisition: 500 subscribers by Sept 30. Channel: LinkedIn organic + cold outbound. Core message: Give your reps the system that actually works..."',
+  },
+  {
+    cmd: '/blair:linkedin thought leadership',
+    label: 'LinkedIn post',
+    preview: '"Most sales AI tools are built for marketers. Your reps need prompts for discovery calls, objection scripts, and follow-ups that don\'t sound like ChatGPT."',
+  },
+];
+
+function OnboardingPreview({ onStart }: { onStart: () => void }) {
+  return (
+    <div className="min-h-screen bg-neutral-950 text-neutral-100 flex items-center justify-center p-6">
+      <div className="w-full max-w-xl">
+        <div className="flex items-center gap-3 mb-10">
+          <div className="w-8 h-8 bg-violet-600 rounded-lg flex items-center justify-center">
+            <span className="text-white font-bold text-sm">B</span>
+          </div>
+          <span className="text-neutral-400 text-sm font-medium">Blair — AI CMO</span>
+        </div>
+
+        <h1 className="text-2xl font-semibold text-neutral-100 mb-3">Here&apos;s what Blair produces for you.</h1>
+        <p className="text-neutral-500 text-sm mb-8">
+          Answer 7 questions about your brand. Blair reads them automatically in every future session.
+        </p>
+
+        <div className="space-y-3 mb-8">
+          {PREVIEW_EXAMPLES.map(({ cmd, label, preview }) => (
+            <div key={cmd} className="bg-neutral-900 border border-neutral-800 rounded-lg p-4">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-xs text-violet-400 font-mono bg-violet-950 px-2 py-0.5 rounded">{label}</span>
+                <code className="text-xs text-neutral-600 font-mono truncate">{cmd}</code>
+              </div>
+              <p className="text-neutral-300 text-sm leading-relaxed italic">{preview}</p>
+            </div>
+          ))}
+        </div>
+
+        <Button
+          onClick={onStart}
+          className="w-full bg-violet-600 hover:bg-violet-500 text-white py-3"
+        >
+          Start setup — takes 3 minutes →
+        </Button>
+
+        <p className="text-neutral-600 text-xs text-center mt-4">
+          Requires an Anthropic API key. Estimated cost: $3–50/month.{' '}
+          <a
+            href="https://console.anthropic.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-neutral-500 hover:text-neutral-400 underline transition-colors"
+          >
+            Get your key →
+          </a>
+        </p>
+      </div>
+    </div>
+  );
+}
+
 type StepId = 'name' | 'product' | 'icp' | 'differentiation' | 'goal' | 'competitors' | 'voice';
 
 interface Step {
@@ -77,6 +146,7 @@ const STEPS: Step[] = [
 
 export function OnboardingWizard() {
   const router = useRouter();
+  const [showPreview, setShowPreview] = useState(true);
   const [currentStep, setCurrentStep] = useState(0);
   const [answers, setAnswers] = useState<Record<StepId, string>>({
     name: '',
@@ -89,6 +159,8 @@ export function OnboardingWizard() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState('');
+
+  if (showPreview) return <OnboardingPreview onStart={() => setShowPreview(false)} />;
 
   const step = STEPS[currentStep];
   const isLast = currentStep === STEPS.length - 1;
@@ -124,6 +196,11 @@ export function OnboardingWizard() {
       const personality = voiceParts[0]?.trim() ?? answers.voice;
       const voiceRemainder = voiceParts.slice(1).join('.').trim();
 
+      const PRIORITIES = ['awareness', 'acquisition', 'retention', 'revenue'] as const;
+      type Priority = typeof PRIORITIES[number];
+      const lower = answers.goal.toLowerCase();
+      const currentPriority = PRIORITIES.find((k) => lower.includes(k)) as Priority | undefined;
+
       const payload = {
         companyName: answers.name.trim(),
         oneLiner: answers.product,
@@ -145,9 +222,9 @@ export function OnboardingWizard() {
         },
         competitors: competitorLines,
         goals: {
-          currentPriority: answers.goal,
+          currentPriority,
           activeChannels: '[ASK WHEN NEEDED]',
-          constraints: 'none',
+          constraints: answers.goal,
         },
       };
 

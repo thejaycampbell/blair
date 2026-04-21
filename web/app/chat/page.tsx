@@ -6,7 +6,10 @@ import { brands, conversations } from '@/lib/db/schema';
 import { ChatInterface } from '@/components/chat-interface';
 import { BrandSidebar } from '@/components/brand-sidebar';
 
-export const metadata = { title: 'Blair — AI CMO' };
+export const metadata = {
+  title: 'Chat',
+  description: 'Generate campaigns, copy, cold email, and strategy — all in your brand voice.',
+};
 
 interface ChatPageProps {
   searchParams: Promise<{ c?: string }>;

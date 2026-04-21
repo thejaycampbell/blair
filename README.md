@@ -1,25 +1,23 @@
-# Blair: your AI CMO Agent
+# Brief once. Use forever.
 
-Most founders re-explain their brand to AI every session. Your ICP. Your voice. Your competitors. Every time. Blair fixes that.
+Most founders re-explain their brand to AI every single session. Your ICP. Your voice. Your competitors. Every time.
 
-Brief Blair once. It writes your brand profile and reads it automatically in every future session -- in any AI IDE. No re-briefing. No re-explaining. It knows who you're targeting, what you sound like, and who you're competing against.
+**Blair fixes that.** Answer 7 questions once. Blair writes your brand profile and reads it automatically in every future session — in any AI IDE, in the browser, forever.
 
-## Try Blair now
+**[→ Try Blair in your browser](https://blair-steel.vercel.app)** — no install, no IDE. Answer 7 questions. Start generating.
 
-**[→ Open Blair in your browser](https://blair-steel.vercel.app)** — no install, no IDE, no setup. Answer 6 questions. Start asking.
-
-*Claude Code / Cursor user? [Jump to IDE install ↓](#quick-start--ide-install)*
+*Claude Code / Cursor user?* [Jump to IDE install ↓](#quick-start--ide-install)
 
 ---
 
-## Blair ran on Blair
+## What Blair produces
 
-Blair's own positioning statement -- produced by running `/blair:strategy` on itself. One run. No editing.
+Blair ran `/blair:strategy` on itself. One run. No editing.
 
 ```
 Positioning statement:
 For solo founders and 1-3 person teams who build with Claude Code or Cursor,
-Blair is the AI CMO that replaces the copy-paste brand context problem -- so
+Blair is the AI CMO that replaces the copy-paste brand context problem — so
 every marketing task starts from the same brief, not from scratch.
 
 Unlike ChatGPT or Claude (which reset every session), Blair writes your brand
@@ -30,35 +28,42 @@ Tier 1 message: "You explained your ICP 47 times last year. Blair remembers it
 after one."
 ```
 
-This is what "brief once, use forever" looks like in practice.
-
-**[→ See more real outputs in GitHub Discussions](https://github.com/thejaycampbell/blair/discussions)** — positioning statements, campaign outputs, cold outbound sequences, competitor battle cards.
+**[→ See more outputs in GitHub Discussions](https://github.com/thejaycampbell/blair/discussions)** — positioning statements, campaign briefs, cold outbound sequences, competitor battle cards.
 
 ---
 
-## Three things that make it different
+## What it does
 
-**It knows your brand.** Brief Blair once with 6 questions. Every future session reads that profile automatically -- strategy, copy, campaigns, outbound, all of it.
+Brief Blair once → it writes your brand profile → reads it automatically in every future session.
 
-**It gets better over time.** Every correction you make is logged. Every specialist reads that log before acting. Tell Blair your brand never uses the word "streamline" -- it never uses it again, in any output, any session, going forward.
+| What you type | What you get |
+|---|---|
+| `/blair:strategy` | Positioning statement, ICP, messaging, GTM plan |
+| `/blair:campaigns` | Full campaign brief — channels, copy, timing |
+| `/blair:cold-outbound VP Sales at Series B` | 7-touch email + 5-touch LinkedIn sequence |
+| `/blair:competitor HubSpot` | Battle card, trap questions, your advantages |
+| `/blair:copy` | Landing page, ad, or email copy in your brand voice |
+| `/blair:calendar` | 30/60/90-day content calendar for your ICP |
+| `/blair:launch` | Full launch kit — positioning, copy, press, pitches |
+| `/blair:audit` | Scored marketing audit — fixes applied to your files |
 
-**It works in your IDE.** Claude Code, Cursor, and more. One command to install.
+[Full command list ↓](#slash-commands)
 
 ---
 
-## What it looks like for a client brand
+## What it looks like
 
 *Founder:* `"Define our positioning."`
 
-*Blair:* `"One question -- when a customer tells a colleague about you, what do they lead with: the problem you solved, or the feature they love?"`
+*Blair:* `"One question — when a customer tells a colleague about you, what do they lead with: the problem you solved, or the feature they love?"`
 
 *Founder:* `"The problem. They say they stopped losing track of client revisions."`
 
 *Blair:*
 ```
 Positioning statement:
-For freelance designers billing $5k-$15k/month, Dispatch is the client management
-tool that replaces the Notion + email + invoice patchwork -- so revision hell stops
+For freelance designers billing $5k–$15k/month, Dispatch is the client management
+tool that replaces the Notion + email + invoice patchwork — so revision hell stops
 being the default.
 
 Unlike HoneyBook (built for photographers) and Dubsado (a CRM in disguise),
@@ -73,89 +78,60 @@ Three minutes. Two messages. Something you'd actually use.
 
 ## Pricing
 
-**Blair (this repo) is free and open source.** The web app at [blair-steel.vercel.app](https://blair-steel.vercel.app) is free to use — you bring your own AI API key (added in onboarding).
+**Blair is free and open source (MIT).** You bring your own AI API key — costs go to Anthropic directly, not to Blair.
 
-Typical cost for a solo founder running 10–20 marketing tasks/week:
-
-| Usage | Estimated cost |
+| Usage | Estimated monthly cost |
 |---|---|
-| Light (strategy + copy, ~10 tasks/week) | ~$3–8/mo |
-| Active (campaigns + outbound + calendar) | ~$10–20/mo |
-| Heavy (daily use, agency volume) | ~$25–50/mo |
+| Light (~10 tasks/week: strategy + copy) | ~$3–8 |
+| Active (campaigns + outbound + calendar) | ~$10–20 |
+| Heavy (daily use, agency volume) | ~$25–50 |
 
-Costs go to Anthropic or OpenAI directly — not to Blair.
-
-**Blair Pro** (multi-brand agency workspace, SSO, team roles) — [join the waitlist](https://tally.so/r/KYByQX).
+**Blair Pro** — multi-brand workspaces, SSO, team roles. [Join the waitlist →](https://tally.so/r/KYByQX)
 
 ---
 
 ## Quick Start — IDE Install
 
-**Claude Code -- Mac/Linux:**
+**Claude Code — Mac/Linux:**
 ```bash
 curl -fsSL https://raw.githubusercontent.com/thejaycampbell/blair/main/install.sh | bash
 ```
 
-**Claude Code -- Windows:**
+**Claude Code — Windows:**
 ```powershell
 irm https://raw.githubusercontent.com/thejaycampbell/blair/main/install.ps1 | iex
 ```
 
-**Cursor -- Mac/Linux:**
+**Cursor — Mac/Linux:**
 ```bash
 curl -fsSL https://raw.githubusercontent.com/thejaycampbell/blair/main/install-cursor.sh | bash
 ```
 
-**Cursor -- Windows:**
+**Cursor — Windows:**
 ```powershell
 irm https://raw.githubusercontent.com/thejaycampbell/blair/main/install-cursor.ps1 | iex
 ```
 
-**All IDEs -- npx:**
+**All IDEs — npx:**
 ```bash
 npx blair-cmo               # Claude Code (default)
-npx blair-cmo --ide cursor   # Cursor
+npx blair-cmo --ide cursor  # Cursor
 ```
 
-Then run onboarding:
+Then start onboarding:
 ```
 /blair:start
 ```
 
-Blair asks 6 questions. Writes your brand profile. Ready.
+Blair asks 7 questions. Writes your brand profile. Every future session reads it automatically.
 
 ---
 
 ## What Blair is / isn't
 
-**Blair is for:** founders doing their own marketing. If you're writing copy, building campaigns, and researching competitors yourself -- without a CMO or agency -- Blair gives you a senior marketer's output without the headcount. It covers positioning, messaging, campaigns, copy, content calendars, competitive research, battle cards, cold outbound sequences, and performance attribution.
+**Blair is for:** founders doing their own marketing — positioning, copy, campaigns, outbound, content calendars, competitive research. If you're doing this without a CMO or agency budget, Blair gives you senior-marketer output without the headcount.
 
-**Blair is not:** a CRM, a lead database, email verification, or a dialer. It helps you say the right things -- your existing stack handles finding the people.
-
----
-
-## What you can do with it
-
-**Starting from scratch / new project**
-`/blair:start` -- answer 6 questions once. Blair writes your brand profile and reads it automatically in every future session. No re-explaining your ICP to every tool, every time.
-
-**Launching something**
-`/blair:launch` -- positioning angle, campaign architecture, launch-day copy, press release, journalist pitches. All in one run.
-
-**Competitor shows up in a sales call**
-`/blair:competitor HubSpot` -- real weaknesses from G2 and Reddit, your advantages mapped against them, exact trap questions, one-line response to "why not just use them?"
-
-**Homepage isn't converting**
-`/blair:audit` -- scored across 6 dimensions, specific line-by-line diagnosis. Say "fix it" and Blair rewrites directly to your project files.
-
-**Need 90 days of content**
-`/blair:calendar` -- week-by-week plan with topics, hooks, CTAs, formats, and channels. Built around your ICP and what's working in your category.
-
-**Fill your pipeline with outbound**
-`/blair:cold-outbound VP of Sales at Series B SaaS` -- 7-touch cold email + 5-touch LinkedIn DM sequence, optimized for reply rate. Logs to pipeline tracker automatically.
-
-**Starting your week**
-`/blair:weekly-brief` -- reads everything Blair knows and tells you the three things to focus on this week. Proactive, not reactive.
+**Blair is not:** a CRM, a lead database, email verification, or a dialer. It helps you say the right things — your existing stack handles finding the people.
 
 ---
 
@@ -178,16 +154,16 @@ Blair asks 6 questions. Writes your brand profile. Ready.
 | `/blair:research` | Competitive and market intelligence |
 | `/blair:competitor` | Deep research + battle card for any competitor |
 | `/blair:swot` | Marketing SWOT with 90-day priorities |
-| `/blair:research-integrity` | Research with mandatory Competitor Fact Table + citations |
+| `/blair:research-integrity` | Research with mandatory citations + Competitor Fact Table |
 
 **Campaigns & Content**
 
 | Command | What it does |
 |---|---|
 | `/blair:campaign` | Full campaign end-to-end |
-| `/blair:launch` | Coordinated launch kit -- strategy, copy, and PR |
+| `/blair:launch` | Coordinated launch kit — strategy, copy, and PR |
 | `/blair:calendar` | 30/60/90-day content calendar |
-| `/blair:post` | Platform-native social post -- fast |
+| `/blair:post` | Platform-native social post — fast |
 | `/blair:repurpose` | Repurpose one asset across all channels |
 
 **Copy & Assets**
@@ -197,15 +173,15 @@ Blair asks 6 questions. Writes your brand profile. Ready.
 | `/blair:headline` | 10 headline variations for any surface |
 | `/blair:email-sequence` | Full email sequence for any trigger |
 | `/blair:review` | Scored copy review with line-by-line rewrites |
-| `/blair:audit` | Full marketing audit -- applies fixes directly to project files |
-| `/blair:mockup` | HTML visual mockups -- ads, email, landing pages, social |
+| `/blair:audit` | Full marketing audit — fixes applied directly to project files |
+| `/blair:mockup` | HTML mockups — ads, email, landing pages, social |
 
 **Revenue & Pipeline**
 
 | Command | What it does |
 |---|---|
 | `/blair:pipeline-impact` | Attribution from CRM CSV export |
-| `/blair:weekly-brief` | Monday CMO standup -- what shipped, what's performing, what's next |
+| `/blair:weekly-brief` | Monday CMO standup — what shipped, what's performing, what's next |
 
 **Outbound**
 
@@ -213,7 +189,7 @@ Blair asks 6 questions. Writes your brand profile. Ready.
 |---|---|
 | `/blair:cold-outbound` | 7-touch cold email + 5-touch LinkedIn DM sequence |
 | `/blair:sequence-from-list` | CSV to segmented sequences + import-ready files |
-| `/blair:deliverability-checklist` | Pre-send domain check -- BLOCK/WARN/NOTE scored output |
+| `/blair:deliverability-checklist` | Pre-send domain check — BLOCK/WARN/NOTE scored output |
 | `/blair:brief-agency` | Creative brief for agencies, freelancers, or internal teams |
 
 ---
@@ -226,18 +202,18 @@ Blair asks 6 questions. Writes your brand profile. Ready.
 /blair:brands              # see all clients
 ```
 
-Blair Pro for agencies -- [join the waitlist](https://tally.so/r/KYByQX).
+Multi-brand agency workspaces → [Blair Pro waitlist](https://tally.so/r/KYByQX)
 
 ---
 
-## Under the hood
+## How it works under the hood
 
-Blair is an agent bundle. No runtime, no server, no separate API keys -- it runs inside your IDE using the account you already have. Each specialist is a self-contained agent file. The whole thing is yours: readable, editable, portable.
+Blair is an agent bundle. No runtime, no separate server, no extra API keys — it runs inside your IDE using the account you already have. Each specialist is a self-contained markdown agent file. Readable, editable, yours.
 
 ```
 Claude Code:              Cursor:
 .claude/                  .cursor/rules/
-+-- agents/               +-- blair.mdc          <- always-on orchestrator
++-- agents/               +-- blair.mdc          ← always-on orchestrator
 |   +-- blair.md          +-- blair-strategist.mdc
 |   +-- blair-*.md        +-- blair-researcher.mdc
 +-- cmo/                  +-- [16 more specialists]
@@ -246,48 +222,22 @@ Claude Code:              Cursor:
     +-- insights.md           +-- campaigns.md
 ```
 
-Want to add a specialist or modify behavior? Edit the relevant file. Each agent is self-contained.
+Your brand profile and logs are plain markdown under `.claude/cmo/`. Copy them to any project. No lock-in.
 
 ---
 
 ## Web App
 
-Blair runs in your browser at **[blair-steel.vercel.app](https://blair-steel.vercel.app)** — no IDE, no install, no terminal.
-
-The web app is a full Next.js application backed by the same Blair agents. Source is in `web/`. Self-hosting instructions and required environment variables are documented in [`web/.env.example`](web/.env.example).
+Blair runs in your browser at **[blair-steel.vercel.app](https://blair-steel.vercel.app)** — no IDE, no install, no terminal. Source is in `web/`. Self-hosting docs and required env vars: [`web/.env.example`](web/.env.example).
 
 ---
 
 ## Requirements
 
-**Web app:** A browser. That's it → [blair-steel.vercel.app](https://blair-steel.vercel.app)
+**Browser:** [blair-steel.vercel.app](https://blair-steel.vercel.app) — nothing to install.
 
-**IDE install:** [Claude Code](https://claude.ai/code) or [Cursor](https://cursor.sh) — free tier covers most tasks.
-
----
-
-## Portability
-
-Your brand profile and logs are plain markdown under `.claude/cmo/` or `.cursor/cmo/`. Copy them to any project. No lock-in.
-
-**Versioned changes:** [CHANGELOG.md](CHANGELOG.md)
+**IDE:** [Claude Code](https://claude.ai/code) or [Cursor](https://cursor.sh) — free tier covers most tasks.
 
 ---
 
-## Version history
-
-**v5.0** — Web app: Blair now runs in the browser at [blair-steel.vercel.app](https://blair-steel.vercel.app). No IDE, no install. Onboarding wizard, persistent chat, conversation history, brand profile editor. Same agents, same brand memory, any device.
-
-**v4.0** — Multi-IDE: Cursor support, `npx blair-cmo --ide cursor`, one-command Cursor installers. Compound engine: 12-week Blair-on-Blair publishing schedule, founder outreach playbook, Blair Pro agency waitlist. README rewritten pain-first.
-
-**v3.1** — One-command install (`npx blair-cmo`), CSV list-to-sequence, deliverability checklist, HTML visual mockups, CRM pipeline attribution, audit fixes applied directly to files.
-
-**v3.0** — Revenue layer: cold outbound, pipeline tracking, weekly CMO brief, agency briefing, fast onboarding.
-
-**v2.x** — Multi-brand support, slash commands, morning brief, escalation check.
-
-**v1.0** — Core agents: strategy, research, campaigns, copy, content, email, audit, calendar, repurpose, PR, sales enablement, analytics, paid, SEO.
-
----
-
-Built by [Jay Campbell](https://thejaycampbell.com). In the spirit of [Mason](https://github.com/thejaycampbell/mason).
+**[CHANGELOG.md](CHANGELOG.md)** · Built by [Jay Campbell](https://thejaycampbell.com) · In the spirit of [Mason](https://github.com/thejaycampbell/mason)
