@@ -1,4 +1,4 @@
-# Brief once. Use forever.
+# Brief Blair once. Use forever.
 
 Most founders re-explain their brand to AI every single session. Your ICP. Your voice. Your competitors. Every time.
 
