@@ -192,9 +192,9 @@ export function OnboardingWizard() {
         .filter(Boolean)
         .map((name) => ({ name, differentiation: 'see positioning notes' }));
 
-      const voiceParts = answers.voice.split('.');
-      const personality = voiceParts[0]?.trim() ?? answers.voice;
-      const voiceRemainder = voiceParts.slice(1).join('.').trim();
+      const trunc = (s: string, max: number) => s.slice(0, max);
+
+      const firstSentence = answers.voice.split(/[.!?]/)[0]?.trim() ?? answers.voice;
 
       const PRIORITIES = ['awareness', 'acquisition', 'retention', 'revenue'] as const;
       type Priority = typeof PRIORITIES[number];
@@ -202,29 +202,29 @@ export function OnboardingWizard() {
       const currentPriority = PRIORITIES.find((k) => lower.includes(k)) as Priority | undefined;
 
       const payload = {
-        companyName: answers.name.trim(),
-        oneLiner: answers.product,
+        companyName: trunc(answers.name.trim(), 200),
+        oneLiner: trunc(answers.product, 500),
         category: '',
         stage: 'launched',
         audience: {
-          primaryIcp: answers.icp,
+          primaryIcp: trunc(answers.icp, 1000),
           secondarySegments: 'none',
           notFor: '[ASK WHEN NEEDED]',
         },
         positioning: {
-          keyDifferentiator: answers.differentiation,
+          keyDifferentiator: trunc(answers.differentiation, 1000),
           proofPoints: ['[ASK WHEN NEEDED]'],
         },
         voice: {
-          personality,
-          hardBans: voiceRemainder || '[ASK WHEN NEEDED]',
-          referenceBrand: voiceRemainder || '[ASK WHEN NEEDED]',
+          personality: trunc(firstSentence, 200),
+          hardBans: trunc(answers.voice, 500),
+          referenceBrand: undefined,
         },
         competitors: competitorLines,
         goals: {
           currentPriority,
           activeChannels: '[ASK WHEN NEEDED]',
-          constraints: answers.goal,
+          constraints: trunc(answers.goal, 500),
         },
       };
 
