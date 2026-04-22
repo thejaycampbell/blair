@@ -1,3 +1,4 @@
+<img width="763" height="585" alt="Screenshot 2026-04-21 081205" src="https://github.com/user-attachments/assets/d5b1ac5a-ad1f-4625-8352-aadef2fbcd4e" />
 # Brief Blair once. Use forever.
 
 Most founders re-explain their brand to AI every single session. Your ICP. Your voice. Your competitors. Every time.
