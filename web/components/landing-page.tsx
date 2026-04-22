@@ -210,7 +210,7 @@ export function LandingPage() {
                 <span className="text-neutral-400">Blair is not</span>
               </h3>
               <ul className="space-y-3 text-neutral-500 text-sm">
-                <li>A CRM or lead database (try HubSpot)</li>
+                <li>A CRM or lead database</li>
                 <li>A replacement for an enterprise content team</li>
                 <li>A multi-brand agency tool (Blair Pro — coming soon)</li>
                 <li>A design tool or ad platform</li>

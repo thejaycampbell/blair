@@ -26,7 +26,7 @@ export const SLASH_COMMANDS: SlashCommand[] = [
     command: '/competitor',
     label: 'Competitor',
     description: 'Deep dive on a single competitor — real weaknesses, your advantages, trap questions, and a battle card.',
-    example: '/competitor HubSpot',
+    example: '/competitor [name]',
   },
   {
     command: '/campaign',

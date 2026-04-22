@@ -132,7 +132,7 @@ export function EditProfileForm({ brand }: EditProfileFormProps) {
         value={fields.companyName}
         onChange={set('companyName')}
         multiline={false}
-        placeholder="e.g. Selling with AI"
+        placeholder="e.g. Acme Corp"
       />
 
       <Field
@@ -140,7 +140,7 @@ export function EditProfileForm({ brand }: EditProfileFormProps) {
         hint="What it does and who it's for."
         value={fields.oneLiner}
         onChange={set('oneLiner')}
-        placeholder="e.g. Selling with AI teaches sales reps how to use AI to close more deals."
+        placeholder="e.g. We help [who] do [what] so they can [outcome]."
       />
 
       <Field
@@ -148,7 +148,7 @@ export function EditProfileForm({ brand }: EditProfileFormProps) {
         hint="Role, company size, the problem they're dealing with right now."
         value={fields.primaryIcp}
         onChange={set('primaryIcp')}
-        placeholder="e.g. B2B SaaS AEs at 10–200 person companies, quota-carrying, using ChatGPT ad hoc."
+        placeholder="e.g. Founders at 5–50 person companies, wearing every hat, trying to grow without a marketing team."
       />
 
       <Field
@@ -173,7 +173,7 @@ export function EditProfileForm({ brand }: EditProfileFormProps) {
         value={fields.competitorNames}
         onChange={set('competitorNames')}
         multiline={false}
-        placeholder="e.g. Lavender, Humanlinker, generic AI newsletters"
+        placeholder="e.g. The category leader, the DIY option, doing nothing"
       />
 
       <Field
