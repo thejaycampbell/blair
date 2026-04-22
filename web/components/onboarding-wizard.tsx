@@ -91,7 +91,7 @@ const STEPS: Step[] = [
     number: 1,
     question: "What's your company or product name?",
     hint: 'Just the name — exactly as you want Blair to reference it.',
-    placeholder: 'e.g. "Selling with AI" or "Dispatch" or "Acme Corp"',
+    placeholder: 'e.g. "Acme Corp" or "My Product Name"',
     multiline: false,
   },
   {
@@ -99,7 +99,7 @@ const STEPS: Step[] = [
     number: 2,
     question: 'What does it do, and who is it for?',
     hint: 'One sentence. What it is, who uses it.',
-    placeholder: 'e.g. "Selling with AI teaches sales reps how to use AI tools to prospect faster and close more deals — for B2B salespeople who know AI is changing their job but don\'t know where to start."',
+    placeholder: 'e.g. "We help [who] do [what] so they can [outcome]."',
     multiline: true,
   },
   {
@@ -107,7 +107,7 @@ const STEPS: Step[] = [
     number: 3,
     question: 'Who is your ideal customer?',
     hint: "Be specific — role, company size, the problem they're dealing with right now.",
-    placeholder: 'e.g. "B2B SaaS AEs at companies with 10–200 employees, quota-carrying, using ChatGPT ad hoc but with no real system for it."',
+    placeholder: 'e.g. "Founders at 5–50 person companies, wearing every hat, trying to grow without a marketing team."',
     multiline: true,
   },
   {
@@ -123,7 +123,7 @@ const STEPS: Step[] = [
     number: 5,
     question: "What's your #1 marketing priority right now?",
     hint: 'Pick one: awareness, acquisition, retention, or revenue.',
-    placeholder: 'e.g. "Acquisition — get the first 500 email subscribers actively selling in B2B SaaS."',
+    placeholder: 'e.g. "Acquisition — get the first 500 email subscribers."',
     multiline: true,
   },
   {
@@ -131,7 +131,7 @@ const STEPS: Step[] = [
     number: 6,
     question: 'Who are your top 2–3 competitors?',
     hint: 'What do people use instead of you? Include indirect alternatives.',
-    placeholder: 'e.g. "Lavender, Humanlinker, generic AI newsletter content. Also just reps Googling ChatGPT prompts."',
+    placeholder: 'e.g. "The category leader, the DIY option, and doing nothing at all."',
     multiline: true,
   },
   {
