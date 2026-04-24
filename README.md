@@ -1,3 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="248" height="28" viewBox="0 0 248 28" role="img" aria-label="RepoRanker: thejaycampbell/blair — 1 star">
+  <title>RepoRanker — thejaycampbell/blair</title>
+  <defs>
+    <linearGradient id="rrBrand" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3b82f6"/>
+      <stop offset="1" stop-color="#1d4ed8"/>
+    </linearGradient>
+  </defs>
+  <clipPath id="rrClip">
+    <rect width="248" height="28" rx="6"/>
+  </clipPath>
+  <g clip-path="url(#rrClip)">
+    <rect x="0" y="0" width="110" height="28" fill="url(#rrBrand)"/>
+    <rect x="110" y="0" width="138" height="28" fill="#0c0c10"/>
+  </g>
+  <rect
+    x="0.5"
+    y="0.5"
+    width="247"
+    height="27"
+    rx="5.5"
+    fill="none"
+    stroke="rgba(59,130,246,0.3)"
+  />
+  <text
+    x="55"
+    y="18"
+    text-anchor="middle"
+    font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif"
+    font-size="12"
+    font-weight="700"
+    letter-spacing="0.04em"
+    fill="#ffffff"
+  >RepoRanker</text>
+  <text
+    x="119"
+    y="12.5"
+    font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif"
+    font-size="11"
+  >
+    <tspan fill="#fbbf24" font-weight="600">&#9733;</tspan>
+    <tspan fill="#f8fafc" font-weight="700" font-size="12" dx="3">1</tspan>
+    <tspan fill="#94a3b8" font-size="9.5" font-weight="500" dx="4"> star</tspan>
+  </text>
+  <text
+    x="119"
+    y="22.5"
+    font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace"
+    font-size="9.5"
+    fill="#64748b"
+  >thejaycampbell/blair</text>
+</svg><img width="248" height="28" alt="blair" src="https://github.com/user-attachments/assets/9cb5183d-635e-46d1-8a53-875ac717d13e" />
 
 # Brief Blair once. Use forever.
 
