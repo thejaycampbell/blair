@@ -20,3 +20,7 @@ web/drizzle/
 
 # Claude Code worktree artifacts — created by git worktree, not part of the project
 .claude/worktrees/
+
+# Vercel — ignore CLI cache; commit project.json for shared project link
+.vercel/*
+!.vercel/project.json
