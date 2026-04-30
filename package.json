@@ -9,6 +9,9 @@
     "url": "https://github.com/thejaycampbell/blair.git"
   },
   "license": "MIT",
+  "scripts": {
+    "vercel-build": "npm ci --prefix web && npm run build --prefix web"
+  },
   "bin": {
     "blair-setup": "./bin/install.js"
   },
@@ -22,6 +25,6 @@
     "install-cursor.ps1"
   ],
   "engines": {
-    "node": ">=16"
+    "node": "22.x"
   }
 }
