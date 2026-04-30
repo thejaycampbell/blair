@@ -10,7 +10,13 @@
   },
   "license": "MIT",
   "scripts": {
+    "build": "npm ci --prefix web && npm run build --prefix web",
     "vercel-build": "npm ci --prefix web && npm run build --prefix web"
+  },
+  "devDependencies": {
+    "next": "16.2.4",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
   },
   "bin": {
     "blair-setup": "./bin/install.js"
@@ -23,8 +29,5 @@
     "install.bat",
     "install-cursor.sh",
     "install-cursor.ps1"
-  ],
-  "engines": {
-    "node": "22.x"
-  }
+  ]
 }
